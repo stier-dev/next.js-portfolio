@@ -1,0 +1,74 @@
+.memoryContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.eliminated {
+  opacity: 0;
+  border: 3px solid red;
+}
+
+.active {
+  opacity: 100;
+  border: 3px solid green;
+}
+
+.allCards {
+  background-color: blue;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.oneCard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 200px;
+  width: 170px;
+  margin: 20px;
+  background-color: orange;
+  color: white;
+  transform-style: preserve-3d;
+  perspective: 250px;
+  transition: all 500ms;
+
+  // &:hover {
+  //   transform: rotateY(180deg);
+  // }
+}
+
+.closed {
+  transform: rotateY(0deg);
+}
+
+.open {
+  transform: rotateY(180deg);
+}
+
+.card {
+  position: absolute;
+  backface-visibility: hidden;
+  height: 100%;
+  width: 100%;
+}
+
+.cardBackside {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 4rem;
+}
+
+.cardImg {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.cardFrontside {
+  transform: rotateY(180deg);
+}
