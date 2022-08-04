@@ -8,6 +8,24 @@ export default function () {
         <li>Navbar</li>
         <li>Footer</li>
 
+        <h3>Scroll to Section</h3>
+        <p>
+          https://stackoverflow.com/questions/68589788/nextjs-link-to-scroll-to-a-section-in-same-page
+        </p>
+        <p>
+          https://www.youtube.com/watch?v=0jgl5L8yeTw&ab_channel=ProgrammingWithPrem
+        </p>
+        <p>
+          https://www.youtube.com/results?search_query=next+js+scroll+to+section
+        </p>
+
+        <h3>Page Transitions</h3>
+        <p>https://www.youtube.com/watch?v=GOuwOI-WSkE&ab_channel=PedroTech</p>
+
+        <h3>Loading Screens</h3>
+        <p>
+          https://www.youtube.com/watch?v=fJji8_Ywjmc&ab_channel=Skillthrive
+        </p>
         <h3>Home:</h3>
         <li>Hero section: Glitch & Matrix</li>
         <li>Parallax</li>

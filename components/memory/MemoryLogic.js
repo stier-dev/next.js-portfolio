@@ -1,76 +1,101 @@
 // ! 2do:
-// ? sreen to click before play: Memory spielen
-// ? winning screen! btn: nochmal spielen
-// ? stats: time and attempts
+// ? Loading Screen
 
 import FlipAllCards from "./FlipAllCards";
 import cardsArray from "./CardsArray";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import shuffleArray from "@/components/functions/shuffleArray";
 import deepCopyArray from "../functions/deepCopyArray";
+import Counter from "./Counter";
 
 export default function MemoryGame() {
+  // * card variables
   const [cards, setCards] = useState(shuffleArray(deepCopyArray(cardsArray)));
   const [openCards, setOpenCards] = useState([]);
-  const [guessedCards, setGuessedCards] = useState(2);
-  const [winningScreen, setWinningScreen] = useState(true);
+
+  const [guessedCards, setGuessedCards] = useState(0);
+  const [winningScreen, setWinningScreen] = useState(false);
+  // * attempts
+  const [attempts, setAttempts] = useState(0);
+  // * counter variables
+  const [timerOn, setTimerOn] = useState(false);
+  const [neededTime, setNeededTime] = useState(0);
 
   // * <--------------------------- Reset functions  --------------------------- >
-  const resetGame = () => {
-    setCards(shuffleArray(deepCopyArray(cardsArray)));
-    setOpenCards([]);
-    setGuessedCards(2);
-  };
 
+  // * creates a smooth card turn and resets variables
   const flipThenReset = (array) => {
-    console.log("flippin");
-
+    setOpenCards([]);
+    setGuessedCards(0);
     setTimeout(() => {
       FlipAllCards(array);
       setTimeout(() => {
         setCards(array);
         setTimeout(() => {
-          resetGame();
+          setCards(shuffleArray(deepCopyArray(cardsArray)));
         }, 500);
       }, 500);
     }, 1000);
   };
-
+  // * happens if you click the: play again btn
   const playAgain = () => {
     setWinningScreen(false);
-    console.log("play again :)");
+    setAttempts(0);
+    setNeededTime(0);
   };
+  // * winning scenario:
+  useEffect(() => {
+    if (guessedCards === 2) {
+      setTimerOn(false);
+      setWinningScreen(true);
+      flipThenReset([...cards]);
+    }
+  }, [guessedCards]);
+
+  // * starts to count the Attempts
+  useEffect(() => {
+    if (attempts === 1) {
+      setTimerOn(true);
+    }
+  }, [attempts]);
+
+  // * <------------------------ counter ------------------------ >
+  useEffect(() => {
+    // the interval variable has to be declared outside the if to work!!!
+    let interval = undefined;
+    if (timerOn) {
+      interval = setInterval(() => {
+        setNeededTime((prevTime) => prevTime + 1);
+      }, 1000);
+    } else {
+      clearInterval(interval);
+    }
+    return () => clearInterval(interval);
+  }, [timerOn]);
 
   // * <------------------------ selection function ------------------------ >
   const selectCard = (id) => {
     let clonedCards = [...cards];
     const cardIndex = clonedCards.findIndex((element) => element.id === id);
-    //  * if clicked twice: return
+    //  if clicked twice || or card is already open!: return
     if (clonedCards[cardIndex].guessed || !clonedCards[cardIndex].closed) {
       return;
     }
-    // * if different card: flip Card
+    setAttempts((prevState) => prevState + 1);
     if (openCards.length === 0) {
       clonedCards[cardIndex].closed = !cards[cardIndex].closed;
       openCards.push(cardIndex);
     } else if (openCards.length === 1) {
       clonedCards[cardIndex].closed = !cards[cardIndex].closed;
       openCards.push(cardIndex);
+      // setAttempts((prevState) => prevState + 1);
 
       // * 2 cards match:
       if (clonedCards[openCards[0]].url === clonedCards[openCards[1]].url) {
         clonedCards[openCards[0]].guessed = true;
         clonedCards[openCards[1]].guessed = true;
         setOpenCards([]);
-        setGuessedCards(guessedCards + 2);
-        // * if all cards are open:
-        // ! make a screen appear, btn: replay (resetGame())
-        if (guessedCards === 4) {
-          // makes the winning Screen appear
-          setWinningScreen(true);
-          // turns cards around smoothly
-          flipThenReset(clonedCards);
-        }
+        setGuessedCards((prevState) => prevState + 2);
         return;
       }
       // * turns the cards around to the backside
@@ -82,5 +107,12 @@ export default function MemoryGame() {
     }
     setCards(clonedCards);
   };
-  return { cards, resetGame, selectCard, winningScreen, playAgain };
+  return {
+    cards,
+    selectCard,
+    winningScreen,
+    playAgain,
+    attempts,
+    neededTime,
+  };
 }
