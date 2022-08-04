@@ -1,12 +1,8 @@
-// ! 2do:
-// ? Loading Screen
-
 import FlipAllCards from "./FlipAllCards";
 import cardsArray from "./CardsArray";
 import { useState, useEffect } from "react";
 import shuffleArray from "@/components/functions/shuffleArray";
 import deepCopyArray from "../functions/deepCopyArray";
-import Counter from "./Counter";
 
 export default function MemoryGame() {
   // * card variables
