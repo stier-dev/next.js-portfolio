@@ -1,14 +1,21 @@
 import style from "@/styles/components/Navbar.module.scss";
-import Link from "next/link";
+// import Link from "next/link";
+import { Link } from "react-scroll";
 
 export default function () {
   return (
     <div className={style.navbarContainer}>
       <h3>I am A header</h3>
-      <Link href="#heroSection">
+      <Link
+        to="heroSection"
+        spy={true}
+        smooth={true}
+        offset={-50}
+        duration={700}
+      >
         <button>Startseite</button>
       </Link>
-      <Link href="#memory">
+      <Link to="memory" spy={true} smooth={true} offset={-50} duration={700}>
         <button>Memory</button>
       </Link>
     </div>

@@ -3,6 +3,7 @@ import cardsArray from "./CardsArray";
 import { useState, useEffect } from "react";
 import shuffleArray from "@/components/functions/shuffleArray";
 import deepCopyArray from "../functions/deepCopyArray";
+// import cardFlipSound from "../../public/sounds/card_flip.mp3";
 
 export default function MemoryGame() {
   // * card variables
@@ -58,6 +59,7 @@ export default function MemoryGame() {
   // * <------------------------ counter ------------------------ >
   useEffect(() => {
     // the interval variable has to be declared outside the if to work!!!
+
     let interval = undefined;
     if (timerOn) {
       interval = setInterval(() => {
@@ -69,6 +71,16 @@ export default function MemoryGame() {
     return () => clearInterval(interval);
   }, [timerOn]);
 
+  // * <------------------------ sound function ------------------------ >
+
+  const playCardFlipSound = () => {
+    let cardFlipSound = document.getElementById("cardFlipSound");
+
+    cardFlipSound.volume = 0.3;
+    cardFlipSound.play();
+    console.log("hi");
+    console.log(cardFlipSound);
+  };
   // * <------------------------ selection function ------------------------ >
   const selectCard = (id) => {
     let clonedCards = [...cards];
@@ -77,6 +89,8 @@ export default function MemoryGame() {
     if (clonedCards[cardIndex].guessed || !clonedCards[cardIndex].closed) {
       return;
     }
+    // playing flipping sound
+    playCardFlipSound();
     setAttempts((prevState) => prevState + 1);
     if (openCards.length === 0) {
       clonedCards[cardIndex].closed = !cards[cardIndex].closed;

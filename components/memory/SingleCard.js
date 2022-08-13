@@ -23,15 +23,36 @@ export default function SingleCard({
       >
         <div className={`${styles.cardFrontside} ${styles.card}`}>
           {/* FRONT SIDE -------------------------- */}
-          <Image layout="fill" src={url} className={styles.cardImg} />
+          <div className={styles.frontsideBackground}>
+            <Image
+              layout="fill"
+              src={"/img/memory/frontside/frontside_background.svg"}
+            />
+          </div>
+          <div className={styles.frontsideImg}>
+            <Image layout="fill" src={url} />
+          </div>
         </div>
         <div className={`${styles.cardBackside} ${styles.card}`}>
           {/* BACK SIDE -------------------------- */}
-          <Image
-            layout="fill"
-            src={"/img/memory/backside.png"}
-            className={styles.cardImg}
-          />
+          <div className={styles.backgroundShapes}>
+            <Image
+              layout="fill"
+              src={"/img/memory/backside/background_border.svg"}
+            />
+          </div>
+          <div className={styles.backsideCircle}>
+            <Image
+              layout="fill"
+              src={"/img/memory/backside/background_pattern.svg"}
+            />
+          </div>
+          <div className={styles.backsideHexagon}>
+            <Image
+              layout="fill"
+              src={"/img/memory/backside/hover_hexagon.svg"}
+            />
+          </div>
         </div>
       </div>
     </div>

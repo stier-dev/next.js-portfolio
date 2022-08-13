@@ -4,37 +4,37 @@ import uniqid from "uniqid";
 const cardsArray = [
   {
     id: uniqid(),
-    url: "/img/memory/bearDog.jpg",
+    url: "/img/memory/1.svg",
     closed: true,
     guessed: false,
   },
   {
     id: uniqid(),
-    url: "/img/memory/cat.jpg",
+    url: "/img/memory/2.svg",
     closed: true,
     guessed: false,
   },
   {
     id: uniqid(),
-    url: "/img/memory/husky.jpg",
+    url: "/img/memory/3.svg",
     closed: true,
     guessed: false,
   },
   {
     id: uniqid(),
-    url: "/img/memory/owel.jpg",
+    url: "/img/memory/4.svg",
     closed: true,
     guessed: false,
   },
   {
     id: uniqid(),
-    url: "/img/memory/unicornDog.jpg",
+    url: "/img/memory/5.svg",
     closed: true,
     guessed: false,
   },
   {
     id: uniqid(),
-    url: "/img/memory/headDog.jpg",
+    url: "/img/memory/6.svg",
     closed: true,
     guessed: false,
   },
