@@ -2,7 +2,7 @@ import style from "@/styles/components/Navbar.module.scss";
 // import Link from "next/link";
 import { Link } from "react-scroll";
 
-export default function () {
+export default function Navbar() {
   return (
     <div className={style.navbarContainer}>
       <h3>I am A header</h3>

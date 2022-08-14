@@ -2,7 +2,7 @@
 import Link from "next/link";
 import styles from "@/styles/404.module.scss";
 
-export default function () {
+export default function CantFindPage() {
   return (
     <div className={styles.error}>
       <h1>
