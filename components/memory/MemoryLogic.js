@@ -3,6 +3,7 @@ import FlipAllCards from "@/components/memory/FlipAllCards";
 import { useState, useEffect } from "react";
 import shuffleArray from "@/components/functions/shuffleArray";
 import deepCopyArray from "../functions/deepCopyArray";
+import uniqid from "uniqid";
 // import cardFlipSound from "../../public/sounds/card_flip.mp3";
 
 export default function MemoryGame() {
