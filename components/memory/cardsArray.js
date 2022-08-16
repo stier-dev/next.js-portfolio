@@ -1,6 +1,6 @@
 // has to be installed first with: npm install uniqid
 import uniqid from "uniqid";
-export default function () {
+export default function cardsArray() {
   const cardsArray = [
     {
       id: uniqid(),
