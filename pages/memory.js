@@ -4,8 +4,15 @@ import styles from "@/styles/components/Memory.module.scss";
 import btnStyles from "@/styles/components/buttons.module.scss";
 
 export default function MemoryHtml() {
-  const { cards, selectCard, winningScreen, playAgain, attempts, neededTime } =
-    MemoryGame();
+  const {
+    cards,
+    selectCard,
+    winningScreen,
+    playAgain,
+    attempts,
+    neededTime,
+    resetBtn,
+  } = MemoryGame();
 
   // * makes the winning screen visible or invisible
   const winningClass = () => {
@@ -28,6 +35,7 @@ export default function MemoryHtml() {
           <div className={styles.statsContainer}>
             <h3 className={styles.stats}>Zeit: {neededTime}</h3>
             <button
+              onClick={resetBtn}
               className={`${styles.resetBtn} ${btnStyles.transparentBtn}`}
             >
               Neustart

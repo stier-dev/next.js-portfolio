@@ -22,7 +22,7 @@ export default function MemoryGame() {
   // * <--------------------------- Reset functions  --------------------------- >
 
   // * creates a smooth card turn and resets variables
-  const flipThenReset = (array) => {
+  const flipThenReset = (array, delay) => {
     setOpenCards([]);
     setGuessedCards(0);
     setTimeout(() => {
@@ -31,9 +31,9 @@ export default function MemoryGame() {
         setCards(array);
         setTimeout(() => {
           setCards(shuffleArray(deepCopyArray(cardsArray())));
-        }, 500);
-      }, 500);
-    }, 1000);
+        }, delay);
+      }, delay);
+    }, delay * 2);
   };
   // * happens if you click the: play again btn
   const playAgain = () => {
@@ -41,12 +41,21 @@ export default function MemoryGame() {
     setAttempts(0);
     setNeededTime(0);
   };
+
+  const resetBtn = () => {
+    console.log("reset");
+
+    setAttempts(0);
+    setNeededTime(0);
+    setTimerOn(false);
+    flipThenReset([...cards], 0);
+  };
   // * winning scenario:
   useEffect(() => {
     if (guessedCards === 12) {
       setTimerOn(false);
       setWinningScreen(true);
-      flipThenReset([...cards]);
+      flipThenReset([...cards], 500);
     }
   }, [guessedCards]);
 
@@ -130,5 +139,6 @@ export default function MemoryGame() {
     playAgain,
     attempts,
     neededTime,
+    resetBtn,
   };
 }
