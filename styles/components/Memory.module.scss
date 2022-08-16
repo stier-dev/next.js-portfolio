@@ -1,19 +1,71 @@
 @import "/styles/abstracts/colors";
+@import "/styles/abstracts/fonts";
 
-// ? Containers
-
-.memoryMainContainer {
-  background-color: black;
+.mainContainer {
+  width: 100vw;
+  background-color: $darkViolette;
   display: flex;
   justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
-.memoryContainer {
+.textAndGameContainer {
+  position: relative;
   max-width: 900px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+// ? Headline and Stats
+.textContainer {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: black;
+  flex-wrap: wrap;
+  width: 100%;
+  color: white;
+}
+
+.statsContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.resetBtn {
+}
+
+.memoryHeadline {
+  color: $yellow;
+  font-family: $head-font;
+  letter-spacing: 0.2rem;
+  font-size: 4rem;
+}
+
+.stats {
+  font-family: $hand-written;
+  display: flex;
+  justify-content: center;
+  width: 30%;
+  font-size: 1.8rem;
+}
+// ? Memory Game
+.memoryContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.memoryHeadline {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
 }
 
 // ? winning Screen
@@ -61,7 +113,6 @@
   transform-style: preserve-3d;
   perspective: 250px;
   transition: all 500ms;
-
   // &:hover {
   //   transform: rotateY(180deg);
   // }
@@ -99,7 +150,7 @@
   transform: rotate(0.1turn);
 }
 .cardBackside:hover {
-  background-color: rgb(19, 0, 11);
+  background-color: $darkViolette;
   border: 1px solid white;
 }
 
@@ -130,13 +181,14 @@
 }
 
 .cardFrontside {
-  border: 1px solid white;
+  border: 1px solid $yellow;
   border-radius: 5%;
   transform: rotateY(180deg);
+  cursor: pointer;
 }
 
-.cardFrontside:hover .frontsideImg {
-  transform: scale(1.15);
+.oneCard:hover .frontsideImg {
+  transform: scale(1.2);
 }
 
 .frontsideBackground {

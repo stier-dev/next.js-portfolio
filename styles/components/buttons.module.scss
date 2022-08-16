@@ -1,0 +1,47 @@
+@import "/styles/abstracts/colors";
+@import "/styles/abstracts/fonts";
+
+.transparentBtn {
+  color: white;
+  font-family: $hand-written;
+  font-size: 1.5rem;
+  padding: 0.7rem 2rem;
+  background: none;
+  border: none;
+  position: relative;
+  letter-spacing: 0.06rem;
+  cursor: pointer;
+  &:after,
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    border: 1px solid white;
+    border-radius: 0.6rem;
+    transition: all 0.6s;
+    transform: translate(0);
+  }
+  &:hover {
+    &:after {
+      transform: translate(3px, 3px);
+    }
+    &:before {
+      border-color: $yellow;
+      transform: translate(-3px, -3px);
+    }
+  }
+  &:active {
+    color: $yellow;
+    &:after {
+      border-color: $yellow;
+      transform: translate(0);
+    }
+    &:before {
+      border-color: $yellow;
+      transform: translate(0);
+    }
+  }
+}

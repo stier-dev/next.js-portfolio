@@ -7,51 +7,6 @@ import deepCopyArray from "../functions/deepCopyArray";
 // import cardFlipSound from "../../public/sounds/card_flip.mp3";
 
 export default function MemoryGame() {
-  // const cardsArray = [
-  //   {
-  //     id: uniqid(),
-  //     url: "/img/memory/1.svg",
-  //     closed: true,
-  //     guessed: false,
-  //   },
-  //   {
-  //     id: uniqid(),
-  //     url: "/img/memory/2.svg",
-  //     closed: true,
-  //     guessed: false,
-  //   },
-  //   {
-  //     id: uniqid(),
-  //     url: "/img/memory/3.svg",
-  //     closed: true,
-  //     guessed: false,
-  //   },
-  //   {
-  //     id: uniqid(),
-  //     url: "/img/memory/4.svg",
-  //     closed: true,
-  //     guessed: false,
-  //   },
-  //   {
-  //     id: uniqid(),
-  //     url: "/img/memory/5.svg",
-  //     closed: true,
-  //     guessed: false,
-  //   },
-  //   {
-  //     id: uniqid(),
-  //     url: "/img/memory/6.svg",
-  //     closed: true,
-  //     guessed: false,
-  //   },
-  // ];
-  // cardsArray.forEach((el) => {
-  //   cardsArray.push({
-  //     ...el,
-  //     id: uniqid(),
-  //   });
-  // });
-
   // * card variables
   const [cards, setCards] = useState(shuffleArray(deepCopyArray(cardsArray())));
   const [openCards, setOpenCards] = useState([]);
@@ -75,7 +30,7 @@ export default function MemoryGame() {
       setTimeout(() => {
         setCards(array);
         setTimeout(() => {
-          setCards(shuffleArray(deepCopyArray(cardsArray)));
+          setCards(shuffleArray(deepCopyArray(cardsArray())));
         }, 500);
       }, 500);
     }, 1000);
@@ -118,14 +73,17 @@ export default function MemoryGame() {
   }, [timerOn]);
 
   // * <------------------------ sound function ------------------------ >
-
-  const playCardFlipSound = () => {
+  // two sound variables, so that they can overlap while opening multiple cards fast
+  const playCardFlipSound = (nr) => {
     let cardFlipSound = document.getElementById("cardFlipSound");
-
+    let cardFlipSound2 = document.getElementById("cardFlipSound2");
     cardFlipSound.volume = 0.3;
-    cardFlipSound.play();
-    console.log("hi");
-    console.log(cardFlipSound);
+    cardFlipSound2.volume = 0.3;
+    if (nr === 1) {
+      cardFlipSound.play();
+    } else {
+      cardFlipSound2.play();
+    }
   };
   // * <------------------------ selection function ------------------------ >
   const selectCard = (id) => {
@@ -136,12 +94,14 @@ export default function MemoryGame() {
       return;
     }
     // playing flipping sound
-    playCardFlipSound();
+
     setAttempts((prevState) => prevState + 1);
     if (openCards.length === 0) {
+      playCardFlipSound(1);
       clonedCards[cardIndex].closed = !cards[cardIndex].closed;
       openCards.push(cardIndex);
     } else if (openCards.length === 1) {
+      playCardFlipSound(2);
       clonedCards[cardIndex].closed = !cards[cardIndex].closed;
       openCards.push(cardIndex);
       // setAttempts((prevState) => prevState + 1);

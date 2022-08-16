@@ -1,2 +1,23 @@
+@font-face {
+  font-family: "SignPainter HouseScript";
+  src: url("//db.onlinewebfonts.com/t/cfdf18a10f253f0aa9db6db978d328c0.eot");
+  src: url("//db.onlinewebfonts.com/t/cfdf18a10f253f0aa9db6db978d328c0.eot?#iefix")
+      format("embedded-opentype"),
+    url("//db.onlinewebfonts.com/t/cfdf18a10f253f0aa9db6db978d328c0.woff2")
+      format("woff2"),
+    url("//db.onlinewebfonts.com/t/cfdf18a10f253f0aa9db6db978d328c0.woff")
+      format("woff"),
+    url("//db.onlinewebfonts.com/t/cfdf18a10f253f0aa9db6db978d328c0.ttf")
+      format("truetype"),
+    url("//db.onlinewebfonts.com/t/cfdf18a10f253f0aa9db6db978d328c0.svg#SignPainter HouseScript")
+      format("svg");
+}
+
+@font-face {
+  font-family: "Zaio";
+  src: url("/fonts/Zaio.woff") format("woff");
+}
+
 $head-font: "Zaio";
-$hand-written: "Stay Classy SLDT";
+$hand-written: "SignPainter HouseScript";
+// $hand-written: "Stay Classy SLDT";
