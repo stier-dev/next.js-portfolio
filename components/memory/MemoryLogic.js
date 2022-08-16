@@ -1,53 +1,59 @@
 import FlipAllCards from "@/components/memory/FlipAllCards";
-// import cardsArray from "@/components/memory/CardsArray";
+import cardsArray from "@/components/memory/CardsArray";
 import { useState, useEffect } from "react";
 import shuffleArray from "@/components/functions/shuffleArray";
 import deepCopyArray from "../functions/deepCopyArray";
-import uniqid from "uniqid";
+// import uniqid from "uniqid";
 // import cardFlipSound from "../../public/sounds/card_flip.mp3";
 
 export default function MemoryGame() {
-  const cardsArray = [
-    {
-      id: uniqid(),
-      url: "/img/memory/1.svg",
-      closed: true,
-      guessed: false,
-    },
-    {
-      id: uniqid(),
-      url: "/img/memory/2.svg",
-      closed: true,
-      guessed: false,
-    },
-    {
-      id: uniqid(),
-      url: "/img/memory/3.svg",
-      closed: true,
-      guessed: false,
-    },
-    {
-      id: uniqid(),
-      url: "/img/memory/4.svg",
-      closed: true,
-      guessed: false,
-    },
-    {
-      id: uniqid(),
-      url: "/img/memory/5.svg",
-      closed: true,
-      guessed: false,
-    },
-    {
-      id: uniqid(),
-      url: "/img/memory/6.svg",
-      closed: true,
-      guessed: false,
-    },
-  ];
+  // const cardsArray = [
+  //   {
+  //     id: uniqid(),
+  //     url: "/img/memory/1.svg",
+  //     closed: true,
+  //     guessed: false,
+  //   },
+  //   {
+  //     id: uniqid(),
+  //     url: "/img/memory/2.svg",
+  //     closed: true,
+  //     guessed: false,
+  //   },
+  //   {
+  //     id: uniqid(),
+  //     url: "/img/memory/3.svg",
+  //     closed: true,
+  //     guessed: false,
+  //   },
+  //   {
+  //     id: uniqid(),
+  //     url: "/img/memory/4.svg",
+  //     closed: true,
+  //     guessed: false,
+  //   },
+  //   {
+  //     id: uniqid(),
+  //     url: "/img/memory/5.svg",
+  //     closed: true,
+  //     guessed: false,
+  //   },
+  //   {
+  //     id: uniqid(),
+  //     url: "/img/memory/6.svg",
+  //     closed: true,
+  //     guessed: false,
+  //   },
+  // ];
+  // cardsArray.forEach((el) => {
+  //   cardsArray.push({
+  //     ...el,
+  //     id: uniqid(),
+  //   });
+  // });
 
   // * card variables
-  const [cards, setCards] = useState(shuffleArray(deepCopyArray(cardsArray)));
+  const [cards, setCards] = useState(shuffleArray(deepCopyArray(cardsArray())));
   const [openCards, setOpenCards] = useState([]);
 
   const [guessedCards, setGuessedCards] = useState(0);
