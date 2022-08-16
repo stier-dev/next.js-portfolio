@@ -1,5 +1,5 @@
-import FlipAllCards from "./FlipAllCards";
-import cardsArray from "./CardsArray";
+import FlipAllCards from "@/components/memory/FlipAllCards";
+import cardsArray from "@/components/memory/CardsArray";
 import { useState, useEffect } from "react";
 import shuffleArray from "@/components/functions/shuffleArray";
 import deepCopyArray from "../functions/deepCopyArray";
