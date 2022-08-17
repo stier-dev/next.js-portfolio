@@ -74,10 +74,31 @@
   justify-content: center;
   align-items: center;
   position: absolute;
-  height: 100%;
   width: 100%;
-  background-color: rgba(255, 140, 0, 0.517);
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
   transition: all 1000ms;
+}
+.winningContent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 200px;
+}
+.winningHeadline {
+  margin: 0;
+  font-family: $head-font;
+  font-size: 6rem;
+  width: 100%;
+  text-align: center;
+  color: $yellow;
+}
+
+.winningSub {
+  width: 100%;
+  text-align: center;
+  color: white;
 }
 
 .visibleWinningScreen {
@@ -108,26 +129,28 @@
   height: 230px;
   width: 170px;
   margin: 20px;
-  background-color: black;
   color: white;
   transform-style: preserve-3d;
   perspective: 250px;
   transition: all 500ms;
-  // &:hover {
-  //   transform: rotateY(180deg);
-  // }
 }
 
 .closed {
+  transform-style: preserve-3d;
   transform: rotateY(0deg);
 }
 
 .open {
+  transform-style: preserve-3d;
   transform: rotateY(180deg);
 }
 
 .card {
   position: absolute;
+  -webkit-perspective: 0;
+  -webkit-backface-visibility: hidden;
+  -webkit-transform: translate3d(0, 0, 0);
+  visibility: visible;
   backface-visibility: hidden;
   height: 100%;
   width: 100%;

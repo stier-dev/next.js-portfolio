@@ -52,7 +52,7 @@ export default function MemoryGame() {
   };
   // * winning scenario:
   useEffect(() => {
-    if (guessedCards === 12) {
+    if (guessedCards === 2) {
       setTimerOn(false);
       setWinningScreen(true);
       flipThenReset([...cards], 500);
