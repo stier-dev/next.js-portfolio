@@ -28,8 +28,8 @@ export default function Layout({ title, keywords, description, children }) {
 }
 
 Layout.defaultProps = {
-  title: "Georgiy Stier | Portfolio",
+  title: "Georgi Stier | Portfolio",
   description: "Web-Development & Web-Design beispiele",
   keywords:
-    "Web-Entwicklung, Web-Design, React, Next.js, Software Entwicklung, Georgiy Stier",
+    "Web-Entwicklung, Web-Design, React, Next.js, Software Entwicklung, Georgi Stier",
 };
