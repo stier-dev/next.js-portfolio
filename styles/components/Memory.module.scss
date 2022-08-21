@@ -183,7 +183,6 @@
     height: 3rem;
     width: 9rem;
   }
-
   .stats {
     font-size: 1.5rem;
   }
@@ -194,6 +193,30 @@
     height: 123.84px;
     width: 91.8px;
     margin: 10px;
+  }
+  @media (max-width: 450px) {
+    .memoryHeadline {
+      letter-spacing: 0.15rem;
+      font-size: 2.5rem;
+    }
+    .stats {
+      font-size: 1.2rem;
+    }
+    .prevHeadline {
+      width: 8rem;
+    }
+    .resetBtn {
+      font-size: 1.2rem !important;
+      width: 8rem;
+    }
+    .textAndGameContainer {
+      max-width: 450px;
+    }
+    .oneCard {
+      height: 123.84px;
+      width: 91.8px;
+      margin: 4px;
+    }
   }
 }
 
