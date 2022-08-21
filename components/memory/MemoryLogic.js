@@ -11,6 +11,8 @@ export default function MemoryGame() {
   const [cards, setCards] = useState(shuffleArray(deepCopyArray(cardsArray())));
   const [openCards, setOpenCards] = useState([]);
 
+  const [canPlay, setCanPlay] = useState(true);
+
   const [guessedCards, setGuessedCards] = useState(0);
   const [winningScreen, setWinningScreen] = useState(false);
   // * attempts
@@ -18,6 +20,9 @@ export default function MemoryGame() {
   // * counter variables
   const [timerOn, setTimerOn] = useState(false);
   const [neededTime, setNeededTime] = useState(0);
+  // * previous Values
+  const [previousTime, setPreviousTime] = useState(0);
+  const [previousAttempts, setPreviousAttempts] = useState(0);
 
   // * <--------------------------- Reset functions  --------------------------- >
 
@@ -37,14 +42,19 @@ export default function MemoryGame() {
   };
   // * happens if you click the: play again btn
   const playAgain = () => {
+    flipThenReset([...cards], 100);
     setWinningScreen(false);
-    setAttempts(0);
-    setNeededTime(0);
+    setCanPlay(false);
+    setTimeout(() => {
+      setPreviousTime(neededTime);
+      setPreviousAttempts(attempts);
+      setAttempts(0);
+      setNeededTime(0);
+      setCanPlay(true);
+    }, 500);
   };
 
   const resetBtn = () => {
-    console.log("reset");
-
     setAttempts(0);
     setNeededTime(0);
     setTimerOn(false);
@@ -53,9 +63,10 @@ export default function MemoryGame() {
   // * winning scenario:
   useEffect(() => {
     if (guessedCards === 2) {
+      // ! just for test purpose!
       setTimerOn(false);
       setWinningScreen(true);
-      flipThenReset([...cards], 500);
+      // flipThenReset([...cards], 500);
     }
   }, [guessedCards]);
 
@@ -96,6 +107,7 @@ export default function MemoryGame() {
   };
   // * <------------------------ selection function ------------------------ >
   const selectCard = (id) => {
+    if (!canPlay) return;
     let clonedCards = [...cards];
     const cardIndex = clonedCards.findIndex((element) => element.id === id);
     //  if clicked twice || or card is already open!: return
@@ -140,5 +152,7 @@ export default function MemoryGame() {
     attempts,
     neededTime,
     resetBtn,
+    previousTime,
+    previousAttempts,
   };
 }
