@@ -48,6 +48,10 @@
   width: 10rem;
 }
 
+.gleichNochmalBtn {
+  margin-top: 1.3rem;
+}
+
 .memoryHeadline {
   color: $yellow;
   font-family: $head-font;
@@ -116,12 +120,16 @@
   text-align: center;
   color: $yellow;
 }
-
+.winningSubContainer {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+}
 .winningSub {
-  font-size: 1.2rem;
-  width: 100%;
+  font-size: 1.5rem;
   text-align: center;
   color: white;
+  max-width: 70vw;
 }
 
 .winningText {
@@ -162,6 +170,7 @@
   perspective: 250px;
   transition: all 500ms;
 }
+
 @media (max-width: 840px) {
   .textAndGameContainer {
     max-width: 700px;
@@ -176,7 +185,7 @@
   }
 
   .winningSub {
-    font-size: 1rem;
+    font-size: 1.5rem;
   }
 }
 @media (max-width: 590px) {
@@ -191,6 +200,7 @@
     height: 3rem;
     width: 9rem;
   }
+
   .stats {
     font-size: 1.5rem;
   }
@@ -206,7 +216,7 @@
     font-size: 4.5rem;
   }
   .winningSub {
-    font-size: 0.8rem;
+    font-size: 1.3rem;
   }
 }
 @media (max-width: 450px) {
@@ -236,7 +246,7 @@
     font-size: 3.5rem;
   }
   .winningSub {
-    font-size: 0.65rem;
+    font-size: 1.1rem;
   }
 }
 

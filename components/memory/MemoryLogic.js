@@ -118,11 +118,11 @@ export default function MemoryGame() {
 
     setAttempts((prevState) => prevState + 1);
     if (openCards.length === 0) {
-      playCardFlipSound(1);
+      // playCardFlipSound(1);
       clonedCards[cardIndex].closed = !cards[cardIndex].closed;
       openCards.push(cardIndex);
     } else if (openCards.length === 1) {
-      playCardFlipSound(2);
+      // playCardFlipSound(2);
       clonedCards[cardIndex].closed = !cards[cardIndex].closed;
       openCards.push(cardIndex);
       // setAttempts((prevState) => prevState + 1);

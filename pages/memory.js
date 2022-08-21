@@ -41,21 +41,28 @@ export default function MemoryHtml() {
       <div className={`${winningClass()} ${styles.winningScreen}`}>
         <div className={styles.winningContent}>
           <h1 className={styles.winningHeadline}>
-            {" "}
             {
               winningText(neededTime, attempts, previousTime, previousAttempts)
                 .headline
             }
           </h1>
-          <h1 className={styles.winningSub}>
-            {" "}
-            {
-              winningText(neededTime, attempts, previousTime, previousAttempts)
-                .subhead
-            }
-          </h1>
+          <div className={styles.winningSubContainer}>
+            <h1 className={styles.winningSub}>
+              {
+                winningText(
+                  neededTime,
+                  attempts,
+                  previousTime,
+                  previousAttempts
+                ).subhead
+              }
+            </h1>
+          </div>
 
-          <button onClick={playAgain} className={btnStyles.transparentBtn}>
+          <button
+            onClick={playAgain}
+            className={`${btnStyles.transparentBtn} ${styles.gleichNochmalBtn}`}
+          >
             Gleich Nochmal
           </button>
         </div>
