@@ -1,15 +1,134 @@
+// .navbarContainer {
+//   position: fixed;
+//   top: 0;
+//   display: flex;
+//   flex-wrap: wrap;
+//   justify-content: center;
+//   align-items: center;
+//   margin: 0;
+//   padding: 0;
+//   color: white;
+//   height: 50px;
+//   width: 100vw;
+//   background-color: rgba(0, 0, 0, 0.95);
+//   z-index: 100;
+// }
+// .homeImgContainer {
+//   position: absolute;
+//   top: 10px;
+//   left: 30px;
+//   width: 5rem;
+//   height: 40px;
+//   cursor: pointer;
+// }
+// .homeImg {
+//   // position: relative;
+// }
+
+// was *
+// .navbarContainer {
+//   margin: 0;
+//   padding: 0;
+//   outline: none;
+//   box-sizing: border-box;
+// }
+// was a
+// .link {
+//   text-decoration: none;
+//   color: inherit;
+// }
 .navbarContainer {
-  position: fixed;
+  position: sticky;
+  z-index: 30;
   top: 0;
+}
+.nav {
   display: flex;
-  flex-wrap: wrap;
+  padding: 16px;
+  height: 60px;
+  background-color: black;
+  justify-content: space-between;
+  align-items: center;
+}
+.menuBar {
+  display: flex;
+  flex-direction: column;
+  row-gap: 6px;
+  cursor: pointer;
+}
+
+.homeImgContainer {
+  position: absolute;
+  top: 10px;
+  left: 30px;
+  width: 5rem;
+  height: 40px;
+  cursor: pointer;
+}
+
+.menuBar div {
+  width: 40px;
+  height: 4px;
+  background-color: white;
+  border-radius: 2px;
+}
+.menuList {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 60px;
+  width: 288px;
+  row-gap: 24px;
+  right: -288px;
+  padding: 24px 16px;
+  transition: all 0.2s;
+  min-height: calc(100vh - 60px);
+  background-color: black;
+}
+.menuList.active {
+  right: 0;
+}
+.link {
+  font-size: 18px;
+  position: relative;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.link:active {
+  // ! cool click animation here!
+}
+
+.center {
+  min-height: 600px;
+  display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0;
-  padding: 0;
-  color: white;
-  height: 50px;
-  width: 100vw;
-  background-color: rgba(0, 0, 0, 0.95);
-  z-index: 100;
+}
+.link::before {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -16px;
+  left: 0;
+  background-color: white;
+  transition: all 0.2s;
+}
+
+.link:hover:before {
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .menuBar {
+    display: none;
+  }
+  .menuList {
+    position: unset;
+    flex-direction: row;
+    min-height: fit-content;
+    width: fit-content;
+    column-gap: 24px;
+    align-items: center;
+  }
 }

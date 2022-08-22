@@ -1,7 +1,7 @@
 import MemoryGame from "@/components/memory/MemoryLogic.js";
 import SingleCard from "@/components/memory/SingleCard";
-import styles from "@/styles/components/Memory.module.scss";
-import btnStyles from "@/styles/components/buttons.module.scss";
+import style from "@/styles/components/Memory.module.scss";
+import btnStyle from "@/styles/components/buttons.module.scss";
 import winningText from "@/components/memory/winningText";
 
 export default function MemoryHtml() {
@@ -21,33 +21,33 @@ export default function MemoryHtml() {
   // * makes the winning screen visible or invisible
   const winningClass = () => {
     if (winningScreen) {
-      return styles.visibleWinningScreen;
+      return style.visibleWinningScreen;
     } else {
-      return styles.invisibleWinningScreen;
+      return style.invisibleWinningScreen;
     }
   };
   // * makes the memoryboard transarent
   // to avoid the Safari Bug where the rotation is visible
   const transparentClass = () => {
     if (winningScreen) {
-      return styles.transparent;
+      return style.transparent;
     } else {
-      return styles.visible;
+      return style.visible;
     }
   };
   // * in case of winnig: show Winning Screen
   return (
-    <div id="memory" className={styles.mainContainer}>
-      <div className={`${winningClass()} ${styles.winningScreen}`}>
-        <div className={styles.winningContent}>
-          <h1 className={styles.winningHeadline}>
+    <div id="memory" className={style.mainContainer}>
+      <div className={`${winningClass()} ${style.winningScreen}`}>
+        <div className={style.winningContent}>
+          <h1 className={style.winningHeadline}>
             {
               winningText(neededTime, attempts, previousTime, previousAttempts)
                 .headline
             }
           </h1>
-          <div className={styles.winningSubContainer}>
-            <h1 className={styles.winningSub}>
+          <div className={style.winningSubContainer}>
+            <h1 className={style.winningSub}>
               {
                 winningText(
                   neededTime,
@@ -61,43 +61,53 @@ export default function MemoryHtml() {
 
           <button
             onClick={playAgain}
-            className={`${btnStyles.transparentBtn} ${styles.gleichNochmalBtn}`}
+            className={`${btnStyle.transparentBtn} ${style.gleichNochmalBtn}`}
           >
             Gleich Nochmal
           </button>
         </div>
       </div>
-      <div className={`${styles.textAndGameContainer} ${transparentClass()}`}>
+      <div className={`${style.textAndGameContainer} ${transparentClass()}`}>
         <audio id="cardFlipSound" src="/sounds/card_flip.mp3"></audio>
         <audio id="cardFlipSound2" src="/sounds/card_flip.mp3"></audio>
-        <div className={styles.textContainer}>
-          <div className={styles.headlineContainer}>
-            <h1 className={styles.memoryHeadline}>Magic Memory</h1>
+        <div className={style.textContainer}>
+          <div className={style.headlineContainer}>
+            <h1 className={style.memoryHeadline}>Magic Memory</h1>
           </div>
-          <div className={styles.statsContainer}>
-            <h3 className={styles.stats}>Zeit: {neededTime}</h3>
+          <div className={style.statsContainer}>
+            <h3 className={`${style.stats} ${style.statsFont}`}>
+              Zeit: {neededTime}
+            </h3>
             <button
               onClick={resetBtn}
-              className={`${styles.resetBtn} ${btnStyles.transparentBtn}`}
+              className={`${style.resetBtn}  ${style.statsFont}  ${btnStyle.transparentBtn}`}
             >
               Neustart
             </button>
-            <h3 className={styles.stats}>Versuche: {attempts}</h3>
+            <h3 className={`${style.stats} ${style.statsFont}`}>
+              Versuche: {attempts}
+            </h3>
           </div>
-          <div className={styles.statsContainer}>
-            <h3 className={`${styles.stats} ${styles.prevStats}`}>
+          <div className={style.statsContainer}>
+            <h3
+              className={`${style.stats}  ${style.statsFont}  ${style.prevStats}`}
+            >
               Zeit: {previousTime}
             </h3>
-            <h3 className={`${styles.stats} ${styles.prevHeadline}`}>
+            <h3
+              className={`${style.stats}  ${style.statsFont}  ${style.prevHeadline}`}
+            >
               Letzter Versuch
             </h3>
-            <h3 className={`${styles.stats} ${styles.prevStats}`}>
+            <h3
+              className={`${style.stats}  ${style.statsFont}  ${style.prevStats}`}
+            >
               Versuche: {previousAttempts}
             </h3>
           </div>
         </div>
-        <div className={styles.memoryContainer}>
-          <div className={styles.allCards}>
+        <div className={style.memoryContainer}>
+          <div className={style.allCards}>
             {cards.map(({ url, closed, id, guessed }) => {
               return (
                 <SingleCard

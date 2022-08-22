@@ -60,12 +60,15 @@
 }
 
 .stats {
-  font-family: $hand-written;
+  // font-family: $hand-written;
   display: flex;
   justify-content: center;
   width: 30%;
   margin: 0;
-  font-size: 1.8rem;
+}
+
+.statsFont {
+  font-size: 1.1rem;
 }
 
 .prevStats {
@@ -197,12 +200,12 @@
     width: 9rem;
   }
   .resetBtn {
-    height: 3rem;
-    width: 9rem;
+    height: 2.5rem;
+    width: 8rem;
   }
 
-  .stats {
-    font-size: 1.5rem;
+  .statsFont {
+    font-size: 0.85rem;
   }
   .textAndGameContainer {
     max-width: 450px;
@@ -224,15 +227,14 @@
     letter-spacing: 0.15rem;
     font-size: 2.5rem;
   }
-  .stats {
-    font-size: 1.2rem;
+  .statsFont {
+    font-size: 0.7rem;
   }
   .prevHeadline {
     width: 8rem;
   }
   .resetBtn {
-    font-size: 1.2rem !important;
-    width: 8rem;
+    width: 7rem;
   }
   .textAndGameContainer {
     max-width: 450px;
