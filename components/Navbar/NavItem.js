@@ -11,7 +11,7 @@ export default function NavItem({ text, sectionId, active }) {
       offset={-50}
       duration={700}
     >
-      <a className={`${style.item} ${active ? style.active : ""}`}>{text}</a>
+      <h5 className={`${style.item} ${active ? style.active : ""}`}>{text}</h5>
     </Link>
   );
 }
