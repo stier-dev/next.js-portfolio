@@ -1,0 +1,257 @@
+@import "/styles/abstracts/colors";
+
+.mainContainer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100vw;
+  padding-bottom: 100px;
+}
+.headlinesContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+// ? Contact Form
+
+.contactFormContainer {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.inputBox {
+  position: relative;
+  width: 400px;
+  font-size: 1.2rem;
+  letter-spacing: 00.05rem;
+}
+.inputBox .input {
+  background: transparent;
+  width: 100%;
+  color: white;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  font-size: 1.3rem;
+  letter-spacing: 00.05rem;
+}
+.inputBox .inputTitle {
+  position: absolute;
+  left: 5px;
+  padding: 1px 0;
+  // text-transform: uppercase;
+  pointer-events: none;
+  color: $darkGray;
+  transition: all 0.5s;
+}
+
+.input:valid ~ .inputTitle,
+.input:focus ~ .inputTitle {
+  color: $blue;
+  transform: translateY(-22px);
+  font-size: 0.75rem;
+}
+
+.inputBox .stripe {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  background-color: white;
+  overflow: hidden;
+}
+
+.inputBox .stripe:before {
+  content: "";
+  position: absolute;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, $blue, $yellow, $blue);
+  animation: animate 5s linear infinite;
+  transition: all 0.5s;
+}
+
+@keyframes animate {
+  0% {
+    background-position-x: 0;
+  }
+  100% {
+    background-position-x: 400px;
+  }
+}
+
+.input:valid ~ .stripe:before,
+.input:focus ~ .stripe:before {
+  left: 0;
+}
+
+// ? MESSAGE INPUT BOX
+
+.messageInputBox {
+  position: relative;
+  width: 400px;
+  height: 220px;
+  letter-spacing: 00.05rem;
+  font-size: 1rem;
+  margin-top: 20px;
+  // margin-bottom: 10px;
+}
+
+.messageInputBox .messageInput {
+  // background: transparent;
+  background-color: black;
+  margin: 10px;
+  width: 380px;
+  height: 200px;
+  margin-bottom: 50px;
+  color: white;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  font-size: 1rem;
+  letter-spacing: 00.05rem;
+  resize: none;
+  z-index: 2;
+}
+
+.messageInputBox .messageInputBackground {
+  position: absolute;
+  left: 2px;
+  top: 2px;
+  width: 396px;
+  height: 216px;
+  background-color: black;
+  z-index: -1;
+}
+
+.messageInputBox .stripe {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 400px;
+  height: 220px;
+  background-color: rgba(255, 255, 255, 0.655);
+  overflow: hidden;
+  z-index: -2;
+}
+
+.messageInputBox .stripe:before {
+  content: "";
+  position: absolute;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, $blue, $yellow, $blue);
+  animation: animate 4s linear infinite;
+  transition: all 0.5s;
+}
+
+.messageInputBox .messageInputTitle {
+  font-size: 1.2rem;
+  position: absolute;
+  top: 6px;
+  left: 12px;
+  padding: 3px 0;
+  pointer-events: none;
+  color: $darkGray;
+  transition: all 0.5s;
+}
+
+.messageInput:valid ~ .messageInputTitle,
+.messageInput:focus ~ .messageInputTitle {
+  color: $blue;
+  transform: translateY(-34px);
+  font-size: 0.75rem;
+  left: 0;
+}
+
+.messageInput:valid ~ .stripe:before,
+.messageInput:focus ~ .stripe:before {
+  left: 0;
+}
+
+// !!! style button to look like the form!
+.btnContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+$btnWidth: 220px;
+$btnHeight: 40px;
+
+.contactBtn {
+  position: relative;
+  width: $btnWidth;
+  height: $btnHeight;
+  padding: 5px 10px;
+  font-size: 1rem;
+  letter-spacing: 00.05rem;
+  background: transparent;
+  border: none;
+  background-color: white;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.contactBtn:before {
+  content: "";
+  position: absolute;
+  left: -100%;
+  width: $btnWidth;
+  height: $btnHeight;
+  background: linear-gradient(90deg, $blue, $yellow, $blue);
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+.contactBtn:after {
+  content: attr(alt);
+  color: white;
+  font-size: 1rem;
+  position: absolute;
+  width: calc($btnWidth - 2px);
+  height: calc($btnHeight - 2px);
+  border-radius: 5px;
+  background-color: #000000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.1s ease-in-out;
+}
+.contactBtn:hover:before {
+  // background: orange;
+  left: 0;
+  // background-image: linear-gradient(
+  //   90deg,
+  //   #00c0ff 0%,
+  //   #ffcf00 49%,
+  //   #fc4f4f 80%,
+  //   #00c0ff 100%
+  // );
+  animation: hoverBtn 2s linear infinite;
+}
+.contactBtn:active:after {
+  color: $yellow;
+  font-size: 0.9rem;
+}
+
+@keyframes hoverBtn {
+  to {
+    background-position: $btnWidth;
+  }
+}
+
+// ! tilde ~ testen bei click Events und so

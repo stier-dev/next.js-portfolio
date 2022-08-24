@@ -12,6 +12,7 @@ const menueObject = [
 const Navbar = () => {
   const [navActive, setNavActive] = useState(null);
   const [activeIdx, setActiveIdx] = useState(-1);
+  const [hoverLogo, setHoverLogo] = useState(false);
 
   return (
     <header className={style.navbarContainer}>
@@ -23,8 +24,19 @@ const Navbar = () => {
           offset={-50}
           duration={700}
         >
-          <div className={style.homeImgContainer}>
-            <Image layout="fill" src={"/img/navbar/GeorgiStierLogo.svg"} />
+          <div
+            className={style.homeImgContainer}
+            onMouseEnter={() => setHoverLogo(true)}
+            onMouseLeave={() => setHoverLogo(false)}
+          >
+            <Image
+              layout="fill"
+              src={
+                !hoverLogo
+                  ? "/img/navbar/logo.svg"
+                  : "/img/navbar/logo_hover.svg"
+              }
+            />
           </div>
         </Link>
         <div onClick={() => setNavActive(!navActive)} className={style.menuBar}>
