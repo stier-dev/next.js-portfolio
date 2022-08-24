@@ -1,6 +1,6 @@
 import Memory from "./memory";
 import HeroSection from "./heroSection";
-import styles from "@/styles/index.module.scss";
+import styles from "@/styles/Index.module.scss";
 // import LoadingIcons from "@/components/LoadingIcons";
 import Contact from "./contact";
 // * dynamic loading / Deferred loading / lazy loading
