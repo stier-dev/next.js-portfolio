@@ -47,7 +47,7 @@
 .inputError {
   position: absolute;
   // top: -5px;
-  width: 500px;
+  width: 200px;
   color: $yellow;
   font-size: 1em;
 }
@@ -307,13 +307,26 @@ $btnHeight: 40px;
 }
 
 @media (max-width: 350px) {
+  .inputBox .input {
+    font-size: 1rem;
+  }
+  .messageInputBox .messageInput {
+    font-size: 0.9rem;
+  }
   .contactFormContainer {
     width: 250px;
+  }
+  .inputError {
+    font-size: 0.9em;
   }
 }
 @media (max-width: 300px) {
   .contactFormContainer {
     width: 200px;
+  }
+  .inputError {
+    width: 150px;
+    font-size: 0.7em;
   }
 }
 

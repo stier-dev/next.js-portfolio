@@ -109,7 +109,7 @@ export default function Contact() {
               },
               pattern: {
                 value: /\S+@\S+\.\S+/,
-                message: "Bitte gib eine gültige E-Mail Adresse ein",
+                message: "Die Email scheint falsch zu sein",
               },
             })}
             className={style.input}
