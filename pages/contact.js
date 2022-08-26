@@ -11,10 +11,19 @@
 // need security stuff, to secure peoples Data and spam bot protection
 
 import { useForm } from "react-hook-form";
+import { useState } from "react";
 import style from "@/styles/contact.module.scss";
 import axios from "axios";
 
 export default function Contact() {
+  const [messageSent, setMessageSent] = useState(false);
+  const [nameFocus, setNameFocus] = useState(false);
+
+  // ! if (input.value = empty) { make white and on spot }
+  // ! if (input.value >= 0) { blue, small on top }
+  // ! css: :focus { blue, small on top }
+  function setFocusInput(inputField) {}
+
   const {
     register,
     handleSubmit,
@@ -37,14 +46,13 @@ export default function Contact() {
       const response = await axios(config);
       console.log(response);
       if (response.status == 200) {
-        // !!! reactivate to reset
-        // reset();
-        console.log(
-          "success",
-          "Thank you for contacting us, we will be in touch soon."
-        );
+        reset();
+        setMessageSent(true);
       }
-    } catch (err) {}
+    } catch (err) {
+      console.log("--- ERROR ---");
+      console.log(err);
+    }
   }
 
   return (
@@ -56,6 +64,26 @@ export default function Contact() {
         onSubmit={handleSubmit(onSubmit)}
         className={style.contactFormContainer}
       >
+        <div
+          className={`${style.messageSentContainer}  ${
+            messageSent ? style.sentAppear : style.sentDisappear
+          }`}
+        >
+          <div className={style.sentTextContainer}>
+            <h1 className={`${style.sentHeadline}`}>Glückwunsch</h1>
+            <h3 className={`${style.sentMessage}`}>
+              Die Brieftaube ist unterwegs!
+            </h3>
+            <button
+              onClick={() => {
+                setMessageSent(false);
+                console.log("now you can write another message");
+              }}
+              className={`${style.contactBtn} ${style.newMessageBtn}`}
+              alt="Neue Nachricht"
+            ></button>
+          </div>
+        </div>
         {/* NAME */}
         <div className={style.inputBox}>
           <input
@@ -154,15 +182,13 @@ export default function Contact() {
           <i className={style.stripe}></i>
         </div>
         <div className={style.btnContainer}>
-          <button href="#" className={style.contactBtn} alt="Senden"></button>
+          <button className={style.contactBtn} alt="Senden"></button>
           {errors.name || errors.subject || errors.email ? (
             <span role="alert" className={style.submitError}>
-              * Bite fülle alle erforderlichen Felder aus *
+              * Bite fülle alle Felder aus *
             </span>
           ) : (
-            <h3 className={style.submitSuccess}>
-              Deine Nachricht wurde erfolgreich geschickt!
-            </h3>
+            ""
           )}
         </div>
       </form>

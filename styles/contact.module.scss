@@ -1,5 +1,14 @@
 @import "/styles/abstracts/colors";
 
+.sentDisappear {
+  opacity: 0;
+  pointer-events: none;
+}
+.sentAppear {
+  pointer-events: auto;
+  opacity: 1;
+}
+
 .mainContainer {
   position: relative;
   display: flex;
@@ -18,11 +27,12 @@
 
 // ? Contact Forms
 .contactFormContainer {
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   gap: 40px;
-  // !!! defines the width of all containing elements
+  // ? defines the width of all containing elements
   width: 400px;
   transition: width 1s;
 }
@@ -52,11 +62,42 @@
   font-size: 1em;
 }
 
-.submitSuccess {
+.messageSentContainer {
   position: absolute;
-  top: 60px;
+  display: flex;
+  justify-content: center;
+  top: -15%;
+  height: 130%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.733);
+  z-index: 1;
+}
+
+.sentTextContainer {
+  display: flex;
+  flex-wrap: wrap;
+  width: 120%;
+  padding-top: 2.5rem;
+  padding-bottom: 3rem;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 30%;
+  background-color: rgb(0, 0, 0);
+  border: 1px solid white;
+  border-radius: 5px;
+  transition: all 1s;
+}
+
+.sentHeadline {
+  font-size: 3rem;
+  margin: 0;
+  transition: all 1s;
+}
+
+.sentMessage {
   color: $yellow;
-  text-align: center;
+  transition: all 1s;
 }
 
 .submitError {
@@ -241,7 +282,7 @@ $btnHeight: 40px;
   left: -100%;
   width: $btnWidth;
   height: $btnHeight;
-  background: linear-gradient(90deg, $blue, $yellow, $blue);
+  background-color: white;
   border-radius: 5px;
   transition: width 1s ease-in-out;
   transition: all 0.3s ease-in-out;
@@ -263,6 +304,7 @@ $btnHeight: 40px;
 }
 .contactBtn:hover:before {
   left: 0;
+  background: linear-gradient(90deg, $blue, $yellow, $blue);
   animation: hoverBtn 2s linear infinite;
 }
 .contactBtn:active:after {
@@ -278,9 +320,23 @@ $btnHeight: 40px;
 
 // * Media Queries
 
+@media (max-width: 630px) {
+  .sentTextContainer {
+    width: 90%;
+    // padding: 2rem 0rem;
+  }
+}
+
 @media (max-width: 500px) {
   .contactFormContainer {
     width: 300px;
+  }
+
+  .sentHeadline {
+    font-size: 2rem;
+  }
+  .sentMessage {
+    font-size: 0.9rem;
   }
 
   .contactBtn {
@@ -307,6 +363,28 @@ $btnHeight: 40px;
 }
 
 @media (max-width: 350px) {
+  .sentHeadline {
+    font-size: 1.2rem;
+  }
+  .sentMessage {
+    font-size: 0.7rem;
+  }
+
+  .newMessageBtn {
+    width: 140px;
+    height: 32px;
+  }
+
+  .newMessageBtn:before {
+    height: 30px;
+    width: 138px;
+  }
+  .newMessageBtn:after {
+    width: 138px;
+    height: 30px;
+    font-size: 0.7rem;
+  }
+
   .inputBox .input {
     font-size: 1rem;
   }
