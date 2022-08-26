@@ -18,6 +18,11 @@
   width: 100vw;
   padding-bottom: 100px;
 }
+
+.formAndSucessScreenContainer {
+  position: relative;
+}
+
 .headlinesContainer {
   display: flex;
   justify-content: center;
@@ -84,7 +89,7 @@
   position: absolute;
   top: 30%;
   background-color: rgb(0, 0, 0);
-  border: 1px solid white;
+  border: 1px solid rgb(122, 122, 122);
   border-radius: 5px;
   transition: all 1s;
 }
@@ -116,11 +121,17 @@
   transition: all 0.5s;
 }
 
-.input:optional ~ .inputTitle {
-  color: $darkGray;
+// .input:optional ~ .inputTitle {
+//   color: $darkGray;
+// }
+
+.contactFormContainer .inputBox .activeInputTitle {
+  transform: translateY(-22px);
+  font-size: 0.75rem;
+  color: $blue;
 }
 
-.input:valid ~ .inputTitle,
+// .input:valid ~ .inputTitle,
 .input:focus ~ .inputTitle {
   color: $blue;
   transform: translateY(-22px);
@@ -157,8 +168,11 @@
   }
 }
 
-.input:valid ~ .stripe:before,
 .input:focus ~ .stripe:before {
+  left: 0;
+}
+
+.inputBox .activeStripe:before {
   left: 0;
 }
 
@@ -234,7 +248,7 @@
   transition: all 0.5s;
 }
 
-.messageInput:enabled ~ .messageInputTitle,
+// .messageInput:enabled ~ .messageInputTitle,
 .messageInput:focus ~ .messageInputTitle {
   color: $blue;
   transform: translateY(-34px);
@@ -242,8 +256,18 @@
   left: 0;
 }
 
-.messageInput:active ~ .stripe:before,
+.messageInputBox .activeMessageInputTitle {
+  color: $blue;
+  transform: translateY(-34px);
+  font-size: 0.75rem;
+  left: 0;
+}
+
 .messageInput:focus ~ .stripe:before {
+  left: 0;
+}
+
+.messageInputBox .activeStripe:before {
   left: 0;
 }
 
