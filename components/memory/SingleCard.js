@@ -1,5 +1,5 @@
 import Image from "next/image";
-import styles from "@/styles/components/Memory.module.scss";
+import style from "@/styles/components/Memory.module.scss";
 
 export default function SingleCard({
   selectCard,
@@ -18,36 +18,34 @@ export default function SingleCard({
         }
       }}
     >
-      <div
-        className={`${styles.oneCard} ${closed ? styles.closed : styles.open}`}
-      >
-        <div className={`${styles.cardFrontside} ${styles.card}`}>
+      <div className={`${style.oneCard} ${closed ? style.closed : style.open}`}>
+        <div className={`${style.cardFrontside} ${style.card}`}>
           {/* FRONT SIDE -------------------------- */}
-          <div className={styles.frontsideBackground}>
+          <div className={style.frontsideBackground}>
             <Image
               layout="fill"
               src={"/img/memory/frontside/frontside_background.svg"}
             />
           </div>
-          <div className={styles.frontsideImg}>
+          <div className={style.frontsideImg}>
             <Image layout="fill" src={url} />
           </div>
         </div>
-        <div className={`${styles.cardBackside} ${styles.card}`}>
+        <div className={`${style.cardBackside} ${style.card}`}>
           {/* BACK SIDE -------------------------- */}
-          <div className={styles.backgroundShapes}>
+          <div className={style.backgroundShapes}>
             <Image
               layout="fill"
               src={"/img/memory/backside/background_border.svg"}
             />
           </div>
-          <div className={styles.backsideCircle}>
+          <div className={style.backsideCircle}>
             <Image
               layout="fill"
               src={"/img/memory/backside/background_pattern.svg"}
             />
           </div>
-          <div className={styles.backsideHexagon}>
+          <div className={style.backsideHexagon}>
             <Image
               layout="fill"
               src={"/img/memory/backside/hover_hexagon.svg"}

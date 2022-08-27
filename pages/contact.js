@@ -1,14 +1,7 @@
-// Have to buy a domain first!
+// ! Telefonnummer mit Whatsapp Icon hinzufügen
+// ! email hinzufügen
 
-// Good explanation:
-// https://www.youtube.com/watch?v=QrVYLLpoyMw&ab_channel=ColbyFayock
-
-// Form error message and forth:
-// Next.js (react) contact form using react-hook-form and /api route for submission
-// https://www.youtube.com/watch?v=7j6xWy4P_LA&ab_channel=AdamRichardson
-
-// automaticly sent the people an email, that i will message them back soon :)
-// need security stuff, to secure peoples Data and spam bot protection
+// ! memory different for schmartphones an
 
 import { useForm } from "react-hook-form";
 import { useState, useEffect } from "react";
