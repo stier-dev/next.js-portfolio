@@ -187,6 +187,10 @@
 
 .card {
   position: absolute;
+
+  perspective: 0;
+  backface-visibility: hidden;
+  transform: translate3d(0, 0, 0);
   -webkit-perspective: 0;
   -webkit-backface-visibility: hidden;
   -webkit-transform: translate3d(0, 0, 0);
@@ -293,14 +297,14 @@
 }
 
 //  ? TOUCHSCREEN
-// @media screen and (hover: none) {
-//   .backsideHexagon {
-//     animation: rotateRight 60s linear infinite;
-//   }
-//   .backsideCircle {
-//     animation: rotateLeft 35s linear infinite;
-//   }
-// }
+@media screen and (hover: none) {
+  .backsideHexagon {
+    animation: rotateRight 60s linear infinite;
+  }
+  .backsideCircle {
+    animation: rotateLeft 35s linear infinite;
+  }
+}
 
 // ? MEDIA QUERIES
 

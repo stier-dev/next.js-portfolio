@@ -38,10 +38,12 @@
 //   color: inherit;
 // }
 .navbarContainer {
-  position: sticky;
+  width: 100vw;
+  position: fixed;
   z-index: 30;
   top: 0;
 }
+
 .nav {
   display: flex;
   padding: 16px;

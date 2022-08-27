@@ -1,5 +1,5 @@
 import Head from "next/head";
-import styles from "@/styles/components/Layout.module.scss";
+import style from "@/styles/components/Layout.module.scss";
 // import Navbar from "./Navbar";
 import Footer from "./Footer";
 import Navbar from "@/components/Navbar";
@@ -23,7 +23,7 @@ export default function Layout({ title, keywords, description, children }) {
       {/* <DynamicNavbar /> */}
       {/* </Suspense> */}
       <Navbar />
-      <div className={styles.container}>{children}</div>
+      <div className={style.container}>{children}</div>
       <Footer />
     </div>
   );
