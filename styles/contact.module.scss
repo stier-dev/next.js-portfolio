@@ -43,20 +43,16 @@
   display: flex;
   min-width: 20rem;
 }
+
 .iconAndText {
   opacity: 0.6;
+  display: flex;
+  align-items: baseline;
+  margin: 0rem 2rem;
 }
 .iconAndText:hover {
   opacity: 1;
 }
-
-.iconAndText {
-  display: flex;
-  align-items: baseline;
-  // background-color: rgba(255, 192, 203, 0.508);
-  margin: 0rem 2rem;
-}
-
 .image {
   position: relative;
   width: 0.8rem;
@@ -433,6 +429,14 @@ $btnHeight: 40px;
   }
   .contactBtn:active:after {
     font-size: 0.9rem;
+  }
+  .contactInfos {
+    flex-wrap: wrap;
+  }
+  .iconAndText {
+    justify-content: center;
+    margin-bottom: 1rem;
+    width: 100%;
   }
 }
 
