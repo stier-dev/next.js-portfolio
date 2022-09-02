@@ -60,8 +60,8 @@ const Navbar = () => {
                 id="line"
                 fill="none"
                 stroke="currentColor"
-                stroke-width="10"
-                stroke-linecap="round"
+                strokeWidth="10"
+                strokeLinecap="round"
                 d="M -40 0 h 80"
               />
             </defs>
