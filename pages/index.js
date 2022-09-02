@@ -1,3 +1,8 @@
+// ! make scroll only possible after the load!
+// ! make sections load only if user scrolled to them
+// ! make sure no functions or else from other sections run in the background
+// ! throtting and debounce have to work
+
 import Memory from "./memory";
 import HeroSection from "./heroSection";
 import styles from "@/styles/Index.module.scss";
@@ -10,9 +15,10 @@ import Contact from "./contact";
 export default function Home() {
   return (
     <div className={styles.container}>
-      <Contact />
-      <Memory />
+      {/* <HeroSection /> */}
       <HeroSection />
+      <Memory />
+      <Contact />
     </div>
   );
 }

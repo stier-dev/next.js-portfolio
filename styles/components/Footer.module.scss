@@ -1,1 +1,18 @@
-
+.footerContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  background-color: blue;
+}
+.linksContainer {
+  display: flex;
+  justify-content: center;
+  width: 80%;
+  background-color: pink;
+}
+.link {
+  //   width: 5rem;
+  margin: 1rem 1rem;
+  cursor: pointer;
+}

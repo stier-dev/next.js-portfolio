@@ -1,42 +1,5 @@
-// .navbarContainer {
-//   position: fixed;
-//   top: 0;
-//   display: flex;
-//   flex-wrap: wrap;
-//   justify-content: center;
-//   align-items: center;
-//   margin: 0;
-//   padding: 0;
-//   color: white;
-//   height: 50px;
-//   width: 100vw;
-//   background-color: rgba(0, 0, 0, 0.95);
-//   z-index: 100;
-// }
-// .homeImgContainer {
-//   position: absolute;
-//   top: 10px;
-//   left: 30px;
-//   width: 5rem;
-//   height: 40px;
-//   cursor: pointer;
-// }
-// .homeImg {
-//   // position: relative;
-// }
+@import "/styles/abstracts/colors";
 
-// was *
-// .navbarContainer {
-//   margin: 0;
-//   padding: 0;
-//   outline: none;
-//   box-sizing: border-box;
-// }
-// was a
-// .link {
-//   text-decoration: none;
-//   color: inherit;
-// }
 .navbarContainer {
   width: 100vw;
   position: fixed;
@@ -52,11 +15,18 @@
   justify-content: space-between;
   align-items: center;
 }
-.menuBar {
-  display: flex;
-  flex-direction: column;
-  row-gap: 6px;
-  cursor: pointer;
+
+.item {
+  margin: 0;
+  font-weight: 400;
+  width: auto;
+  min-width: 5rem;
+}
+
+.itemSecondMenue {
+  font-weight: 300;
+  padding: 0;
+  margin-bottom: 0.2rem;
 }
 
 .homeImgContainer {
@@ -66,39 +36,46 @@
   width: 5rem;
   height: 40px;
   cursor: pointer;
+  z-index: 11;
 }
 
-.menuBar div {
-  width: 40px;
-  height: 4px;
-  background-color: white;
-  border-radius: 2px;
-}
 .menuList {
   display: flex;
   flex-direction: column;
   position: fixed;
   top: 60px;
-  width: 288px;
+  width: 8rem;
   row-gap: 24px;
   right: -288px;
-  padding: 24px 16px;
+  padding: 0;
   transition: all 0.2s;
   min-height: calc(100vh - 60px);
-  background-color: black;
+  // background-color: black;
+  opacity: 1;
+  transition: all 400ms ease-in-out;
+  z-index: 10;
 }
 .menuList.active {
   right: 0;
 }
-.link {
-  font-size: 18px;
-  position: relative;
-  transition: all 0.2s;
-  cursor: pointer;
+
+.menueBackground {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  opacity: 0.85;
 }
 
-.link:active {
-  // ! cool click animation here!
+.link {
+  position: relative;
+  padding-left: 1.3rem;
+  padding-top: 1rem;
+  font-size: 1.1rem;
+  transition: all 0.2s;
+  cursor: pointer;
 }
 
 .center {
@@ -112,25 +89,147 @@
   position: absolute;
   width: 0%;
   height: 2px;
-  bottom: -16px;
-  left: 0;
+  bottom: -0.4rem;
+  left: 1.3rem;
   background-color: white;
   transition: all 0.2s;
 }
 
-.link:hover:before {
-  width: 100%;
+.link:hover {
+  color: $yellow;
 }
+.link:hover:before {
+  background-color: $yellow;
+  width: 5rem;
+}
+
+.secondMenue {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 60px;
+  width: 20rem;
+  row-gap: 24px;
+  right: -13rem;
+  padding: 0;
+  transition: all 0.2s;
+  min-height: calc(100vh - 60px);
+  background-color: black;
+  transition: all 500ms ease;
+  opacity: 0;
+  pointer-events: none;
+  z-index: -10;
+}
+
+.portfolio {
+  width: 100%;
+  margin-top: 2.3rem;
+}
+
+.portfolio:hover ~ .secondMenue {
+  right: 0;
+  opacity: 0.92;
+  pointer-events: auto;
+}
+.secondMenue:hover {
+  right: 0;
+  opacity: 0.92;
+  pointer-events: auto;
+}
+
+.portfolio:visited {
+  background-color: orange;
+}
+
+// !!! button
+.button {
+  position: absolute;
+  right: 1rem;
+  width: 3rem;
+  background: none;
+  border: none;
+  color: white;
+  padding: 0.5rem;
+  cursor: pointer;
+  transition: right 500ms ease-in-out;
+}
+.button:focus {
+  outline-color: currentColor;
+}
+
+.button svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.button .translate {
+  transition: transform 0.25s ease-in-out;
+  transition-delay: 0.25s;
+}
+.button .rotate {
+  transition: transform 0.25s ease-in-out;
+  transition-delay: 0s;
+}
+.button.open .translate {
+  transform: translateY(0);
+  transition-delay: 0s;
+}
+.button.open .rotate {
+  transform: rotate(0);
+  transition-delay: 0.25s;
+}
+
 @media screen and (min-width: 768px) {
-  .menuBar {
-    display: none;
+  .button {
+    right: -10rem;
+  }
+
+  .link {
+    padding-top: 1.5rem;
+    height: 60px;
+  }
+  .link:before {
+    bottom: 0.5rem;
   }
   .menuList {
     position: unset;
+    height: 60px;
     flex-direction: row;
     min-height: fit-content;
     width: fit-content;
     column-gap: 24px;
     align-items: center;
+    background-color: none;
+    transition: opacity 1s ease-in-out;
+    opacity: 1;
+  }
+  .portfolio {
+    margin-top: 0;
+  }
+  .secondMenue {
+    width: 100vw;
+    right: 0;
+    top: 60px;
+    min-height: 0;
+    min-height: 3rem;
+    flex-direction: row;
+  }
+  .portfolio:hover ~ .secondMenue {
+    top: 60px;
+  }
+  .secondMenue:hover {
+    top: 60px;
+  }
+
+  .navBackground {
+    position: fixed;
+    width: 100vw;
+    height: 60px;
+    background-color: black;
+    z-index: 2;
+  }
+
+  .item {
+    z-index: -100;
   }
 }

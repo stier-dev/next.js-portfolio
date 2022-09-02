@@ -7,6 +7,7 @@ import { useForm } from "react-hook-form";
 import { useState, useEffect } from "react";
 import style from "@/styles/contact.module.scss";
 import axios from "axios";
+import Image from "next/image";
 
 export default function Contact() {
   const {
@@ -56,10 +57,30 @@ export default function Contact() {
   }
 
   return (
-    <div className={style.mainContainer}>
+    <div id="contact" className={style.mainContainer}>
       <div className={style.headlinesContainer}>
-        <h1>KONTAKT</h1>
+        <h1 className={style.headline}>KONTAKT</h1>
+        <div className={style.contactContainer}>
+          <div className={style.contactInfos}>
+            <a href="tel:+491743917416" className={style.iconAndText}>
+              <div className={`${style.image} ${style.tel}`}>
+                <Image layout="fill" src={"/img/contact/phone.svg"} />
+              </div>
+              <div className={style.image}>
+                <Image layout="fill" src={"/img/contact/whatsapp.svg"} />
+              </div>
+              <h3 className={style.contact}>0174 3917416</h3>
+            </a>
+            <a href="mailto:info@stier.dev" className={style.iconAndText}>
+              <div className={`${style.image} ${style.mail}`}>
+                <Image layout="fill" src={"/img/contact/mail.svg"} />
+              </div>
+              <h3 className={style.contact}>info@stier.dev</h3>
+            </a>
+          </div>
+        </div>
       </div>
+
       <div className={style.formAndSucessScreenContainer}>
         <div
           className={`${style.messageSentContainer}  ${
