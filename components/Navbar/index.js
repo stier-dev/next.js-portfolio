@@ -66,18 +66,18 @@ const Navbar = () => {
               />
             </defs>
             <g>
-              <g class={style.translate} transform="translate(0 -30)">
-                <g class={style.rotate} transform="rotate(-45)">
+              <g className={style.translate} transform="translate(0 -30)">
+                <g className={style.rotate} transform="rotate(-45)">
                   <use transform="rotate(45)" href="#line" />
                 </g>
               </g>
 
-              <g class={style.rotate} transform="rotate(45)">
+              <g className={style.rotate} transform="rotate(45)">
                 <use transform="rotate(-45)" href="#line" />
               </g>
 
-              <g class={style.translate} transform="translate(0 30)">
-                <g class={style.rotate} transform="rotate(-45)">
+              <g className={style.translate} transform="translate(0 30)">
+                <g className={style.rotate} transform="rotate(-45)">
                   <use transform="rotate(45)" href="#line" />
                 </g>
               </g>
