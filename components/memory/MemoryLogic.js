@@ -62,7 +62,7 @@ export default function MemoryGame() {
   };
   // * winning scenario:
   useEffect(() => {
-    if (guessedCards === 2) {
+    if (guessedCards === 12) {
       // ! just for test purpose!
       setTimerOn(false);
       setWinningScreen(true);
