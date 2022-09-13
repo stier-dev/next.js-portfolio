@@ -1,8 +1,6 @@
 import Head from "next/head";
 import style from "@/styles/components/Layout.module.scss";
-// import Navbar from "./Navbar";
 import Footer from "./Footer";
-import Navbar from "@/components/Navbar";
 import Nav from "@/components/Nav";
 
 // suspense
