@@ -1,0 +1,220 @@
+@import "/styles/abstracts/colors";
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100vw;
+}
+.mainBackground {
+  position: absolute;
+  top: 0;
+  height: 60px;
+  width: 100vw;
+  background-color: rgb(0, 0, 0);
+}
+
+.homeImgContainer {
+  position: absolute;
+  top: 12px;
+  left: 30px;
+  width: 65px;
+  height: 40px;
+  cursor: pointer;
+}
+
+// ? Main Menue Items:
+
+.menueItem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  height: 60px;
+  width: 100%;
+  z-index: 101;
+}
+
+.menueText {
+  position: relative;
+  font-size: 1rem;
+  margin: 0;
+  font-weight: 200;
+  color: white;
+  // padding: 1rem;
+  cursor: pointer;
+}
+
+.mobileSubMenueClippingMask {
+  position: absolute;
+  right: 150px;
+  top: 0;
+  width: 150px;
+  height: 500px;
+  // background-color: orange;
+  clip-path: inset(0 0 0 0 round 0);
+}
+
+.mobileMenue {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 60px;
+  width: 150px;
+  right: 0;
+  transition: right 600ms ease-in-out;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+// .openMobileBackground {
+//   position: absolute;
+//   right: 0px;
+//   top: 60px;
+//   background-color: rgba(0, 0, 0, 0.9);
+//   height: 300px;
+//   width: 250px;
+// }
+
+.closedMobileMenue {
+  right: -150px;
+}
+.openMobileMenue {
+  right: 0;
+}
+
+.portfolio {
+  animation: portfolio 600ms ease-in-out;
+}
+
+.about {
+  animation: about 600ms ease-in-out;
+}
+.contact {
+  animation: contact 600ms ease-in-out;
+}
+
+@keyframes portfolio {
+  0% {
+    right: -2rem;
+  }
+  20% {
+    right: -2rem;
+  }
+
+  70% {
+    right: 0;
+  }
+}
+
+@keyframes contact {
+  0% {
+    right: -2rem;
+  }
+  50% {
+    right: -2rem;
+  }
+
+  100% {
+    right: 0;
+  }
+}
+@keyframes about {
+  0% {
+    right: -2rem;
+  }
+  40% {
+    right: -2rem;
+  }
+  90% {
+    right: 0;
+  }
+}
+
+.mobileSubMenue {
+  position: absolute;
+  right: -150px;
+  top: 0px;
+  background-color: rgba(26, 26, 26, 0.93);
+  opacity: 0;
+  transition: all 500ms ease-in-out;
+  width: 150px;
+}
+
+.mobileMenueBackground {
+  height: 100%;
+  width: 100%;
+}
+
+.menueText:hover {
+  color: $yellow;
+}
+.portfolio:focus {
+  color: $yellow;
+}
+
+.portfolio:hover ~ .mobileSubMenueClippingMask {
+  .mobileSubMenue {
+    right: 0;
+    opacity: 1;
+  }
+}
+
+.mobileSubMenue:hover {
+  right: 0;
+  opacity: 1;
+}
+
+// media queries
+
+@media (min-width: 500px) {
+  .closedMobileMenue {
+    right: -100px;
+    opacity: 0;
+    transition: all 1s;
+    pointer-events: none;
+  }
+  .openMobileMenue {
+    right: -100px;
+    opacity: 0;
+    transition: all 1s;
+    pointer-events: none;
+  }
+}
+
+// ? sub menue animations
+
+.portfolio:hover ~ .mobileSubMenueClippingMask {
+  .one {
+    // animation: textFade 400ms ease-in-out;
+  }
+  .two {
+    animation: textFade 600ms ease-in-out;
+  }
+  .three {
+    animation: textFade 800ms ease-in-out;
+  }
+  .four {
+    animation: textFade 950ms ease-in-out;
+  }
+  .five {
+    animation: textFade 1100ms ease-in-out;
+  }
+  .six {
+    animation: textFade 1200ms ease-in-out;
+  }
+}
+
+@keyframes textFade {
+  0% {
+    right: -2rem;
+  }
+  100% {
+    right: 0;
+  }
+}

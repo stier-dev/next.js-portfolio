@@ -3,6 +3,8 @@ import style from "@/styles/components/Layout.module.scss";
 // import Navbar from "./Navbar";
 import Footer from "./Footer";
 import Navbar from "@/components/Navbar";
+import Nav from "@/components/Nav";
+
 // suspense
 import dynamic from "next/dynamic";
 import { Suspense } from "react";
@@ -22,7 +24,8 @@ export default function Layout({ title, keywords, description, children }) {
       {/* <Suspense fallback={<div>Loading....</div>}> */}
       {/* <DynamicNavbar /> */}
       {/* </Suspense> */}
-      <Navbar />
+      {/* <Navbar /> */}
+      <Nav />
       <div className={style.container}>{children}</div>
       <Footer />
     </div>

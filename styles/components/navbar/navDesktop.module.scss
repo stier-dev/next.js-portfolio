@@ -1,0 +1,127 @@
+@import "/styles/abstracts/colors";
+
+.noPointerEvents {
+}
+
+.menueContainer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 60px;
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  pointer-events: none;
+}
+
+.menueText {
+  pointer-events: all;
+  position: relative;
+  font-size: 1rem;
+  margin: 0;
+  font-weight: 200;
+  color: white;
+  padding: 0;
+}
+
+.menueItemContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  pointer-events: all;
+  cursor: pointer;
+}
+
+.menueItemContainer:hover {
+  .menueText {
+    color: $yellow;
+  }
+}
+
+.portfolio:hover {
+  .menueText {
+    color: $yellow;
+  }
+}
+
+// ! MENUE LINKS
+
+.linkTextContainer {
+  display: flex;
+  align-items: center;
+  position: relative;
+  height: 60px;
+  padding: 2rem;
+}
+
+// ! SUB MENUE
+
+.subMenueClippingMask {
+  position: absolute;
+  right: 0;
+  top: 60px;
+  width: 100%;
+  height: 200px;
+  clip-path: inset(0 0 0 0 round 0);
+  pointer-events: none;
+}
+
+.subMenue {
+  display: flex;
+  flex-wrap: wrap;
+  position: absolute;
+  justify-content: center;
+  top: -70px;
+  left: 0;
+  width: 100%;
+  pointer-events: all;
+  background-color: rgba(0, 0, 0, 0.9);
+  transition: all 400ms ease-in-out;
+
+  opacity: 0;
+}
+
+.twoItems {
+  display: flex;
+}
+
+.divisionLine {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.7);
+  opacity: 0;
+  transition: opacity 700ms ease-in-out;
+}
+
+.portfolio:hover ~ .subMenueClippingMask {
+  .divisionLine {
+    opacity: 1;
+  }
+  .subMenue {
+    opacity: 1;
+  }
+}
+.subMenue:hover {
+  top: 0px;
+  opacity: 1;
+}
+
+.portfolio:hover ~ .subMenueClippingMask {
+  .subMenue {
+    top: 0px;
+  }
+}
+
+.subMenue:hover ~ .divisionLine {
+  opacity: 1;
+}
+
+// @media ...   sub menue : top: -70px; -> higher number if smaler screen!
+
+// .menueItemContainer:hover ~ .subMenueClippingMask {
+//   background-color: saddlebrown !important;
+// }

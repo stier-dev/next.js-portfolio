@@ -1,7 +1,7 @@
 import { Link } from "react-scroll";
 import Image from "next/image";
 import React, { useState } from "react";
-import NavItem from "@/components/Navbar/NavItem";
+// import NavItem from "@/components/Navbar/NavItem";
 import style from "@/styles/components/Navbar.module.scss";
 
 // const menueObject = [
