@@ -5,13 +5,11 @@ import HamburgerBtn from "./HamburgerBtn";
 import MobileMenue from "./MobileMenue";
 import DesktopMenue from "./DesktopMenue";
 import { useRouter } from "next/router";
-import { test } from "./MobileMenue";
 
 export default function Nav() {
   const [hoverLogo, setHoverLogo] = useState(false);
   const [navActive, setNavActive] = useState(false);
   const router = useRouter();
-  console.log(test);
 
   return (
     <div className={style.navbar}>
