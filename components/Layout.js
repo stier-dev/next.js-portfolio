@@ -1,7 +1,12 @@
 import Head from "next/head";
 import style from "@/styles/components/Layout.module.scss";
 import Footer from "./Footer";
-import Nav from "@/components/Nav";
+import Navbar from "@/components/Navbar";
+
+// {/* <Suspense fallback={<div>Loading....</div>}> */}
+// {/* <DynamicNavbar /> */}
+// {/* </Suspense> */}
+// {/* <Navbar /> */}
 
 // suspense
 import dynamic from "next/dynamic";
@@ -19,11 +24,8 @@ export default function Layout({ title, keywords, description, children }) {
         <meta name="description" content={description} />
         <meta name="keywords" content={keywords} />
       </Head>
-      {/* <Suspense fallback={<div>Loading....</div>}> */}
-      {/* <DynamicNavbar /> */}
-      {/* </Suspense> */}
-      {/* <Navbar /> */}
-      <Nav />
+
+      <Navbar />
       <div className={style.container}>{children}</div>
       <Footer />
     </div>
