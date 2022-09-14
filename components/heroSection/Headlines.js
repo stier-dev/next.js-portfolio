@@ -2,7 +2,7 @@ import Image from "next/image";
 import { useState, useEffect } from "react";
 import style from "@/styles/heroSection/headlines.module.scss";
 
-export default function () {
+export default function Headlines() {
   let jumboH1 = undefined;
   const [ready, setReady] = useState(false);
   const [hoverGeorgiy, setHoverGeorgiy] = useState(false);
