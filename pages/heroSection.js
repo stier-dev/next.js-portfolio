@@ -1,4 +1,5 @@
-import style from "@/styles/heroSection.module.scss";
+import style from "@/styles/heroSection/heroSection.module.scss";
+import Headlines from "@/components/herosection/Headlines";
 
 export default function HeroSection() {
   return (
@@ -8,6 +9,9 @@ export default function HeroSection() {
         width="100%"
         className={style.iFrame}
       ></iframe>
+      <div className={style.headlinesContainer}>
+        <Headlines />
+      </div>
     </div>
   );
 }

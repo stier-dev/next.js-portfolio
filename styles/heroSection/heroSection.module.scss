@@ -24,3 +24,11 @@
   overflow-x: hidden;
   overflow-y: hidden;
 }
+
+.headlinesContainer {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  top: 0rem;
+  z-index: 10;
+}

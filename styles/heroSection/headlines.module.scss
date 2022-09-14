@@ -1,97 +1,184 @@
-#matrix-canvas {
-  width: 100%;
-  height: 95%;
-  position: absolute;
-  top: 0;
-  overflow: hidden;
-}
+@import "/styles/abstracts/colors";
 
-#hero-heaadlines {
-  position: fixed;
-  top: 20vh;
-  width: 100vw;
-  overflow-y: visible;
-  display: -webkit-box;
-  display: -ms-flexbox;
+// ! Umbrella:
+.textAndUmbrella {
+  position: absolute;
   display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  z-index: 2;
-  -webkit-transition: opacity 2s ease-in;
-  transition: opacity 2s ease-in;
+  top: 10vh;
+
+  width: 30rem;
 }
 
-#hero-jumbo {
-  font-family: "Zaio";
-  letter-spacing: 0.4rem;
-  color: white;
-  font-size: 8rem;
-  text-align: center;
-  position: relative;
-  -webkit-transition: font-size 0.2s ease-in;
-  transition: font-size 0.2s ease-in;
-  width: 100%;
-}
-
-@media all and (min-width: 2300px) {
-  #hero-jumbo {
-    letter-spacing: 0.2rem;
-    font-size: 10rem;
-  }
-}
-
-@media all and (min-width: 1500px) {
-  #hero-jumbo {
-    letter-spacing: 0.2rem;
-    font-size: 8rem;
-  }
-}
-
-@media all and (max-width: 1150px) {
-  #hero-jumbo {
-    letter-spacing: 0.2rem;
-    font-size: 6rem;
-  }
-}
-
-@media all and (max-width: 710px) {
-  #hero-jumbo {
-    letter-spacing: 0.15rem;
-    font-size: 4rem;
-  }
-}
-
-@media all and (max-width: 480px) {
-  #hero-jumbo {
-    letter-spacing: 0.15rem;
-    font-size: 3rem;
-  }
-}
-
-@media all and (max-width: 370px) {
-  #hero-jumbo {
-    letter-spacing: 0.1rem;
-    font-size: 2.4rem;
-  }
-}
-
-#hero-h2 {
-  text-align: center;
-  font-family: "Stay Classy SLDT";
-  color: rgba(89, 27, 12, 0.4);
-  font-size: 4rem;
-  -webkit-transition: font-size 0.45s ease-in;
-  transition: font-size 0.45s ease-in;
-  width: 100%;
+.backgroundImage {
   position: absolute;
+  top: 3rem;
+  height: 25rem;
+  width: 100%;
 }
 
-#hero-h2:hover {
-  font-size: 5rem;
-  color: #591b0c;
+.headlines {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  top: 11rem;
+  height: 12rem;
+  width: 100%;
+  background-color: black;
+}
+
+.heroJumbo {
+  position: absolute;
+  top: 0px;
+  margin: 0.1rem;
+  font-family: "Zaio";
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  -webkit-transition: font-size 0.2s ease-in;
+  transition: font-size 0.3s ease-in;
+  cursor: default;
+}
+
+.georgiy {
+  position: absolute;
+  top: 5rem;
+  height: 5.2rem;
+  width: 9rem;
+  transition: all 400ms ease-in-out;
+}
+
+.georgiy:hover {
+  transform: scale(1.2);
+}
+
+// ! Responsiveness
+
+.heroJumbo {
+  letter-spacing: 0.2rem;
+  font-size: 4rem;
+}
+.textAndUmbrella {
+  transition: all 400ms ease-in-out;
+}
+
+.backgroundImage {
+  top: 1rem;
+  height: 33rem;
+  width: 100%;
+}
+
+.headlines {
+  top: 11.8rem;
+  height: 12rem;
+  width: 100%;
+}
+.georgiy {
+  top: 5.3rem;
+  height: 5.5rem;
+  width: 11rem;
+}
+
+@media all and (max-width: 1200px) {
+  .heroJumbo {
+    font-size: 2.9rem;
+  }
+  .textAndUmbrella {
+    width: 25rem;
+  }
+
+  .backgroundImage {
+    top: 2rem;
+    height: 25rem;
+    width: 100%;
+  }
+
+  .headlines {
+    top: 10.5rem;
+    height: 9.5rem;
+    width: 100%;
+  }
+  .georgiy {
+    top: 4rem;
+    height: 4.5rem;
+    width: 9rem;
+  }
+}
+
+@media all and (max-width: 750px) {
+  .heroJumbo {
+    font-size: 2.5rem;
+  }
+
+  .backgroundImage {
+    top: 2.2rem;
+    height: 22rem;
+    width: 100%;
+  }
+
+  .headlines {
+    top: 9.5rem;
+    height: 9rem;
+    width: 100%;
+  }
+  .georgiy {
+    top: 3.5rem;
+    height: 4rem;
+    width: 8rem;
+  }
+}
+
+@media all and (max-width: 500px) {
+  .heroJumbo {
+    font-size: 2rem;
+  }
+  .textAndUmbrella {
+    width: 17rem;
+  }
+
+  .backgroundImage {
+    top: 0rem;
+    height: 24rem;
+    width: 100%;
+  }
+
+  .headlines {
+    top: 9.3rem;
+    height: 7rem;
+    width: 100%;
+  }
+  .georgiy {
+    top: 2.8rem;
+    height: 3.5rem;
+    width: 7.5rem;
+  }
+}
+
+@media all and (max-width: 350px) {
+  .heroJumbo {
+    font-size: 1.7rem;
+  }
+  .textAndUmbrella {
+    width: 14rem;
+  }
+
+  .backgroundImage {
+    top: 0rem;
+    height: 20rem;
+    width: 100%;
+  }
+
+  .headlines {
+    top: 8.1rem;
+    height: 6rem;
+    width: 100%;
+  }
+  .georgiy {
+    top: 2.4rem;
+    height: 3.5rem;
+    width: 5rem;
+  }
 }
 
 .flex-center {
@@ -103,138 +190,10 @@
   justify-content: center;
 }
 
-#h2-wrapper {
-  position: relative;
-  width: 18rem;
-  -webkit-transition: all 0.4s ease-in;
-  transition: all 0.4s ease-in;
-}
-
-#h2-wrapper:hover {
-  width: 22rem;
-  color: #c0ffdc;
-}
-
-/* .html-tag-subhead {
-  font-family: "Stay Classy SLDT";
-  color: #f7daa0;
-  font-size: 2rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  position: absolute;
-  top: -0.5rem;
-  -webkit-transition: all 0.4s ease-in;
-  transition: all 0.4s ease-in;
-} */
-
-@media all and (max-width: 1150px) {
-  #hero-h2 {
-    font-size: 3rem;
-  }
-  #hero-h2:hover {
-    font-size: 4rem;
-  }
-  #h2-wrapper {
-    width: 15.5rem;
-  }
-  #h2-wrapper:hover {
-    width: 17rem;
-  }
-  .html-tag-subhead {
-    font-size: 1.5rem;
-  }
-  .left-tag-subhead {
-    margin-left: -2rem;
-    margin-top: 0.7rem;
-  }
-  .right-tag-subhead {
-    margin-right: -2rem;
-    margin-top: 0.7rem;
-  }
-}
-
-@media all and (max-width: 710px) {
-  #hero-h2 {
-    font-size: 2rem;
-  }
-  #hero-h2:hover {
-    font-size: 2.5rem;
-  }
-  #h2-wrapper {
-    width: 10rem;
-  }
-  #h2-wrapper:hover {
-    width: 11.5rem;
-  }
-  .html-tag-subhead {
-    font-size: 1.3rem;
-  }
-  .left-tag-subhead {
-    margin-left: -2rem;
-    margin-top: -0.1rem;
-  }
-  .right-tag-subhead {
-    margin-right: -2rem;
-    margin-top: -0.1rem;
-  }
-}
-
-@media all and (max-width: 480px) {
-  #hero-h2 {
-    font-size: 1.7rem;
-  }
-  #hero-h2:hover {
-    font-size: 2.2rem;
-  }
-  #h2-wrapper {
-    width: 8rem;
-  }
-  #h2-wrapper:hover {
-    width: 9rem;
-  }
-  .html-tag-subhead {
-    font-size: 1rem;
-  }
-  .left-tag-subhead {
-    margin-left: -2rem;
-    margin-top: -0.3rem;
-  }
-  .right-tag-subhead {
-    margin-right: -2rem;
-    margin-top: -0.3rem;
-  }
-}
-
-@media all and (max-width: 370px) {
-  #hero-h2 {
-    font-size: 1.4rem;
-  }
-  #hero-h2:hover {
-    font-size: 1.7rem;
-  }
-  #h2-wrapper {
-    width: 6rem;
-  }
-  #h2-wrapper:hover {
-    width: 7rem;
-  }
-  .html-tag-subhead {
-    font-size: 0.9rem;
-  }
-  .left-tag-subhead {
-    margin-left: -2rem;
-    margin-top: -0.4rem;
-  }
-  .right-tag-subhead {
-    margin-right: -2rem;
-    margin-top: -0.4rem;
-  }
-}
-
 .jumboTypingEffect::after {
   content: "";
   position: absolute;
-  bottom: 1rem;
+  bottom: 0;
   width: 4px;
   height: 4.5rem;
   border-right: 3px solid white;
