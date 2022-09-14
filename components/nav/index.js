@@ -12,34 +12,35 @@ export default function Nav() {
   const router = useRouter();
 
   return (
-    <div className={style.navbar}>
-      <div className={style.menues}>
-        <div className={style.mainBackground} />
-        {/* Startseite Logo */}
-        <div
-          className={style.homeImgContainer}
-          onMouseEnter={() => setHoverLogo(true)}
-          onMouseLeave={() => setHoverLogo(false)}
-          onClick={() => {
-            router.push("/");
-          }}
-        >
-          <Image
-            layout="fill"
-            src={
-              !hoverLogo ? "/img/navbar/logo.svg" : "/img/navbar/logo_hover.svg"
-            }
-          />
-        </div>
-        <div
-          onClick={() => {
-            setNavActive(!navActive);
-          }}
-        >
-          <HamburgerBtn state={navActive} />
-        </div>
-        <MobileMenue state={navActive} />
-        <DesktopMenue />
+    // <div className={style.navbar}>
+    //   <div className={style.menues}>
+    //     <div className={style.mainBackground} />
+    //     {/* Startseite Logo */}
+    //     <div
+    //       className={style.homeImgContainer}
+    //       onMouseEnter={() => setHoverLogo(true)}
+    //       onMouseLeave={() => setHoverLogo(false)}
+    //       onClick={() => {
+    //         router.push("/");
+    //       }}
+    //     >
+    //       <Image
+    //         layout="fill"
+    //         src={
+    //           !hoverLogo ? "/img/navbar/logo.svg" : "/img/navbar/logo_hover.svg"
+    //         }
+    //       />
+    //     </div>
+    //     <div
+    //       onClick={() => {
+    //         setNavActive(!navActive);
+    //       }}
+    //     >
+    //       <HamburgerBtn state={navActive} />
+    //     </div>
+    //     <MobileMenue state={navActive} />
+    //     <DesktopMenue />
+    
         {/* Main Menue */}
         {/* <div
           className={`${style.mobileBackground}  ${
