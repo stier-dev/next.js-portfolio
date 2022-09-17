@@ -1,7 +1,4 @@
 import style from "@/styles/components/navbar/navHamburger.module.scss";
-import { useEffect, useState } from "react";
-import { set } from "react-hook-form";
-// import { navActive, setNavActive } from "./index";
 
 export default function HamburgerBtn(props) {
   let toggle = props;

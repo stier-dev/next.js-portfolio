@@ -50,7 +50,6 @@
   animation: secondLine 400ms linear;
   transform: translateY(0);
   transform: rotate(45deg);
-  opacity: 0;
 }
 .thirdLineX {
   background-color: $yellow;
@@ -59,53 +58,56 @@
   transform: rotate(-45deg);
 }
 
-@keyframes firstLine {
-  0% {
-    transform: translateY(-10px);
-  }
-  50% {
-    transform: translateY(0);
-    transform: rotate(0);
-  }
-  65% {
-    transform: translateY(0);
-    transform: rotate(0);
-  }
-  100% {
-    transform: rotate(45deg);
-  }
-}
-@keyframes secondLine {
-  0% {
-    transform: rotate(0);
-  }
-  50% {
-    transform: rotate(0);
-  }
-  65% {
-    transform: rotate(0);
-  }
-  100% {
-    transform: rotate(45deg);
-  }
-}
+// @keyframes firstLine {
+//   0% {
+//     transform: translateY(-10px);
+//   }
+//   50% {
+//     transform: translateY(0);
+//     transform: rotate(0);
+//   }
+//   65% {
+//     transform: translateY(0);
+//     transform: rotate(0);
+//   }
+//   100% {
+//     transform: rotate(45deg);
+//   }
+// }
+// @keyframes secondLine {
+//   0% {
+//     opacity: 1;
+//     transform: rotate(0);
+//   }
+//   50% {
+//     opacity: 0;
+//     transform: rotate(0);
+//   }
+//   65% {
+//     transform: rotate(0);
+//   }
+//   100% {
+//     opacity: 0;
+//     transform: rotate(45deg);
+//   }
+// }
 
-@keyframes thirdLine {
-  0% {
-    transform: translateY(10px);
-  }
-  50% {
-    transform: translateY(0);
-    transform: rotate(0);
-  }
-  65% {
-    transform: translateY(0);
-    transform: rotate(0);
-  }
-  100% {
-    transform: rotate(-45deg);
-  }
-}
+// @keyframes thirdLine {
+//   0% {
+//     transform: translateY(10px);
+//   }
+//   50% {
+//     transform: translateY(0);
+//     transform: rotate(0);
+//   }
+//   65% {
+//     transform: translateY(0);
+//     transform: rotate(0);
+//   }
+//   100% {
+//     transform: rotate(-45deg);
+//   }
+// }
 
 // media queries
 
