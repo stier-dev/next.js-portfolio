@@ -31,6 +31,7 @@
 }
 .secondLine {
   transform: translateY(0);
+  opacity: 1;
   transition: all 700ms;
 }
 .thirdLine {
@@ -40,19 +41,20 @@
 
 .firstLineX {
   background-color: $yellow;
-  animation: firstLine 400ms ease-in-out;
+  animation: firstLine 400ms linear;
   transform: translateY(0);
   transform: rotate(45deg);
 }
 .secondLineX {
   background-color: $yellow;
-  animation: secondLine 400ms ease-in-out;
+  animation: secondLine 400ms linear;
   transform: translateY(0);
   transform: rotate(45deg);
+  opacity: 0;
 }
 .thirdLineX {
   background-color: $yellow;
-  animation: thirdLine 400ms ease-in-out;
+  animation: thirdLine 400ms linear;
   transform: translateY(10px);
   transform: rotate(-45deg);
 }
