@@ -104,6 +104,9 @@
     height: 4.5rem;
     width: 9rem;
   }
+  .jumboTypingEffect:after {
+    height: 3rem !important;
+  }
 }
 
 @media all and (max-width: 750px) {
@@ -153,6 +156,9 @@
     height: 3.5rem;
     width: 7.5rem;
   }
+  .jumboTypingEffect:after {
+    height: 2rem !important;
+  }
 }
 
 @media all and (max-width: 350px) {
@@ -179,6 +185,9 @@
     height: 3.5rem;
     width: 5rem;
   }
+  .jumboTypingEffect:after {
+    height: 2rem !important;
+  }
 }
 
 .flex-center {
@@ -195,7 +204,7 @@
   position: absolute;
   bottom: 0;
   width: 4px;
-  height: 4.5rem;
+  height: 4rem;
   border-right: 3px solid white;
   -webkit-animation: blink 0.7s infinite;
   animation: blink 0.7s infinite;
@@ -315,78 +324,78 @@
   }
 }
 
-@-webkit-keyframes glitch {
-  0% {
-    text-shadow: -0.02em 0 0 rgb(152, 0, 172),
-      0.01em -0.005em 0 rgba(255, 178, 36, 1), 0.01em -0.01em 0 #00ced3;
-    color: white;
-  }
-  4% {
-    text-shadow: -0.02em 0 0 rgb(152, 0, 172),
-      0.01em -0.005em 0 rgba(255, 178, 36, 1), 0.01em -0.01em 0 #00ced3;
-    color: white;
-  }
-  5% {
-    text-shadow: 0.005em -0.01em 0 rgb(152, 0, 172),
-      -0.01em 0.01em 0 rgba(255, 178, 36, 1), -0.005em -0.005em 0 #00ced3;
-    color: white;
-  }
-  19% {
-    text-shadow: 0.005em -0.01em 0 rgb(152, 0, 172),
-      -0.01em 0.01em 0 rgba(255, 178, 36, 1), -0.005em -0.005em 0 #00ced3;
-    color: white;
-  }
-  20% {
-    text-shadow: 0.01em 0 0 rgb(152, 0, 172),
-      0.03em -0.0025em 0 rgba(255, 178, 36, 1), -0.0025em -0.02em 0 #00ced3;
-    color: white;
-  }
-  99% {
-    text-shadow: 0.01em 0 0 rgb(152, 0, 172),
-      0.03em -0.0025em 0 rgba(255, 178, 36, 1), -0.0025em -0.02em 0 #00ced3;
-    color: white;
-  }
-  100% {
-    text-shadow: -0.05em -0.05em 0 rgb(152, 0, 172),
-      -0.01em 0.01em 0 rgba(255, 178, 36, 1), -0.02em -0.01em 0 #00ced3;
-    color: white;
-  }
-}
+// @-webkit-keyframes glitch {
+//   0% {
+//     text-shadow: -0.02em 0 0 rgb(152, 0, 172), 0.01em -0.005em 0 $darkYellow,
+//       0.01em -0.01em 0 #00ced3;
+//     color: white;
+//   }
+//   4% {
+//     text-shadow: -0.02em 0 0 rgb(152, 0, 172), 0.01em -0.005em 0 $darkYellow,
+//       0.01em -0.01em 0 #00ced3;
+//     color: white;
+//   }
+//   5% {
+//     text-shadow: 0.005em -0.01em 0 rgb(152, 0, 172),
+//       -0.01em 0.01em 0 $darkYellow, -0.005em -0.005em 0 #00ced3;
+//     color: white;
+//   }
+//   19% {
+//     text-shadow: 0.005em -0.01em 0 rgb(152, 0, 172),
+//       -0.01em 0.01em 0 $darkYellow, -0.005em -0.005em 0 #00ced3;
+//     color: white;
+//   }
+//   20% {
+//     text-shadow: 0.01em 0 0 rgb(152, 0, 172), 0.03em -0.0025em 0 $darkYellow,
+//       -0.0025em -0.02em 0 #00ced3;
+//     color: white;
+//   }
+//   99% {
+//     text-shadow: 0.01em 0 0 rgb(152, 0, 172), 0.03em -0.0025em 0 $darkYellow,
+//       -0.0025em -0.02em 0 #00ced3;
+//     color: white;
+//   }
+//   100% {
+//     text-shadow: -0.05em -0.05em 0 rgb(152, 0, 172),
+//       -0.01em 0.01em 0 $darkYellow, -0.02em -0.01em 0 #00ced3;
+//     color: white;
+//   }
+// }
 
 @keyframes glitch {
   0% {
     text-shadow: -0.02em 0 0 #0096a2, 0.01em -0.005em 0 white,
       0.03em -0.02em 0 #00ced3;
-    color: rgba(255, 178, 36, 0.5);
+    color: $darkYellow;
   }
   4% {
     text-shadow: -0.02em 0 0 #0096a2, 0.01em -0.005em 0 white,
       0.03em -0.01em 0 #00ced3;
-    color: rgba(255, 178, 36, 0.5);
+    color: $darkYellow;
   }
   5% {
-    text-shadow: 0.005em -0.01em 0 #0096a2,
-      -0.01em 0.01em 0 rgba(255, 178, 36, 1), -0.015em -0.015em 0 #00ced3;
-    color: rgba(255, 178, 36, 0.5);
+    text-shadow: 0.005em -0.01em 0 #0096a2, -0.01em 0.01em 0 $darkYellow,
+      -0.015em -0.015em 0 #00ced3;
+    color: $darkYellow;
   }
   19% {
-    text-shadow: 0.005em -0.01em 0 #0096a2,
-      -0.01em 0.01em 0 rgba(255, 178, 36, 1), -0.015em -0.015em 0 #00ced3;
+    text-shadow: 0.005em -0.01em 0 #0096a2, -0.01em 0.01em 0 $darkYellow,
+      -0.015em -0.015em 0 #00ced3;
     color: white;
   }
   20% {
     text-shadow: 0.01em 0 0 #0096a2, 0.03em -0.0025em 0 white,
       -0.0025em -0.02em 0 #00ced3;
-    color: rgba(255, 178, 36, 1);
+    color: $darkYellow;
   }
   99% {
     text-shadow: 0.01em 0 0 #0096a2, 0.03em -0.0025em 0 white,
       -0.0045em -0.03em 0 #00ced3;
-    color: rgba(255, 178, 36, 1);
+    color: $darkYellow;
   }
   100% {
     text-shadow: -0.05em -0.05em 0 #0096a2, -0.01em 0.01em 0 white,
       -0.03em -0.01em 0 #00ced3;
-    color: rgba(255, 178, 36, 1);
+    color: $darkYellow;
   }
 }

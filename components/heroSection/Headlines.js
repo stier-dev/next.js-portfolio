@@ -5,7 +5,6 @@ import style from "@/styles/heroSection/headlines.module.scss";
 export default function Headlines() {
   let jumboH1 = undefined;
   const [ready, setReady] = useState(false);
-  const [hoverGeorgiy, setHoverGeorgiy] = useState(false);
   useEffect(() => {
     jumboH1 = document.querySelector("#heroJumbo");
 
@@ -44,19 +43,8 @@ export default function Headlines() {
             ready ? style.glitch : style.jumboTypingEffect
           }`}
         ></h1>
-        <div
-          className={style.georgiy}
-          onMouseEnter={() => setHoverGeorgiy(true)}
-          onMouseLeave={() => setHoverGeorgiy(false)}
-        >
-          <Image
-            layout="fill"
-            src={
-              !hoverGeorgiy
-                ? "/img/heroSection/georgi.svg"
-                : "/img/heroSection/georgi_hover.svg"
-            }
-          />
+        <div className={style.georgiy}>
+          <Image layout="fill" src={"/img/heroSection/georgi.svg"} />
         </div>
       </div>
     </div>

@@ -23,9 +23,9 @@ window.addEventListener("mousemove", (event) => {
 });
 function findMaxHeightOfAninmation() {
   if (canvas.height > 400) {
-    return 250;
+    return 300;
   }
-  return canvas.height / 2;
+  return canvas.height / 1.6;
 }
 let maxAnimationHeight = findMaxHeightOfAninmation();
 let minAnimationHeight = 600;
@@ -51,8 +51,8 @@ calculateFontSize();
 //
 
 let bgColor = "rgba(0, 0, 0, 1)";
-let bgColor20 = "rgba(0, 0, 0, 0.2)";
-let bgColor50 = "rgba(0, 0, 0, 0.5)";
+let bgColor20 = "rgba(0, 0, 0, 0.1)";
+// let bgColor50 = "rgba(0, 0, 0, 0.5)";
 
 let bgBottomColor = "rgba(0, 0, 0, 1)";
 let bgBottomColor20 = "rgba(0, 0, 0, 0.2)";
@@ -124,7 +124,7 @@ function updateGradients() {
 let reset = false;
 let firstTime = true;
 
-let mouseDistance = 50;
+let mouseDistance = 70;
 
 let hover = false;
 let lastTime = 0;
@@ -272,7 +272,6 @@ window.addEventListener("resize", () => {
 });
 
 function matrixResize() {
-  console.log("running");
   animationOn = true;
   calculateCanvasSize();
   calculateFontSize();

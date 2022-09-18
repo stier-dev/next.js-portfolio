@@ -3,18 +3,18 @@
   display: flex;
   justify-content: center;
   top: 0px;
-  // height: 100px;
   width: 100vw;
   margin: 0;
   padding: 0;
   background-color: black;
-  height: 80vh;
+  height: 85vh;
   overflow-x: hidden;
   overflow-y: hidden;
 }
 
 .iFrame {
   position: absolute;
+  left: 0;
   width: 100vw;
   height: 100%;
   background-color: black;
@@ -31,4 +31,33 @@
   justify-content: center;
   top: 0rem;
   z-index: 10;
+}
+
+.madeWith {
+  position: absolute;
+  top: 0;
+}
+
+@media (min-width: 1201px) {
+  .mainContainer {
+    min-height: 650px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .mainContainer {
+    min-height: 550px;
+  }
+}
+
+@media (max-width: 750px) {
+  .mainContainer {
+    min-height: 500px;
+  }
+}
+
+@media (max-width: 500px) {
+  .mainContainer {
+    min-height: 450px;
+  }
 }
