@@ -100,6 +100,11 @@
   max-width: 1000px;
 }
 
+.programsRow {
+  display: flex;
+  align-items: center;
+}
+
 .programmingLanguages {
   display: flex;
   margin-top: 2rem;
@@ -289,12 +294,18 @@
     margin: 0.7rem;
   }
   .programImgContainer {
+    flex-wrap: wrap;
     margin-top: 0px;
   }
-
+  .programsRow {
+    width: 100vw;
+    justify-content: center;
+  }
   .programsImg {
-    height: 16px;
-    width: 16px;
+    height: 30px;
+    width: 30px;
+    margin-left: 1.3rem;
+    margin-right: 1.3rem;
   }
   .programsText {
     font-size: 0.5em;
@@ -304,10 +315,10 @@
   }
 
   .vsImg {
-    height: 13px;
+    height: 20px;
   }
   .procreateImg {
-    width: 50px;
+    width: 70px;
   }
 }
 
@@ -337,8 +348,10 @@
   }
 
   .programsImg {
-    height: 12px;
-    width: 12px;
+    height: 25px;
+    width: 25px;
+    margin-left: 1.2rem;
+    margin-right: 1.2rem;
   }
   .programsText {
     font-size: 0.4rem;
@@ -348,9 +361,9 @@
   }
 
   .vsImg {
-    height: 10px;
+    height: 21px;
   }
   .procreateImg {
-    width: 40px;
+    width: 60px;
   }
 }

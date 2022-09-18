@@ -22,13 +22,19 @@ export default function MadeWith() {
             <div className={`${style.jsImg} ${style.languagesImg}`}></div>
           </div>
           <div className={style.programImgContainer}>
-            <div className={`${style.vsImg} ${style.programsImg}`}></div>
-            <div className={`${style.githubImg} ${style.programsImg}`}></div>
-            <div className={`${style.xdImg} ${style.programsImg}`}></div>
-            <div className={`${style.aiImg} ${style.programsImg}`}></div>
-            <div className={`${style.psImg} ${style.programsImg}`}></div>
-            <div className={`${style.lrImg} ${style.programsImg}`}></div>
-            <div className={`${style.procreateImg} ${style.programsImg}`}></div>
+            <div className={style.programsRow}>
+              <div className={`${style.vsImg} ${style.programsImg}`}></div>
+              <div className={`${style.githubImg} ${style.programsImg}`}></div>
+              <div className={`${style.xdImg} ${style.programsImg}`}></div>
+              <div className={`${style.aiImg} ${style.programsImg}`}></div>
+            </div>
+            <div className={style.programsRow}>
+              <div className={`${style.psImg} ${style.programsImg}`}></div>
+              <div className={`${style.lrImg} ${style.programsImg}`}></div>
+              <div
+                className={`${style.procreateImg} ${style.programsImg}`}
+              ></div>
+            </div>
           </div>
           <div className={style.programsNameContainer}>
             <p className={style.programsText}>
