@@ -9,9 +9,9 @@ export default function MadeWith() {
       </div>
       <div className={style.textAndIcons}>
         <div className={style.nextReact}>
-          <h4 className={style.nextText}>Programmiert mit:</h4>
+          <h4 className={style.nextText}>Programmiert mit</h4>
           <div className={style.nextImg}></div>
-          <h4 className={style.nextText}>Einem Framework für:</h4>
+          <h4 className={style.nextText}>einem Framework für</h4>
           <div className={style.reactImg}></div>
         </div>
         <div className={style.programsContainer}>
