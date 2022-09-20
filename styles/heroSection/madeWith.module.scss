@@ -1,3 +1,6 @@
+// ! change next and react icons to filter grayscale on hover!
+// ! on mobile, make icons shine after each other
+
 @import "/styles/abstracts/_colors";
 
 .mainContainer {
@@ -66,14 +69,15 @@
   top: 3px;
   height: 65px;
   width: 100px;
-  background-image: url("/img/logos_coding/next_react/next.svg");
+  background-image: url("/img/logos_coding/next_react/next_hover.svg");
   background-size: contain;
   background-repeat: no-repeat;
   transition: all 330ms ease-in-out;
+  filter: grayscale(100%);
 }
 
 .nextImg:hover {
-  background-image: url("/img/logos_coding/next_react/next_hover.svg");
+  filter: none;
 }
 
 .reactImg {
@@ -81,14 +85,16 @@
   top: 14px;
   height: 45px;
   width: 45px;
-  background-image: url("/img/logos_coding/next_react/react.svg");
+  background-image: url("/img/logos_coding/next_react/react_hover.svg");
   background-size: contain;
   background-repeat: no-repeat;
   transition: all 300ms ease-in-out;
+  filter: grayscale(100%);
 }
 
 .reactImg:hover {
-  background-image: url("/img/logos_coding/next_react/react_hover.svg");
+  filter: none;
+  // background-image: url("/img/logos_coding/next_react/react_hover.svg");
 }
 
 .programsContainer {
@@ -158,6 +164,10 @@
   &:hover {
     filter: none;
   }
+}
+
+.colored {
+  filter: none;
 }
 
 .githubImg {
