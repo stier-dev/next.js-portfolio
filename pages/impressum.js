@@ -20,7 +20,7 @@ export default function Impressum() {
       Geschäftsbereich: <p>Web Entwicklung, Grafik Design, Illustration</p>
       <h2 id="m169">Bildnachweise</h2>Bildquellen und Urheberrechtshinweise:{" "}
       <p>....Bilquellen....</p>
-      <p class="seal">
+      <p>
         <a
           href="https://datenschutz-generator.de/"
           title="Rechtstext von Dr. Schwenke - für weitere Informationen bitte anklicken."

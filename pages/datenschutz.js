@@ -19,71 +19,47 @@ export default function Datenschutz() {
       <p>Die verwendeten Begriffe sind nicht geschlechtsspezifisch.</p>
       <p>Stand: 23. September 2022</p>
       <h2>Inhaltsübersicht</h2>{" "}
-      <ul class="index">
+      <ul>
         <li>
-          <a class="index-link" href="#m14">
-            Einleitung
-          </a>
+          <a href="#m14">Einleitung</a>
         </li>
         <li>
-          <a class="index-link" href="#m3">
-            Verantwortlicher
-          </a>
+          <a href="#m3">Verantwortlicher</a>
         </li>
         <li>
-          <a class="index-link" href="#mOverview">
-            Übersicht der Verarbeitungen
-          </a>
+          <a href="#mOverview">Übersicht der Verarbeitungen</a>
         </li>
         <li>
-          <a class="index-link" href="#m13">
-            Maßgebliche Rechtsgrundlagen
-          </a>
+          <a href="#m13">Maßgebliche Rechtsgrundlagen</a>
         </li>
         <li>
-          <a class="index-link" href="#m27">
-            Sicherheitsmaßnahmen
-          </a>
+          <a href="#m27">Sicherheitsmaßnahmen</a>
         </li>
         <li>
-          <a class="index-link" href="#m12">
-            Löschung von Daten
-          </a>
+          <a href="#m12">Löschung von Daten</a>
         </li>
         <li>
-          <a class="index-link" href="#m317">
-            Geschäftliche Leistungen
-          </a>
+          <a href="#m317">Geschäftliche Leistungen</a>
         </li>
         <li>
-          <a class="index-link" href="#m225">
-            Bereitstellung des Onlineangebotes und Webhosting
-          </a>
+          <a href="#m225">Bereitstellung des Onlineangebotes und Webhosting</a>
         </li>
         <li>
-          <a class="index-link" href="#m182">
-            Kontakt- und Anfragenverwaltung
-          </a>
+          <a href="#m182">Kontakt- und Anfragenverwaltung</a>
         </li>
         <li>
-          <a class="index-link" href="#m328">
-            Plugins und eingebettete Funktionen sowie Inhalte
-          </a>
+          <a href="#m328">Plugins und eingebettete Funktionen sowie Inhalte</a>
         </li>
         <li>
-          <a class="index-link" href="#m15">
+          <a href="#m15">
             Änderung und Aktualisierung der Datenschutzerklärung
           </a>
         </li>
         <li>
-          <a class="index-link" href="#m10">
-            Rechte der betroffenen Personen
-          </a>
+          <a href="#m10">Rechte der betroffenen Personen</a>
         </li>
         <li>
-          <a class="index-link" href="#m42">
-            Begriffsdefinitionen
-          </a>
+          <a href="#m42">Begriffsdefinitionen</a>
         </li>
       </ul>
       <h2 id="m3">Verantwortlicher</h2>
@@ -302,7 +278,7 @@ export default function Datenschutz() {
         Anbietern die Geschäftsbedingungen und Datenschutzhinweise der
         jeweiligen Drittanbieter oder Plattformen.{" "}
       </p>
-      <ul class="m-elements">
+      <ul>
         <li>
           <strong>Verarbeitete Datenarten:</strong> Bestandsdaten (z.B. Namen,
           Adressen); Zahlungsdaten (z.B. Bankverbindungen, Rechnungen,
@@ -330,7 +306,7 @@ export default function Datenschutz() {
           Weitere Hinweise zu Verarbeitungsprozessen, Verfahren und Diensten:
         </strong>
       </p>
-      <ul class="m-elements">
+      <ul>
         <li>
           <strong>Bildungs- und Schulungsleistungen: </strong>Wir verarbeiten
           die Daten der Teilnehmer unserer Bildungs- und Schulungsangebote
@@ -393,7 +369,7 @@ export default function Datenschutz() {
         unserer Online-Dienste an den Browser oder das Endgerät der Nutzer zu
         übermitteln.
       </p>
-      <ul class="m-elements">
+      <ul>
         <li>
           <strong>Verarbeitete Datenarten:</strong> Nutzungsdaten (z.B. besuchte
           Webseiten, Interesse an Inhalten, Zugriffszeiten);
@@ -421,7 +397,7 @@ export default function Datenschutz() {
           Weitere Hinweise zu Verarbeitungsprozessen, Verfahren und Diensten:
         </strong>
       </p>
-      <ul class="m-elements">
+      <ul>
         <li>
           <strong>
             Bereitstellung Onlineangebot auf gemietetem Speicherplatz:{" "}
@@ -486,7 +462,7 @@ export default function Datenschutz() {
         verarbeitet soweit dies zur Beantwortung der Kontaktanfragen und
         etwaiger angefragter Maßnahmen erforderlich ist.
       </p>
-      <ul class="m-elements">
+      <ul>
         <li>
           <strong>Verarbeitete Datenarten:</strong> Kontaktdaten (z.B. E-Mail,
           Telefonnummern); Inhaltsdaten (z.B. Eingaben in Onlineformularen);
@@ -514,7 +490,7 @@ export default function Datenschutz() {
           Weitere Hinweise zu Verarbeitungsprozessen, Verfahren und Diensten:
         </strong>
       </p>
-      <ul class="m-elements">
+      <ul>
         <li>
           <strong>Kontaktformular: </strong>Wenn Nutzer über unser
           Kontaktformular, E-Mail oder andere Kommunikationswege mit uns in
@@ -551,7 +527,7 @@ export default function Datenschutz() {
         enthalten als auch mit solchen Informationen aus anderen Quellen
         verbunden werden.
       </p>
-      <ul class="m-elements">
+      <ul>
         <li>
           <strong>Verarbeitete Datenarten:</strong> Nutzungsdaten (z.B. besuchte
           Webseiten, Interesse an Inhalten, Zugriffszeiten);
@@ -577,7 +553,7 @@ export default function Datenschutz() {
           Weitere Hinweise zu Verarbeitungsprozessen, Verfahren und Diensten:
         </strong>
       </p>
-      <ul class="m-elements">
+      <ul>
         <li>
           <strong>Google Fonts (Bezug vom Google Server): </strong>Bezug von
           Schriften (und Symbolen) zum Zwecke einer technisch sicheren,
@@ -709,7 +685,7 @@ export default function Datenschutz() {
         Erläuterungen sollen dagegen vor allem dem Verständnis dienen. Die
         Begriffe sind alphabetisch sortiert.
       </p>
-      <ul class="glossary">
+      <ul>
         <li>
           <strong>Personenbezogene Daten:</strong> "Personenbezogene Daten“ sind
           alle Informationen, die sich auf eine identifizierte oder
@@ -750,7 +726,7 @@ export default function Datenschutz() {
           Löschen.{" "}
         </li>
       </ul>
-      <p class="seal">
+      <p>
         <a
           href="https://datenschutz-generator.de/"
           title="Rechtstext von Dr. Schwenke - für weitere Informationen bitte anklicken."
