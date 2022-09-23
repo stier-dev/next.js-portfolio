@@ -19,8 +19,10 @@ export default function MadeWith() {
     false,
     false,
   ]);
+
   let clonedArray = [];
   let logoIndex = 0;
+
   const blinkArray = () => {
     clonedArray = [
       false,
@@ -43,20 +45,54 @@ export default function MadeWith() {
       logoIndex = 0;
     } else {
       logoIndex++;
+      // console.log(logoIndex);
     }
     clonedArray[logoIndex] = true;
     setBlink(clonedArray);
   };
 
+  //* intersection observer
+
+  let madeWithObserver = undefined;
+  let madeWith = undefined;
+  const [runAnimation, setRunAnimation] = useState(false);
+
+  // use Effect to make sure, that the elements are loaded in the dom before they are targeted
   useEffect(() => {
-    const blinkInterval = setInterval(() => {
-      blinkArray();
-    }, 500);
-    return () => clearInterval(blinkInterval);
+    madeWithObserver = new IntersectionObserver(
+      (entries) => {
+        // if there is only one entry it will be entries[0]
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            console.log("is intersecting!!!");
+            setRunAnimation(true);
+          } else {
+            console.log("is not intersecting");
+            setRunAnimation(false);
+          }
+        });
+      },
+      {
+        rootMargin: "-30%",
+      }
+    );
+
+    madeWith = document.querySelector("#madeWith");
+    madeWithObserver.observe(madeWith);
   }, []);
 
+  // * blinking interval
+  useEffect(() => {
+    if (runAnimation) {
+      const blinkInterval = setInterval(() => {
+        blinkArray();
+      }, 500);
+      return () => clearInterval(blinkInterval);
+    }
+  }, [runAnimation]);
+
   return (
-    <div className={style.mainContainer}>
+    <div id="madeWith" className={style.mainContainer}>
       <div className={style.arrowContainer}>
         <div className={style.stripe} />
         <div className={style.arrow} />
@@ -64,13 +100,9 @@ export default function MadeWith() {
       <div className={style.textAndIcons}>
         <div className={style.nextReact}>
           <h4 className={style.nextText}>Programmiert mit</h4>
-          <div
-            className={`${style.nextImg}  ${blink[0] ? style.colored : ""}`}
-          ></div>
+          <div className={`${style.nextImg}  `}></div>
           <h4 className={style.nextText}>einem Framework für</h4>
-          <div
-            className={`${style.reactImg}  ${blink[1] ? style.colored : ""}`}
-          ></div>
+          <div className={`${style.reactImg}`}></div>
         </div>
         <div className={style.programsContainer}>
           <div className={style.programmingLanguages}>

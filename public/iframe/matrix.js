@@ -245,8 +245,9 @@ function animate(timeStamp) {
     timer += deltaTime;
   }
 }
-
 animate(0);
+console.log("hi");
+
 // ---------------------------------------------------------- Resizing!
 
 // creating a boolean that stops the animation during resizing

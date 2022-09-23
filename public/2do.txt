@@ -1,1 +1,3 @@
-matrix debounce
+page load and scroll animations
+make portfolio go to portfolio
+matrix debounce and pause: when out of screen!

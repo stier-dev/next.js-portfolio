@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { useState, useEffect } from "react";
 import style from "@/styles/heroSection/headlines.module.scss";
+import { motion } from "framer-motion";
 
 export default function Headlines() {
   let jumboH1 = undefined;
@@ -33,9 +34,27 @@ export default function Headlines() {
 
   return (
     <div className={style.textAndUmbrella}>
-      <div className={style.backgroundImage}>
+      <motion.div
+        className={style.backgroundImage}
+        initial="hidden"
+        animate="visible"
+        variants={{
+          hidden: {
+            scale: 0.8,
+            opacity: 0,
+          },
+          visible: {
+            scale: 1,
+            opacity: 1,
+            transition: {
+              duration: 0.5,
+              delay: 0,
+            },
+          },
+        }}
+      >
         <Image layout="fill" src={"/img/heroSection/umbrella.svg"} />
-      </div>
+      </motion.div>
       <div className={style.headlines}>
         <h1
           id="heroJumbo"
@@ -43,7 +62,11 @@ export default function Headlines() {
             ready ? style.glitch : style.jumboTypingEffect
           }`}
         ></h1>
-        <div className={style.georgiy}>
+        <div
+          className={`${style.georgiy} ${
+            ready ? style.georgiyVisible : style.georgiyInVisible
+          }`}
+        >
           <Image layout="fill" src={"/img/heroSection/georgi.svg"} />
         </div>
       </div>

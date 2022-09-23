@@ -49,6 +49,13 @@
   transition: all 400ms ease-in-out;
 }
 
+.georgiyVisible {
+  opacity: 1;
+}
+.georgiyInVisible {
+  opacity: 0;
+}
+
 .georgiy:hover {
   transform: scale(1.2);
 }
@@ -324,43 +331,43 @@
   }
 }
 
-// @-webkit-keyframes glitch {
-//   0% {
-//     text-shadow: -0.02em 0 0 rgb(152, 0, 172), 0.01em -0.005em 0 $darkYellow,
-//       0.01em -0.01em 0 #00ced3;
-//     color: white;
-//   }
-//   4% {
-//     text-shadow: -0.02em 0 0 rgb(152, 0, 172), 0.01em -0.005em 0 $darkYellow,
-//       0.01em -0.01em 0 #00ced3;
-//     color: white;
-//   }
-//   5% {
-//     text-shadow: 0.005em -0.01em 0 rgb(152, 0, 172),
-//       -0.01em 0.01em 0 $darkYellow, -0.005em -0.005em 0 #00ced3;
-//     color: white;
-//   }
-//   19% {
-//     text-shadow: 0.005em -0.01em 0 rgb(152, 0, 172),
-//       -0.01em 0.01em 0 $darkYellow, -0.005em -0.005em 0 #00ced3;
-//     color: white;
-//   }
-//   20% {
-//     text-shadow: 0.01em 0 0 rgb(152, 0, 172), 0.03em -0.0025em 0 $darkYellow,
-//       -0.0025em -0.02em 0 #00ced3;
-//     color: white;
-//   }
-//   99% {
-//     text-shadow: 0.01em 0 0 rgb(152, 0, 172), 0.03em -0.0025em 0 $darkYellow,
-//       -0.0025em -0.02em 0 #00ced3;
-//     color: white;
-//   }
-//   100% {
-//     text-shadow: -0.05em -0.05em 0 rgb(152, 0, 172),
-//       -0.01em 0.01em 0 $darkYellow, -0.02em -0.01em 0 #00ced3;
-//     color: white;
-//   }
-// }
+@-webkit-keyframes glitch {
+  0% {
+    text-shadow: -0.02em 0 0 #0096a2, 0.01em -0.005em 0 white,
+      0.03em -0.02em 0 #00ced3;
+    color: $darkYellow;
+  }
+  4% {
+    text-shadow: -0.02em 0 0 #0096a2, 0.01em -0.005em 0 white,
+      0.03em -0.01em 0 #00ced3;
+    color: $darkYellow;
+  }
+  5% {
+    text-shadow: 0.005em -0.01em 0 #0096a2, -0.01em 0.01em 0 $darkYellow,
+      -0.015em -0.015em 0 #00ced3;
+    color: $darkYellow;
+  }
+  19% {
+    text-shadow: 0.005em -0.01em 0 #0096a2, -0.01em 0.01em 0 $darkYellow,
+      -0.015em -0.015em 0 #00ced3;
+    color: white;
+  }
+  20% {
+    text-shadow: 0.01em 0 0 #0096a2, 0.03em -0.0025em 0 white,
+      -0.0025em -0.02em 0 #00ced3;
+    color: $darkYellow;
+  }
+  99% {
+    text-shadow: 0.01em 0 0 #0096a2, 0.03em -0.0025em 0 white,
+      -0.0045em -0.03em 0 #00ced3;
+    color: $darkYellow;
+  }
+  100% {
+    text-shadow: -0.05em -0.05em 0 #0096a2, -0.01em 0.01em 0 white,
+      -0.03em -0.01em 0 #00ced3;
+    color: $darkYellow;
+  }
+}
 
 @keyframes glitch {
   0% {
