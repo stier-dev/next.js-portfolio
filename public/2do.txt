@@ -1,3 +1,4 @@
-page load and scroll animations
+page load skeleton and scroll animations
+make sections load only when you scroll to -100px or something before it
 make portfolio go to portfolio
 matrix debounce and pause: when out of screen!
