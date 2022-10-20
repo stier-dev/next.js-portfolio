@@ -1,6 +1,45 @@
+@import "/styles/abstracts/colors";
+
 .mainContainer {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  margin-bottom: 4rem;
+}
+
+.textContainer {
+  max-width: 600px;
+}
+
+#impressumJumbo {
+  font-size: 3rem;
+  margin-top: 4rem;
+  margin-bottom: 5rem;
+}
+#datenschutzJumbo {
+  font-size: 2.5rem;
+  margin-top: 4rem;
+  margin-bottom: 5rem;
+}
+
+.jumbo {
+  text-transform: uppercase;
+  text-align: center;
+  color: $lightBlue;
+}
+
+.headline {
+  color: $yellow;
+  margin-left: -1rem;
+}
+
+.all {
+  width: 100%;
+  margin-bottom: 0;
+}
+
+.smallGray {
+  font-size: 0.6rem;
+  color: $darkGray;
 }
