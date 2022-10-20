@@ -21,15 +21,10 @@ export default function Impressum() {
       <h2 id="m169">Bildnachweise</h2>Bildquellen und Urheberrechtshinweise:{" "}
       <p>....Bilquellen....</p>
       <p>
-        <a
-          href="https://datenschutz-generator.de/"
-          title="Rechtstext von Dr. Schwenke - für weitere Informationen bitte anklicken."
-          target="_blank"
-          rel="noopener noreferrer nofollow"
-        >
+        <p>
           Erstellt mit kostenlosem Datenschutz-Generator.de von Dr. Thomas
           Schwenke
-        </a>
+        </p>
       </p>
     </div>
   );

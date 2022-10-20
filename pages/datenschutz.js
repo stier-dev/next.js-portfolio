@@ -66,11 +66,10 @@ export default function Datenschutz() {
       <p>
         Georgiy Stasyuk
         <br />
-        Rodenstraße 20
+        Schulstraße 23
         <br />
-        30451 Hannover
+        30890 Barsinghausen
       </p>
-      E-Mail-Adresse:{" "}
       <p>
         <a href="mailto:info@stier.dev">info@stier.dev</a>
       </p>
@@ -127,7 +126,7 @@ export default function Datenschutz() {
           <strong>
             Vertragserfüllung und vorvertragliche Anfragen (Art. 6 Abs. 1 S. 1
             lit. b) DSGVO)
-          </strong>{" "}
+          </strong>
           - Die Verarbeitung ist für die Erfüllung eines Vertrags, dessen
           Vertragspartei die betroffene Person ist, oder zur Durchführung
           vorvertraglicher Maßnahmen erforderlich, die auf Anfrage der
@@ -136,14 +135,14 @@ export default function Datenschutz() {
         <li>
           <strong>
             Rechtliche Verpflichtung (Art. 6 Abs. 1 S. 1 lit. c) DSGVO)
-          </strong>{" "}
+          </strong>
           - Die Verarbeitung ist zur Erfüllung einer rechtlichen Verpflichtung
           erforderlich, der der Verantwortliche unterliegt.
         </li>
         <li>
           <strong>
             Berechtigte Interessen (Art. 6 Abs. 1 S. 1 lit. f) DSGVO)
-          </strong>{" "}
+          </strong>
           - Die Verarbeitung ist zur Wahrung der berechtigten Interessen des
           Verantwortlichen oder eines Dritten erforderlich, sofern nicht die
           Interessen oder Grundrechte und Grundfreiheiten der betroffenen
@@ -210,7 +209,7 @@ export default function Datenschutz() {
         aufbewahrt werden müssen oder deren Speicherung zur Geltendmachung,
         Ausübung oder Verteidigung von Rechtsansprüchen oder zum Schutz der
         Rechte einer anderen natürlichen oder juristischen Person erforderlich
-        ist.{" "}
+        ist.
       </p>
       <p>
         Unsere Datenschutzhinweise können ferner weitere Angaben zu der
@@ -220,8 +219,8 @@ export default function Datenschutz() {
       <h2 id="m317">Geschäftliche Leistungen</h2>
       <p>
         Wir verarbeiten Daten unserer Vertrags- und Geschäftspartner, z.B.
-        Kunden und Interessenten (zusammenfassend bezeichnet als
-        "Vertragspartner") im Rahmen von vertraglichen und vergleichbaren
+        Kunden und Interessenten (zusammenfassend bezeichnet als &quot;
+        Vertragspartner &quot;) im Rahmen von vertraglichen und vergleichbaren
         Rechtsverhältnissen sowie damit verbundenen Maßnahmen und im Rahmen der
         Kommunikation mit den Vertragspartnern (oder vorvertraglich), z.B., um
         Anfragen zu beantworten.
@@ -276,7 +275,7 @@ export default function Datenschutz() {
         Soweit wir zur Erbringung unserer Leistungen Drittanbieter oder
         Plattformen einsetzen, gelten im Verhältnis zwischen den Nutzern und den
         Anbietern die Geschäftsbedingungen und Datenschutzhinweise der
-        jeweiligen Drittanbieter oder Plattformen.{" "}
+        jeweiligen Drittanbieter oder Plattformen.
       </p>
       <ul>
         <li>
@@ -310,9 +309,9 @@ export default function Datenschutz() {
         <li>
           <strong>Bildungs- und Schulungsleistungen: </strong>Wir verarbeiten
           die Daten der Teilnehmer unserer Bildungs- und Schulungsangebote
-          (einheitlich bezeichnet als "Aus- und Fortzubildende“), um ihnen
-          gegenüber unsere Schulungsleistungen erbringen zu können. Die hierbei
-          verarbeiteten Daten, die Art, der Umfang, der Zweck und die
+          (einheitlich bezeichnet als &quot; Aus- und Fortzubildende &quot;), um
+          ihnen gegenüber unsere Schulungsleistungen erbringen zu können. Die
+          hierbei verarbeiteten Daten, die Art, der Umfang, der Zweck und die
           Erforderlichkeit ihrer Verarbeitung bestimmen sich nach dem
           zugrundeliegenden Vertrags- und Schulungsverhältnis. Zu den
           Verarbeitungsformen gehören auch die Leistungsbewertung und die
@@ -326,7 +325,7 @@ export default function Datenschutz() {
           besonderen Kategorien von Daten ansonsten nur, wenn es zur Erbringung
           der Schulungsleistungen, zu Zwecken der Gesundheitsvorsorge, des
           Sozialschutzes oder des Schutzes lebensnotwendiger Interessen der Aus-
-          und Fortzubildenden erforderlich ist;{" "}
+          und Fortzubildenden erforderlich ist
           <strong>Rechtsgrundlagen:</strong> Vertragserfüllung und
           vorvertragliche Anfragen (Art. 6 Abs. 1 S. 1 lit. b) DSGVO).
         </li>
@@ -339,24 +338,24 @@ export default function Datenschutz() {
           sind als solche im Rahmen des Auftrags-, Bestell- bzw. vergleichbaren
           Vertragsschlusses gekennzeichnet und umfassen die zur Auslieferung und
           Abrechnung benötigten Angaben sowie Kontaktinformationen, um etwaige
-          Rücksprachen halten zu können; <strong>Rechtsgrundlagen:</strong>{" "}
+          Rücksprachen halten zu können; <strong>Rechtsgrundlagen:</strong>
           Vertragserfüllung und vorvertragliche Anfragen (Art. 6 Abs. 1 S. 1
           lit. b) DSGVO).
         </li>
         <li>
           <strong>Technische Dienstleistungen: </strong>Wir verarbeiten die
           Daten unserer Kunden sowie Auftraggeber (nachfolgend einheitlich als
-          "Kunden" bezeichnet), um ihnen die Auswahl, den Erwerb bzw. die
-          Beauftragung der gewählten Leistungen oder Werke sowie verbundener
-          Tätigkeiten als auch deren Bezahlung und Zurverfügungstellung bzw.
-          Ausführung oder Erbringung zu ermöglichen. Die erforderlichen Angaben
-          sind als solche im Rahmen des Auftrags-, Bestell- bzw. vergleichbaren
-          Vertragsschlusses gekennzeichnet und umfassen die zur
-          Leistungserbringung und Abrechnung benötigten Angaben sowie
-          Kontaktinformationen, um etwaige Rücksprachen halten zu können. Soweit
-          wir Zugang zu Informationen der Endkunden, Mitarbeitern oder anderer
-          Personen erhalten, verarbeiten wir diese im Einklang mit den
-          gesetzlichen und vertraglichen Vorgaben;{" "}
+          &quot; Kunden &quot; bezeichnet), um ihnen die Auswahl, den Erwerb
+          bzw. die Beauftragung der gewählten Leistungen oder Werke sowie
+          verbundener Tätigkeiten als auch deren Bezahlung und
+          Zurverfügungstellung bzw. Ausführung oder Erbringung zu ermöglichen.
+          Die erforderlichen Angaben sind als solche im Rahmen des Auftrags-,
+          Bestell- bzw. vergleichbaren Vertragsschlusses gekennzeichnet und
+          umfassen die zur Leistungserbringung und Abrechnung benötigten Angaben
+          sowie Kontaktinformationen, um etwaige Rücksprachen halten zu können.
+          Soweit wir Zugang zu Informationen der Endkunden, Mitarbeitern oder
+          anderer Personen erhalten, verarbeiten wir diese im Einklang mit den
+          gesetzlichen und vertraglichen Vorgaben
           <strong>Rechtsgrundlagen:</strong> Vertragserfüllung und
           vorvertragliche Anfragen (Art. 6 Abs. 1 S. 1 lit. b) DSGVO).
         </li>
@@ -400,13 +399,13 @@ export default function Datenschutz() {
       <ul>
         <li>
           <strong>
-            Bereitstellung Onlineangebot auf gemietetem Speicherplatz:{" "}
+            Bereitstellung Onlineangebot auf gemietetem Speicherplatz:
           </strong>
           Für die Bereitstellung unseres Onlineangebotes nutzen wir
           Speicherplatz, Rechenkapazität und Software, die wir von einem
-          entsprechenden Serveranbieter (auch "Webhoster" genannt) mieten oder
-          anderweitig beziehen; <strong>Rechtsgrundlagen:</strong> Berechtigte
-          Interessen (Art. 6 Abs. 1 S. 1 lit. f) DSGVO).
+          entsprechenden Serveranbieter (auch &quot; Webhoster &quot; genannt)
+          mieten oder anderweitig beziehen; <strong>Rechtsgrundlagen:</strong>{" "}
+          Berechtigte Interessen (Art. 6 Abs. 1 S. 1 lit. f) DSGVO).
         </li>
         <li>
           <strong>E-Mail-Versand und -Hosting: </strong>Die von uns in Anspruch
@@ -423,7 +422,7 @@ export default function Datenschutz() {
           eingesetzt wird) nicht auf den Servern, von denen sie abgesendet und
           empfangen werden. Wir können daher für den Übertragungsweg der E-Mails
           zwischen dem Absender und dem Empfang auf unserem Server keine
-          Verantwortung übernehmen; <strong>Rechtsgrundlagen:</strong>{" "}
+          Verantwortung übernehmen; <strong>Rechtsgrundlagen:</strong>
           Berechtigte Interessen (Art. 6 Abs. 1 S. 1 lit. f) DSGVO).
         </li>
         <li>
@@ -431,23 +430,24 @@ export default function Datenschutz() {
           Bereitstellung von informationstechnischer Infrastruktur und
           verbundenen Dienstleistungen (z.B. Speicherplatz und/oder
           Rechenkapazitäten); <strong>Dienstanbieter:</strong> 1&1 IONOS SE,
-          Elgendorfer Str. 57, 56410 Montabaur, Deutschland;{" "}
+          Elgendorfer Str. 57, 56410 Montabaur, Deutschland;
           <strong>Rechtsgrundlagen:</strong> Berechtigte Interessen (Art. 6 Abs.
-          1 S. 1 lit. f) DSGVO); <strong>Website:</strong>{" "}
+          1 S. 1 lit. f) DSGVO); <strong>Website:</strong>
           <a href="https://www.ionos.de" target="_blank">
             https://www.ionos.de
           </a>
-          ; <strong>Datenschutzerklärung:</strong>{" "}
+          <strong>Datenschutzerklärung:</strong>
           <a
             href="https://www.ionos.de/terms-gtc/terms-privacy"
             target="_blank"
           >
             https://www.ionos.de/terms-gtc/terms-privacy
           </a>
-          ; <strong>Auftragsverarbeitungsvertrag:</strong>{" "}
+          <strong>Auftragsverarbeitungsvertrag:</strong>
           <a
             href="https://www.ionos.de/hilfe/datenschutz/allgemeine-informationen-zur-datenschutz-grundverordnung-dsgvo/auftragsverarbeitung/?utm_source=search&utm_medium=global&utm_term=Auft&utm_campaign=HELP_CENTER&utm_content=/hilfe/"
             target="_blank"
+            rel="noreferrer"
           >
             https://www.ionos.de/hilfe/datenschutz/allgemeine-informationen-zur-datenschutz-grundverordnung-dsgvo/auftragsverarbeitung/?utm_source=search&utm_medium=global&utm_term=Auft&utm_campaign=HELP_CENTER&utm_content=/hilfe/
           </a>
@@ -495,7 +495,7 @@ export default function Datenschutz() {
           <strong>Kontaktformular: </strong>Wenn Nutzer über unser
           Kontaktformular, E-Mail oder andere Kommunikationswege mit uns in
           Kontakt treten, verarbeiten wir die uns in diesem Zusammenhang
-          mitgeteilten Daten zur Bearbeitung des mitgeteilten Anliegens;{" "}
+          mitgeteilten Daten zur Bearbeitung des mitgeteilten Anliegens;
           <strong>Rechtsgrundlagen:</strong> Vertragserfüllung und
           vorvertragliche Anfragen (Art. 6 Abs. 1 S. 1 lit. b) DSGVO),
           Berechtigte Interessen (Art. 6 Abs. 1 S. 1 lit. f) DSGVO).
@@ -505,9 +505,9 @@ export default function Datenschutz() {
       <p>
         Wir binden in unser Onlineangebot Funktions- und Inhaltselemente ein,
         die von den Servern ihrer jeweiligen Anbieter (nachfolgend bezeichnet
-        als "Drittanbieter”) bezogen werden. Dabei kann es sich zum Beispiel um
-        Grafiken, Videos oder Stadtpläne handeln (nachfolgend einheitlich
-        bezeichnet als "Inhalte”).
+        als &quot; Drittanbieter &quot;) bezogen werden. Dabei kann es sich zum
+        Beispiel um Grafiken, Videos oder Stadtpläne handeln (nachfolgend
+        einheitlich bezeichnet als &quot; Inhalte &quot;).
       </p>
       <p>
         Die Einbindung setzt immer voraus, dass die Drittanbieter dieser Inhalte
@@ -517,15 +517,15 @@ export default function Datenschutz() {
         bemühen uns, nur solche Inhalte zu verwenden, deren jeweilige Anbieter
         die IP-Adresse lediglich zur Auslieferung der Inhalte verwenden.
         Drittanbieter können ferner sogenannte Pixel-Tags (unsichtbare Grafiken,
-        auch als "Web Beacons" bezeichnet) für statistische oder Marketingzwecke
-        verwenden. Durch die "Pixel-Tags" können Informationen, wie der
-        Besucherverkehr auf den Seiten dieser Webseite, ausgewertet werden. Die
-        pseudonymen Informationen können ferner in Cookies auf dem Gerät der
-        Nutzer gespeichert werden und unter anderem technische Informationen zum
-        Browser und zum Betriebssystem, zu verweisenden Webseiten, zur
-        Besuchszeit sowie weitere Angaben zur Nutzung unseres Onlineangebotes
-        enthalten als auch mit solchen Informationen aus anderen Quellen
-        verbunden werden.
+        auch als &quot; Web Beacons &quot; bezeichnet) für statistische oder
+        Marketingzwecke verwenden. Durch die &quot; Pixel-Tags &quot; können
+        Informationen, wie der Besucherverkehr auf den Seiten dieser Webseite,
+        ausgewertet werden. Die pseudonymen Informationen können ferner in
+        Cookies auf dem Gerät der Nutzer gespeichert werden und unter anderem
+        technische Informationen zum Browser und zum Betriebssystem, zu
+        verweisenden Webseiten, zur Besuchszeit sowie weitere Angaben zur
+        Nutzung unseres Onlineangebotes enthalten als auch mit solchen
+        Informationen aus anderen Quellen verbunden werden.
       </p>
       <ul>
         <li>
@@ -567,13 +567,13 @@ export default function Datenschutz() {
           Hardware) übermittelt, die für die Bereitstellung der Schriften in
           Abhängigkeit von den verwendeten Geräten und der technischen Umgebung
           notwendig sind; <strong>Dienstanbieter:</strong> Google Ireland
-          Limited, Gordon House, Barrow Street, Dublin 4, Irland;{" "}
+          Limited, Gordon House, Barrow Street, Dublin 4, Irland;
           <strong>Rechtsgrundlagen:</strong> Berechtigte Interessen (Art. 6 Abs.
-          1 S. 1 lit. f) DSGVO); <strong>Website:</strong>{" "}
+          1 S. 1 lit. f) DSGVO); <strong>Website:</strong>
           <a href="https://fonts.google.com/" target="_blank">
             https://fonts.google.com/
           </a>
-          ; <strong>Datenschutzerklärung:</strong>{" "}
+          ; <strong>Datenschutzerklärung:</strong>
           <a href="https://policies.google.com/privacy" target="_blank">
             https://policies.google.com/privacy
           </a>
@@ -582,15 +582,15 @@ export default function Datenschutz() {
         <li>
           <strong>Google Maps: </strong>Wir binden die Landkarten des Dienstes
           “Google Maps” des Anbieters Google ein. Zu den verarbeiteten Daten
-          können insbesondere IP-Adressen und Standortdaten der Nutzer gehören;{" "}
+          können insbesondere IP-Adressen und Standortdaten der Nutzer gehören;
           <strong>Dienstanbieter:</strong> Google Cloud EMEA Limited, 70 Sir
-          John Rogerson’s Quay, Dublin 2, Irland;{" "}
+          John Rogerson’s Quay, Dublin 2, Irland;
           <strong>Rechtsgrundlagen:</strong> Berechtigte Interessen (Art. 6 Abs.
-          1 S. 1 lit. f) DSGVO); <strong>Website:</strong>{" "}
+          1 S. 1 lit. f) DSGVO); <strong>Website:</strong>
           <a href="https://mapsplatform.google.com/" target="_blank">
             https://mapsplatform.google.com/
           </a>
-          ; <strong>Datenschutzerklärung:</strong>{" "}
+          ; <strong>Datenschutzerklärung:</strong>
           <a href="https://policies.google.com/privacy" target="_blank">
             https://policies.google.com/privacy
           </a>
@@ -652,7 +652,7 @@ export default function Datenschutz() {
         <li>
           <strong>
             Recht auf Löschung und Einschränkung der Verarbeitung:
-          </strong>{" "}
+          </strong>
           Sie haben nach Maßgabe der gesetzlichen Vorgaben das Recht, zu
           verlangen, dass Sie betreffende Daten unverzüglich gelöscht werden,
           bzw. alternativ nach Maßgabe der gesetzlichen Vorgaben eine
@@ -687,17 +687,17 @@ export default function Datenschutz() {
       </p>
       <ul>
         <li>
-          <strong>Personenbezogene Daten:</strong> "Personenbezogene Daten“ sind
-          alle Informationen, die sich auf eine identifizierte oder
-          identifizierbare natürliche Person (im Folgenden "betroffene Person“)
-          beziehen; als identifizierbar wird eine natürliche Person angesehen,
-          die direkt oder indirekt, insbesondere mittels Zuordnung zu einer
-          Kennung wie einem Namen, zu einer Kennnummer, zu Standortdaten, zu
-          einer Online-Kennung (z.B. Cookie) oder zu einem oder mehreren
-          besonderen Merkmalen identifiziert werden kann, die Ausdruck der
-          physischen, physiologischen, genetischen, psychischen,
+          <strong>Personenbezogene Daten:</strong> &quot; Personenbezogene Daten
+          &quot; sind alle Informationen, die sich auf eine identifizierte oder
+          identifizierbare natürliche Person (im Folgenden &quot; betroffene
+          Person &quot;) beziehen; als identifizierbar wird eine natürliche
+          Person angesehen, die direkt oder indirekt, insbesondere mittels
+          Zuordnung zu einer Kennung wie einem Namen, zu einer Kennnummer, zu
+          Standortdaten, zu einer Online-Kennung (z.B. Cookie) oder zu einem
+          oder mehreren besonderen Merkmalen identifiziert werden kann, die
+          Ausdruck der physischen, physiologischen, genetischen, psychischen,
           wirtschaftlichen, kulturellen oder sozialen Identität dieser
-          natürlichen Person sind.{" "}
+          natürlichen Person sind.
         </li>
         <li>
           <strong>Standortdaten:</strong> Standortdaten entstehen, wenn sich ein
@@ -708,34 +708,29 @@ export default function Datenschutz() {
           welcher geografisch bestimmbaren Position der Erde sich das jeweilige
           Gerät befindet. Standortdaten können z. B. eingesetzt werden, um
           Kartenfunktionen oder andere von einem Ort abhängige Informationen
-          darzustellen.{" "}
+          darzustellen.
         </li>
         <li>
           <strong>Verantwortlicher:</strong> Als "Verantwortlicher“ wird die
           natürliche oder juristische Person, Behörde, Einrichtung oder andere
           Stelle, die allein oder gemeinsam mit anderen über die Zwecke und
           Mittel der Verarbeitung von personenbezogenen Daten entscheidet,
-          bezeichnet.{" "}
+          bezeichnet.
         </li>
         <li>
-          <strong>Verarbeitung:</strong> "Verarbeitung" ist jeder mit oder ohne
-          Hilfe automatisierter Verfahren ausgeführte Vorgang oder jede solche
-          Vorgangsreihe im Zusammenhang mit personenbezogenen Daten. Der Begriff
-          reicht weit und umfasst praktisch jeden Umgang mit Daten, sei es das
-          Erheben, das Auswerten, das Speichern, das Übermitteln oder das
-          Löschen.{" "}
+          <strong>Verarbeitung:</strong> &quot; Verarbeitung &quot; ist jeder
+          mit oder ohne Hilfe automatisierter Verfahren ausgeführte Vorgang oder
+          jede solche Vorgangsreihe im Zusammenhang mit personenbezogenen Daten.
+          Der Begriff reicht weit und umfasst praktisch jeden Umgang mit Daten,
+          sei es das Erheben, das Auswerten, das Speichern, das Übermitteln oder
+          das Löschen.
         </li>
       </ul>
       <p>
-        <a
-          href="https://datenschutz-generator.de/"
-          title="Rechtstext von Dr. Schwenke - für weitere Informationen bitte anklicken."
-          target="_blank"
-          rel="noopener noreferrer nofollow"
-        >
+        <p>
           Erstellt mit kostenlosem Datenschutz-Generator.de von Dr. Thomas
           Schwenke
-        </a>
+        </p>
       </p>
     </div>
   );
