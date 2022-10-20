@@ -571,7 +571,7 @@ export default function Datenschutz() {
           Limited, Gordon House, Barrow Street, Dublin 4, Irland;
           <strong>Rechtsgrundlagen:</strong> Berechtigte Interessen (Art. 6 Abs.
           1 S. 1 lit. f) DSGVO); <strong>Website:</strong>
-          <a href="https://fonts.google.com/" target="_blank">
+          <a href="https://fonts.google.com/" target="_blank" rel="noreferrer">
             https://fonts.google.com/
           </a>
           ; <strong>Datenschutzerklärung:</strong>
@@ -724,10 +724,10 @@ export default function Datenschutz() {
           darzustellen.
         </li>
         <li>
-          <strong>Verantwortlicher:</strong> Als "Verantwortlicher“ wird die
-          natürliche oder juristische Person, Behörde, Einrichtung oder andere
-          Stelle, die allein oder gemeinsam mit anderen über die Zwecke und
-          Mittel der Verarbeitung von personenbezogenen Daten entscheidet,
+          <strong>Verantwortlicher:</strong> Als &quot; Verantwortlicher &quot;
+          wird die natürliche oder juristische Person, Behörde, Einrichtung oder
+          andere Stelle, die allein oder gemeinsam mit anderen über die Zwecke
+          und Mittel der Verarbeitung von personenbezogenen Daten entscheidet,
           bezeichnet.
         </li>
         <li>
