@@ -8,17 +8,17 @@ export default function Datenschutz() {
       <p>
         Mit der folgenden Datenschutzerklärung möchten wir Sie darüber
         aufklären, welche Arten Ihrer personenbezogenen Daten (nachfolgend auch
-        kurz als "Daten“ bezeichnet) wir zu welchen Zwecken und in welchem
-        Umfang verarbeiten. Die Datenschutzerklärung gilt für alle von uns
-        durchgeführten Verarbeitungen personenbezogener Daten, sowohl im Rahmen
-        der Erbringung unserer Leistungen als auch insbesondere auf unseren
-        Webseiten, in mobilen Applikationen sowie innerhalb externer
+        kurz als &quot; Daten &quot; bezeichnet) wir zu welchen Zwecken und in
+        welchem Umfang verarbeiten. Die Datenschutzerklärung gilt für alle von
+        uns durchgeführten Verarbeitungen personenbezogener Daten, sowohl im
+        Rahmen der Erbringung unserer Leistungen als auch insbesondere auf
+        unseren Webseiten, in mobilen Applikationen sowie innerhalb externer
         Onlinepräsenzen, wie z.B. unserer Social-Media-Profile (nachfolgend
-        zusammenfassend bezeichnet als "Onlineangebot“).
+        zusammenfassend bezeichnet als &quot; Onlineangebot &quot;).
       </p>
       <p>Die verwendeten Begriffe sind nicht geschlechtsspezifisch.</p>
       <p>Stand: 23. September 2022</p>
-      <h2>Inhaltsübersicht</h2>{" "}
+      <h2>Inhaltsübersicht</h2>
       <ul>
         <li>
           <a href="#m14">Einleitung</a>
@@ -404,7 +404,7 @@ export default function Datenschutz() {
           Für die Bereitstellung unseres Onlineangebotes nutzen wir
           Speicherplatz, Rechenkapazität und Software, die wir von einem
           entsprechenden Serveranbieter (auch &quot; Webhoster &quot; genannt)
-          mieten oder anderweitig beziehen; <strong>Rechtsgrundlagen:</strong>{" "}
+          mieten oder anderweitig beziehen; <strong>Rechtsgrundlagen:</strong>
           Berechtigte Interessen (Art. 6 Abs. 1 S. 1 lit. f) DSGVO).
         </li>
         <li>
@@ -433,13 +433,14 @@ export default function Datenschutz() {
           Elgendorfer Str. 57, 56410 Montabaur, Deutschland;
           <strong>Rechtsgrundlagen:</strong> Berechtigte Interessen (Art. 6 Abs.
           1 S. 1 lit. f) DSGVO); <strong>Website:</strong>
-          <a href="https://www.ionos.de" target="_blank">
+          <a href="https://www.ionos.de" target="_blank" rel="noreferrer">
             https://www.ionos.de
           </a>
           <strong>Datenschutzerklärung:</strong>
           <a
             href="https://www.ionos.de/terms-gtc/terms-privacy"
             target="_blank"
+            rel="noreferrer"
           >
             https://www.ionos.de/terms-gtc/terms-privacy
           </a>
@@ -574,7 +575,11 @@ export default function Datenschutz() {
             https://fonts.google.com/
           </a>
           ; <strong>Datenschutzerklärung:</strong>
-          <a href="https://policies.google.com/privacy" target="_blank">
+          <a
+            href="https://policies.google.com/privacy"
+            target="_blank"
+            rel="noreferrer"
+          >
             https://policies.google.com/privacy
           </a>
           .
@@ -587,11 +592,19 @@ export default function Datenschutz() {
           John Rogerson’s Quay, Dublin 2, Irland;
           <strong>Rechtsgrundlagen:</strong> Berechtigte Interessen (Art. 6 Abs.
           1 S. 1 lit. f) DSGVO); <strong>Website:</strong>
-          <a href="https://mapsplatform.google.com/" target="_blank">
+          <a
+            href="https://mapsplatform.google.com/"
+            target="_blank"
+            rel="noreferrer"
+          >
             https://mapsplatform.google.com/
           </a>
           ; <strong>Datenschutzerklärung:</strong>
-          <a href="https://policies.google.com/privacy" target="_blank">
+          <a
+            href="https://policies.google.com/privacy"
+            target="_blank"
+            rel="noreferrer"
+          >
             https://policies.google.com/privacy
           </a>
           .
