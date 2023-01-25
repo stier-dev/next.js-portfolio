@@ -790,7 +790,7 @@ export default function Datenschutz() {
             Übermitteln oder das Löschen.
           </li>
         </ul>
-        <p>
+        <p className={`${style.all} ${style.smallGray}`}>
           Erstellt mit kostenlosem Datenschutz-Generator.de von Dr. Thomas
           Schwenke
         </p>

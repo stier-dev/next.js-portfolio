@@ -3,13 +3,25 @@
   flex-wrap: wrap;
   justify-content: center;
   width: 100%;
-  background-color: blue;
+  min-height: 600px;
+  max-height: 1500px;
+  height: 100vw;
+  background-image: url("/img/footer/galaxy.jpg");
+  background-size: cover;
+  background-position: center;
 }
+
+.textContent {
+  background-color: white;
+  width: 500px;
+  height: 300px;
+}
+
 .linksContainer {
   display: flex;
   justify-content: center;
-  width: 80%;
-  background-color: pink;
+  align-self: center;
+  background-color: gray;
 }
 .link {
   //   width: 5rem;
