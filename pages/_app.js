@@ -31,7 +31,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-MVXBP39');`,
         }}
       />
-
       {consent === true && (
         <Script
           id="consupd"
@@ -46,7 +45,25 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           }}
         />
       )}
-
+      <Script
+        strategy="afterInteractive"
+        src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"
+      />
+          
+      <Script
+        id="google-analytics"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-F4P4DD5F6C', {
+            page_path: window.location.pathname,
+          });
+        `,
+        }}
+      />
       <Layout>
         <Component {...pageProps} />;
       </Layout>
