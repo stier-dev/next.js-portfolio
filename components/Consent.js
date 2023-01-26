@@ -10,6 +10,7 @@ export default function Consent() {
   //     </div>
   //   </>
   // );
+
   const [consent, setConsent] = useState(true);
   useEffect(() => {
     setConsent(hasCookie("localConsent"));
@@ -18,7 +19,11 @@ export default function Consent() {
   const acceptCookie = () => {
     setConsent(true);
     setCookie("localConsent", "true", { maxAge: 60 * 60 * 24 * 365 });
-    console.log("accepring cookies");
+    gtag("consent", "update", {
+      ad_storage: "granted",
+      analytics_storage: "granted",
+    });
+    console.log("accepting cookies");
   };
   const closeP = () => {
     setConsent(true);
@@ -45,7 +50,7 @@ export default function Consent() {
         </button>
         <button
           onClick={(e) => denyCookie()}
-          className="p-2 bg-red-400 rounded-md"
+          className={`${style.btn} ${style.accept}`}
         >
           Deny All
         </button>
@@ -53,7 +58,7 @@ export default function Consent() {
           onClick={() => {
             acceptCookie();
           }}
-          className="p-2 bg-green-400 rounded-md"
+          className={`${style.btn} ${style.accept}`}
         >
           Accept All
         </button>
