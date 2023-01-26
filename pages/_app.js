@@ -47,7 +47,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       )}
       <Script
         strategy="afterInteractive"
-        src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"
+        src="https://www.googletagmanager.com/gtag/js?id=G-F4P4DD5F6C"
       />
           
       <Script
