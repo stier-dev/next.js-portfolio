@@ -11,6 +11,8 @@ function MyApp({ Component, pageProps }) {
       <Head>
         <meta content="width=device-width, initial-scale=1" name="viewport" />
       </Head>
+
+      {/* consent google Tag */}
       <Script
         id="gtag"
         strategy="afterInteractive"
@@ -31,6 +33,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-MVXBP39');`,
         }}
       />
+      {/*  */}
       {consent === true && (
         <Script
           id="consupd"

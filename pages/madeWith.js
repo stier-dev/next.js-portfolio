@@ -64,10 +64,8 @@ export default function MadeWith() {
         // if there is only one entry it will be entries[0]
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            console.log("is intersecting!!!");
             setRunAnimation(true);
           } else {
-            console.log("is not intersecting");
             setRunAnimation(false);
           }
         });
@@ -101,7 +99,7 @@ export default function MadeWith() {
         <div className={style.nextReact}>
           <h4 className={style.nextText}>Programmiert mit</h4>
           <div className={`${style.nextImg}  `}></div>
-          <h4 className={style.nextText}>einem Framework für</h4>
+          <h4 className={style.nextText}>einem Framework für React</h4>
           <div className={`${style.reactImg}`}></div>
         </div>
         <div className={style.programsContainer}>
