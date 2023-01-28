@@ -6,8 +6,5 @@
       "@/styles/*": ["styles/*"],
       "@/functions/*": ["functions/*"]
     }
-  },
-  "parserOptions": {
-    "sourceType": "module"
   }
 }
