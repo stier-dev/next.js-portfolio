@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from "next/legacy/image";
 import style from "@/styles/components/Memory.module.scss";
 
 export default function SingleCard({

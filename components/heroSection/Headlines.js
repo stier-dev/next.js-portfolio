@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from "next/legacy/image";
 import { useState, useEffect } from "react";
 import style from "@/styles/heroSection/headlines.module.scss";
 import { motion } from "framer-motion";

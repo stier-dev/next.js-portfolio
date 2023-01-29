@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from "next/legacy/image";
 import React, { useState } from "react";
 import style from "@/styles/components/navbar/navMobile.module.scss";
 import HamburgerBtn from "./HamburgerBtn";

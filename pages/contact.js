@@ -7,7 +7,7 @@ import { useForm } from "react-hook-form";
 import { useState, useEffect } from "react";
 import style from "@/styles/contact.module.scss";
 import axios from "axios";
-import Image from "next/image";
+import Image from "next/legacy/image";
 
 export default function Contact() {
 	const {
@@ -57,7 +57,7 @@ export default function Contact() {
 	}
 
 	return (
-		<div id="contact" className={style.mainContainer}>
+        <div id="contact" className={style.mainContainer}>
 			<div className={style.headlinesContainer}>
 				<h1 className={style.headline}>KONTAKT</h1>
 				<div className={style.contactContainer}>
@@ -247,5 +247,5 @@ export default function Contact() {
 				</form>
 			</div>
 		</div>
-	);
+    );
 }
