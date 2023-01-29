@@ -24,11 +24,16 @@ export default function SingleCard({
           <div className={style.frontsideBackground}>
             <Image
               layout="fill"
+              alt="rückseite von der Memory Karte"
               src={"/img/memory/frontside/frontside_background.svg"}
             />
           </div>
           <div className={style.frontsideImg}>
-            <Image layout="fill" src={url} />
+            <Image
+              layout="fill"
+              src={url}
+              alt="vorderseite von der Memory Karte"
+            />
           </div>
         </div>
         <div className={`${style.cardBackside} ${style.card}`}>
@@ -36,18 +41,21 @@ export default function SingleCard({
           <div className={style.backgroundShapes}>
             <Image
               layout="fill"
+              alt=""
               src={"/img/memory/backside/background_border.svg"}
             />
           </div>
           <div className={style.backsideCircle}>
             <Image
               layout="fill"
+              alt=""
               src={"/img/memory/backside/background_pattern.svg"}
             />
           </div>
           <div className={style.backsideHexagon}>
             <Image
               layout="fill"
+              alt=""
               src={"/img/memory/backside/hover_hexagon.svg"}
             />
           </div>
