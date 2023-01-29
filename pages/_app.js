@@ -3,8 +3,14 @@ import "../styles/globals.scss";
 import Head from "next/head";
 import Script from "next/script";
 import { getCookie } from "cookies-next";
+import { useEffect } from "react";
 
 function MyApp({ Component, pageProps }) {
+  useEffect(() => {
+    console.log("initial render");
+    // because the scopes are empty it is called only on the initial render
+  }, []);
+
   const consent = getCookie("localConsent");
   return (
     <>

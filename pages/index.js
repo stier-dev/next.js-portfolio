@@ -7,12 +7,12 @@ import Contact from "./contact";
 // * dynamic loading / Deferred loading / lazy loading
 
 export default function Home() {
-	return (
-		<div className={styles.container}>
-			<HeroSection />
-			<MadeWith />
-			<Memory />
-			<Contact />
-		</div>
-	);
+  return (
+    <div className={styles.container}>
+      <HeroSection />
+      <MadeWith />
+      <Memory />
+      <Contact />
+    </div>
+  );
 }
