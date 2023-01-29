@@ -3,8 +3,6 @@ import cardsArray from "@/components/memory/cardsArray";
 import { useState, useEffect } from "react";
 import shuffleArray from "@/components/functions/shuffleArray";
 import deepCopyArray from "../functions/deepCopyArray";
-// import uniqid from "uniqid";
-// import cardFlipSound from "../../public/sounds/card_flip.mp3";
 
 export default function MemoryGame() {
   // * card variables
@@ -92,19 +90,6 @@ export default function MemoryGame() {
     return () => clearInterval(interval);
   }, [timerOn]);
 
-  // * <------------------------ sound function ------------------------ >
-  // two sound variables, so that they can overlap while opening multiple cards fast
-  // const playCardFlipSound = (nr) => {
-  // 	let cardFlipSound = document.getElementById("cardFlipSound");
-  // 	let cardFlipSound2 = document.getElementById("cardFlipSound2");
-  // 	cardFlipSound.volume = 0.3;
-  // 	cardFlipSound2.volume = 0.3;
-  // 	if (nr === 1) {
-  // 		cardFlipSound.play();
-  // 	} else {
-  // 		cardFlipSound2.play();
-  // 	}
-  // };
   // * <------------------------ selection function ------------------------ >
   const selectCard = (id) => {
     if (!canPlay) return;
@@ -114,18 +99,13 @@ export default function MemoryGame() {
     if (clonedCards[cardIndex].guessed || !clonedCards[cardIndex].closed) {
       return;
     }
-    // playing flipping sound
-
     setAttempts((prevState) => prevState + 1);
     if (openCards.length === 0) {
-      // playCardFlipSound(1);
       clonedCards[cardIndex].closed = !cards[cardIndex].closed;
       openCards.push(cardIndex);
     } else if (openCards.length === 1) {
-      // playCardFlipSound(2);
       clonedCards[cardIndex].closed = !cards[cardIndex].closed;
       openCards.push(cardIndex);
-      // setAttempts((prevState) => prevState + 1);
 
       // * 2 cards match:
       if (clonedCards[openCards[0]].url === clonedCards[openCards[1]].url) {

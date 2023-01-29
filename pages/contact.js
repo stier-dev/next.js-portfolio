@@ -59,16 +59,28 @@ export default function Contact() {
           <div className={style.contactInfos}>
             <a href="tel:+491743917416" className={style.iconAndText}>
               <div className={`${style.image} ${style.tel}`}>
-                <Image layout="fill" src={"/img/contact/phone.svg"} />
+                <Image
+                  layout="fill"
+                  src={"/img/contact/phone.svg"}
+                  alt="telefon icon"
+                />
               </div>
               <div className={style.image}>
-                <Image layout="fill" src={"/img/contact/whatsapp.svg"} />
+                <Image
+                  layout="fill"
+                  src={"/img/contact/whatsapp.svg"}
+                  alt="whatsapp icon"
+                />
               </div>
               <h3 className={style.contact}>0174 3917416</h3>
             </a>
             <a href="mailto:info@stier.dev" className={style.iconAndText}>
               <div className={`${style.image} ${style.mail}`}>
-                <Image layout="fill" src={"/img/contact/mail.svg"} />
+                <Image
+                  layout="fill"
+                  src={"/img/contact/mail.svg"}
+                  alt="mail icon"
+                />
               </div>
               <h3 className={style.contact}>info@stier.dev</h3>
             </a>
