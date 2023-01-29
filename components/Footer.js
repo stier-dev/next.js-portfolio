@@ -5,15 +5,15 @@ import { ParallaxProvider, Parallax } from "react-scroll-parallax";
 
 export default function Footer() {
 	return (
-		<div className={styles.footerContainer}>
+        <div className={styles.footerContainer}>
 			<ParallaxProvider>
 				<Parallax translateY={[-10, 10]}>
 					<div className={style.textContent}>
 						<div className={style.linksContainer}>
-							<Link href="/impressum">
+							<Link href="/impressum" legacyBehavior>
 								<h5 className={style.link}>Impressum</h5>
 							</Link>
-							<Link href="/datenschutz">
+							<Link href="/datenschutz" legacyBehavior>
 								<h5 className={style.link}>Datenschutz</h5>
 							</Link>
 						</div>
@@ -21,5 +21,5 @@ export default function Footer() {
 				</Parallax>
 			</ParallaxProvider>
 		</div>
-	);
+    );
 }
