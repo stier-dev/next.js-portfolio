@@ -10,8 +10,8 @@ import Consent from "./Consent";
 // {/* <Navbar /> */}
 
 // suspense
-import dynamic from "next/dynamic";
-import { Suspense } from "react";
+// import dynamic from "next/dynamic";
+// import { Suspense } from "react";
 
 // const DynamicNavbar = dynamic(() => import("../components/Navbar"), {
 //   suspense: true,

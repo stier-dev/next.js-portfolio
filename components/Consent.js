@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { setCookie, hasCookie } from "cookies-next";
 import style from "@/styles/components/Consent.module.scss";
 
@@ -19,6 +19,7 @@ export default function Consent() {
   const acceptCookie = () => {
     setConsent(true);
     setCookie("localConsent", "true", { maxAge: 60 * 60 * 24 * 365 });
+    // eslint-disable-next-line no-undef
     gtag("consent", "update", {
       ad_storage: "granted",
       analytics_storage: "granted",
@@ -42,14 +43,14 @@ export default function Consent() {
       Diese Seite benutzt Cookies, sind sie damit einverstanden?
       <div className="flex align-middle justify-between">
         <button
-          onClick={(e) => {
+          onClick={() => {
             closeP();
           }}
         >
           Close
         </button>
         <button
-          onClick={(e) => denyCookie()}
+          onClick={() => denyCookie()}
           className={`${style.btn} ${style.accept}`}
         >
           Deny All

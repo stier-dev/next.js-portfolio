@@ -1,15 +1,8 @@
 import style from "@/styles/components/navbar/navDesktop.module.scss";
-import { useRouter } from "next/router";
+
 import DesktopMenueLink from "./DesktopMenueLink";
 
-export default function DesktopMenue(props) {
-  let toggle = props.state;
-
-  const router = useRouter();
-
-  // let navActive = value.navActive;
-  // console.log(navActive);
-
+export default function DesktopMenue() {
   return (
     <div className={style.noPointerEvents}>
       <div className={style.menueContainer}>
