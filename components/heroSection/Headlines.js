@@ -1,4 +1,4 @@
-import Image from "next/legacy/image";
+import Image from "next/image";
 import { useState, useEffect } from "react";
 import style from "@/styles/heroSection/headlines.module.scss";
 import { motion } from "framer-motion";
@@ -11,7 +11,7 @@ export default function Headlines() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
     jumboH1 = document.querySelector("#heroJumbo");
 
-    const jumboContent = "Web-Development";
+    const jumboContent = "Web Entwickler";
     let index = 0;
     let currentText = "";
     let letter = "";
@@ -27,8 +27,10 @@ export default function Headlines() {
         setReady(false);
       } else {
         setReady(true);
-        jumboH1.innerHTML = `Web-Development
-    <span aria-hidden="true">Web-Development</span><span  aria-hidden="true">Web-Development</span>`;
+        setTimeout(() => {
+          jumboH1.innerHTML = `Web Entwickler
+        <span aria-hidden="true">Web Entwickler</span><span  aria-hidden="true">Web Entwickler</span>`;
+        }, 200);
       }
     };
     type();
@@ -55,7 +57,12 @@ export default function Headlines() {
           },
         }}
       >
-        <Image layout="fill" src={"/img/heroSection/umbrella.svg"} alt="" />
+        <Image
+          fill
+          blur
+          src={"/img/heroSection/umbrella.svg"}
+          alt="Georgi als Neo von Matrix"
+        />
       </motion.div>
       <div className={style.headlines}>
         <h1
@@ -69,11 +76,14 @@ export default function Headlines() {
             ready ? style.georgiyVisible : style.georgiyInVisible
           }`}
         >
-          <Image layout="fill" src={"/img/heroSection/georgi.svg"} alt="" />
+          <Image
+            fill
+            blur
+            src={"/img/heroSection/georgi.svg"}
+            alt="Georgi Stier"
+          />
         </div>
       </div>
     </div>
   );
 }
-
-// h2 wrapper und hero h2 aus css löschen
