@@ -7,8 +7,7 @@ import { useEffect } from "react";
 
 function MyApp({ Component, pageProps }) {
   useEffect(() => {
-    console.log("initial render");
-    // because the scopes are empty it is called only on the initial render
+    // when writing this function with empty scopes it is called only on the initial render
   }, []);
 
   const consent = getCookie("localConsent");
@@ -70,7 +69,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         `}
       </Script>
       <Layout>
-        <Component {...pageProps} />;
+        <Component {...pageProps} />
       </Layout>
     </>
   );

@@ -1,0 +1,195 @@
+@font-face {
+  font-family: "Zaio";
+  src: url("/fonts/Zaio.woff") format("woff");
+}
+
+#test {
+  position: relative;
+  height: 400px;
+  width: 400px;
+  background-color: red;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #000;
+  overflow: hidden;
+}
+/* to smooth into the animation at the initial start */
+.blackOverlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  margin: 0;
+  padding: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.canvasContainer {
+  height: 800px;
+  width: 100%;
+  clip-path: circle(350px at center);
+}
+
+.circleBorder {
+  position: absolute;
+  margin: auto;
+  top: 270px;
+  height: 720px;
+  width: 720px;
+  border-radius: 50%;
+  border: 1px solid #ffb124;
+  pointer-events: none;
+  z-index: 4;
+}
+
+.invisible {
+  position: absolute;
+
+  overflow: hidden;
+  background-color: transparent;
+  margin: 0;
+  padding: 0;
+  transition: all 3s ease-in-out;
+  pointer-events: none;
+}
+
+.mainContainer {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.textContainer {
+  position: relative;
+  display: flex;
+  height: 230px;
+  width: 100vw;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* .textboxContainer {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+} */
+
+/* .textbox {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.4);
+  border: 1px solid #ffb22481;
+  width: 40rem;
+  border-radius: 0.3rem;
+  padding: 1.5rem;
+} */
+
+h1 {
+  font-size: 3.5rem;
+  letter-spacing: 0.17rem;
+  font-family: "Zaio";
+  color: #ffb124;
+  text-align: center;
+  width: 100%;
+  margin: 0.3rem 0 0.3rem 0;
+  cursor: default;
+  z-index: 2;
+}
+
+h2 {
+  font-size: 1.3rem;
+  letter-spacing: 0.08rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  color: white;
+  text-align: center;
+  width: 100%;
+  cursor: default;
+  z-index: 2;
+}
+
+#kaleidoskopBtn {
+  /* background-color: #ffb124; */
+  position: relative;
+  width: 7rem;
+  height: 2.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffb124;
+  border: none;
+  border: 1px solid white;
+  border-radius: 0.2rem;
+  padding: 0.5rem 1rem;
+  font-size: 1.2rem;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+  z-index: 2;
+}
+#kaleidoskopBtn span {
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+  display: inline-block;
+  transition: 0.5s;
+}
+
+#kaleidoskopBtn span:nth-child(odd) {
+  transform: translateY(-3rem);
+}
+#kaleidoskopBtn:hover span:nth-child(odd) {
+  transform: translateY(0);
+}
+#kaleidoskopBtn span:nth-child(even) {
+  transform: translateY(3rem);
+}
+#kaleidoskopBtn:hover span:nth-child(even) {
+  transform: translateY(0);
+}
+
+#kaleidoskopBtn span:nth-child(odd):before {
+  content: attr(letter);
+  position: absolute;
+  transform: translateY(3rem);
+}
+
+#kaleidoskopBtn span:nth-child(even):before {
+  content: attr(letter);
+  position: absolute;
+  transform: translateY(-3rem);
+}
+
+#kaleidoskopBtn:hover {
+  border-color: #ffb124;
+  color: white;
+}
+
+/* media screen checklist */
+
+/* @media screen and (max-width: 768px) {
+  .textContainer {
+    height: 230px;
+  }
+  
+} */

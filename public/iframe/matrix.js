@@ -28,7 +28,6 @@ function findMaxHeightOfAninmation() {
   return canvas.height / 1.6;
 }
 let maxAnimationHeight = findMaxHeightOfAninmation();
-let minAnimationHeight = 600;
 
 const symbolsArray =
   "♪アァカサタナハマヤャラワンわワヰヱヲらりるれろラリルレロヤユヨマミムメモはひふへほハヒフヘいうえアイウエオかたにナニヌネノちつてとタチツテトきくけこカキクケコさしすせそサスセソABCDEFGHIJKLMNOPQRSTUVWXYZ123456789";
@@ -53,10 +52,6 @@ calculateFontSize();
 let bgColor = "rgba(0, 0, 0, 1)";
 let bgColor20 = "rgba(0, 0, 0, 0.1)";
 // let bgColor50 = "rgba(0, 0, 0, 0.5)";
-
-let bgBottomColor = "rgba(0, 0, 0, 1)";
-let bgBottomColor20 = "rgba(0, 0, 0, 0.2)";
-let bgBottomColor50 = "rgba(0, 0, 0, 0.5)";
 
 let hoverColor = "#00ced3";
 let white = "rgba(255, 178, 36, 0.6)";
@@ -120,9 +115,6 @@ function updateGradients() {
   backgroundGradient20.addColorStop(0, bgColor20);
   backgroundGradient20.addColorStop(1, bgColor20);
 }
-
-let reset = false;
-let firstTime = true;
 
 let mouseDistance = 70;
 
@@ -246,8 +238,6 @@ function animate(timeStamp) {
   }
 }
 animate(0);
-console.log("hi");
-
 // ---------------------------------------------------------- Resizing!
 
 // creating a boolean that stops the animation during resizing

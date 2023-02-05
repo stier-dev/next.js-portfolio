@@ -59,7 +59,6 @@ export default function Headlines() {
       >
         <Image
           fill
-          blur
           src={"/img/heroSection/umbrella.svg"}
           alt="Georgi als Neo von Matrix"
         />
@@ -76,12 +75,7 @@ export default function Headlines() {
             ready ? style.georgiyVisible : style.georgiyInVisible
           }`}
         >
-          <Image
-            fill
-            blur
-            src={"/img/heroSection/georgi.svg"}
-            alt="Georgi Stier"
-          />
+          <Image fill src={"/img/heroSection/georgi.svg"} alt="Georgi Stier" />
         </div>
       </div>
     </div>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>kaleidoskop mit javascript</title>
+    <link rel="stylesheet" href="kaleidoskop.css" />
+    <script defer src="kaleidoskop.js"></script>
+  </head>
+  <body>
+    <div class="mainContainer">
+      <div id="blackOverlay" class="blackOverlay"></div>
+      <div class="textContainer">
+        <h1>Interaktives Kaleidoskop</h1>
+        <h2>Bewege deine Maus um das Kaleidoskop zu steuern</h2>
+        <div id="kaleidoskopBtn">
+          <span letter="S">S</span>
+          <span letter="T">T</span>
+          <span letter="A">A</span>
+          <span letter="R">R</span>
+          <span letter="T">T</span>
+        </div>
+      </div>
+      <div class="circleBorder"></div>
+      <div class="canvasContainer">
+        <canvas id="kaleidoskopCanvas" />
+      </div>
+    </div>
+  </body>
+</html>

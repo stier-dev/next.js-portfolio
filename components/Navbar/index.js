@@ -1,4 +1,4 @@
-import Image from "next/legacy/image";
+import Image from "next/image";
 import { useState } from "react";
 import style from "@/styles/components/navbar/navMobile.module.scss";
 import HamburgerBtn from "./HamburgerBtn";
@@ -25,7 +25,7 @@ export default function Nav() {
           }}
         >
           <Image
-            layout="fill"
+            fill
             alt="Zurück zur Startseite Georgi Stier Logo"
             src={
               !hoverLogo ? "/img/navbar/logo.svg" : "/img/navbar/logo_hover.svg"

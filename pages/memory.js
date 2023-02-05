@@ -3,8 +3,15 @@ import SingleCard from "@/components/memory/SingleCard";
 import style from "@/styles/components/Memory.module.scss";
 import btnStyle from "@/styles/components/buttons.module.scss";
 import winningText from "@/components/memory/winningText";
+import { useEffect, useState } from "react";
 
 export default function MemoryHtml() {
+  // only render cards after hydration
+  const [afterHydration, setAfterHydration] = useState(false);
+  useEffect(() => {
+    setAfterHydration(true);
+  }, []);
+
   const {
     cards,
     selectCard,
@@ -17,6 +24,10 @@ export default function MemoryHtml() {
     previousAttempts,
     // ! a function that calculates how fast and how many attempts
   } = MemoryGame();
+
+  useEffect(() => {
+    console.log("initial memory render");
+  }, []);
 
   // * makes the winning screen visible or invisible
   const winningClass = () => {
@@ -70,7 +81,7 @@ export default function MemoryHtml() {
       <div className={`${style.textAndGameContainer} ${transparentClass()}`}>
         <div className={style.textContainer}>
           <div className={style.headlineContainer}>
-            <h1 className={style.memoryHeadline}>Magic Memory</h1>
+            <h1 className={style.memoryHeadline}>Steampunk Memory</h1>
           </div>
           <div className={style.statsContainer}>
             <h3 className={`${style.stats} ${style.statsFont}`}>
@@ -105,20 +116,22 @@ export default function MemoryHtml() {
           </div>
         </div>
         <div className={style.memoryContainer}>
-          <div className={style.allCards}>
-            {cards.map(({ url, closed, id, guessed }) => {
-              return (
-                <SingleCard
-                  key={id}
-                  selectCard={selectCard}
-                  url={url}
-                  closed={closed}
-                  id={id}
-                  guessed={guessed}
-                />
-              );
-            })}
-          </div>
+          {afterHydration && (
+            <div className={style.allCards}>
+              {cards.map(({ url, closed, id, guessed }) => {
+                return (
+                  <SingleCard
+                    key={id}
+                    selectCard={selectCard}
+                    url={url}
+                    closed={closed}
+                    id={id}
+                    guessed={guessed}
+                  />
+                );
+              })}
+            </div>
+          )}
         </div>
       </div>
     </div>
