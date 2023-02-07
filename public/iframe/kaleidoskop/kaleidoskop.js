@@ -103,8 +103,9 @@ img.onload = function () {
       }
       kaleidoskop.offsetX += (movementX - kaleidoskop.offsetX) * ease;
       kaleidoskop.offsetY += (movementY - kaleidoskop.offsetY) * ease;
-      kaleidoskop.offsetRotation +=
-        (rotation - kaleidoskop.offsetRotation) * ease;
+      kaleidoskop.offsetRotation += cutDecimals(
+        (rotation - kaleidoskop.offsetRotation) * ease
+      );
 
       draw();
     }
@@ -140,20 +141,22 @@ img.onload = function () {
     };
   };
 
+  // !!!!!!!!!!!!!!!!!!!!! Event listener FUNCTIONS !!!!!!!!!!!!!!!!!!!!!!
+
+  // ! decimal cutting function
+  function cutDecimals(number) {
+    number = number * 1000;
+    number = Math.floor(number);
+    number = number / 1000;
+    return number;
+  }
+
   // ! mouse movement function
   let windowWidth = window.innerWidth;
   let windowHeight = window.innerHeight;
   let mouseEventOn = false;
 
-  function cutDecimals(number) {
-    number = number * 100;
-    number = Math.floor(number);
-    number = number / 100;
-    return number;
-  }
-
   function mousemove(event) {
-    console.log("mousemove");
     if (!animationOn) {
       return;
     }
@@ -176,14 +179,49 @@ img.onload = function () {
     movementY = Math.floor((mouseY - 1) * kaleidoskop.radius * 2);
   }
 
+  // ! Mouse Throttle
   let throttleDelay = 100;
-  let iframe = window.parent.document.getElementById("kaleidoskop");
   function mouseEvent(e) {
-    let event = e;
-    throttleFunction(mousemove(event), throttleDelay);
+    // let event = e;
+    throttleFunction(mousemove(e), throttleDelay);
   }
-  // ! Mousemove EventListener
   mouseEventOn = false;
+
+  // ! Touch function
+
+  // eslint-disable-next-line no-unused-vars
+  function touchmove(e) {
+    console.log("touchmove");
+    //  * move Image
+    // console.log(e);
+  }
+  // eslint-disable-next-line no-unused-vars
+  function touchstart(e) {
+    console.log(movementX);
+    movementX = movementX - movementX * 2;
+    console.log(movementX);
+
+    // console.log(kaleidoskop.offsetRotation);
+    // * invert Rotation
+    // console.log(e);
+  }
+
+  //  ! Touch throttle
+  function touchMoveEvent(e) {
+    throttleFunction(touchmove(e), throttleDelay);
+  }
+  function touchStartEvent(e) {
+    throttleFunction(touchstart(e), throttleDelay);
+  }
+
+  // ! !!!!!!!!!!!!!!!!!! EVENT LISTENERS !!!!!!!!!!!!!!!!!!
+
+  //
+  window.addEventListener("touchmove", touchMoveEvent);
+  window.addEventListener("touchstart", touchStartEvent);
+
+  let iframe = window.parent.document.getElementById("kaleidoskop");
+
   // ! Scroll EventListener
   window.parent.addEventListener(
     "scroll",
@@ -220,11 +258,7 @@ img.onload = function () {
     }
   }
 
-  // window.addEventListener("mousemove", test);
-  // function test(e) {
-  //   console.log(e);
-  // }
-  // ! remove Mouse Movement EventListener
+  // ! add & remove Mouse Movement EventListener
   function turnOffMouseEventOffScreen(bolean) {
     if (!bolean && mouseEventOn) {
       console.log("remove MousemoveEventListener");
