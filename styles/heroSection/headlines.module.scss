@@ -1,33 +1,72 @@
 @import "/styles/abstracts/colors";
 
-// ! Umbrella:
-.textAndUmbrella {
-  position: absolute;
+$matrixImgHeight: 800px;
+$matrixImgWidth: 680px;
+
+$matrixImgHeight1200: 680px;
+$matrixImgWidth1200: 570px;
+
+$matrixImgHeight900: 600px;
+$matrixImgWidth900: 510px;
+
+$matrixImgHeight750: 500px;
+$matrixImgWidth750: 400px;
+
+$matrixImgHeight500: 400px;
+$matrixImgWidth500: 340px;
+
+.mainContainer {
+  height: 90vh;
+  // !!! IMPORTANT: adapt to: heroSection.module.scss .mainContainer { height & min-height }
+  min-height: 750px;
+  height: 90vh;
+  // !!!
+  width: 100vw;
   display: flex;
   justify-content: center;
-  top: 10vh;
-  width: 30rem;
+  align-items: center;
+  transition: all 400ms ease-in-out;
+  margin: 0%;
+  padding: 0%;
 }
 
-.backgroundImage {
-  position: absolute;
-  top: 3rem;
-  height: 25rem;
-  width: 100%;
+// ! parallax Georgi
+.parallaxContainer {
+  display: flex;
+  height: $matrixImgHeight;
+  width: $matrixImgWidth;
+
+  margin: 0%;
+  padding: 0%;
 }
 
-.neo {
-  height: 100%;
-  width: 100%;
+.parallaxChildContainer {
+  height: $matrixImgHeight;
+  width: $matrixImgWidth;
+  margin: 0%;
+  padding: 0%;
+
+  // transition: all 400ms ease-in-out;
 }
+
+.matrixGeorgiyImg {
+  height: $matrixImgHeight;
+  width: $matrixImgWidth;
+  z-index: 3;
+  margin: 0%;
+  padding: 0%;
+  // transition: all 400ms ease-in-out;
+}
+
 .headlines {
   position: absolute;
   display: flex;
   justify-content: center;
-  top: 11rem;
+  top: 335px;
   height: 12rem;
   width: 100%;
-  background-color: black;
+  z-index: 10;
+  overflow: visible;
 }
 
 .heroJumbo {
@@ -38,10 +77,11 @@
   color: white;
   text-align: center;
   text-transform: uppercase;
-  letter-spacing: 0.2rem;
   -webkit-transition: font-size 0.2s ease-in;
   transition: font-size 0.3s ease-in;
   cursor: default;
+  letter-spacing: 0.2rem;
+  font-size: 4rem;
 }
 
 .georgiy {
@@ -63,143 +103,6 @@
   transform: scale(1.2);
 }
 
-// ! Responsiveness
-
-.heroJumbo {
-  letter-spacing: 0.2rem;
-  font-size: 4rem;
-}
-.textAndUmbrella {
-  transition: all 400ms ease-in-out;
-}
-
-.backgroundImage {
-  top: 1rem;
-  height: 33rem;
-  width: 100%;
-}
-
-.headlines {
-  top: 11.8rem;
-  height: 12rem;
-  width: 100%;
-}
-.georgiy {
-  top: 5.3rem;
-  height: 5.5rem;
-  width: 11rem;
-}
-
-@media all and (max-width: 1200px) {
-  .heroJumbo {
-    font-size: 2.9rem;
-  }
-  .textAndUmbrella {
-    width: 25rem;
-  }
-
-  .backgroundImage {
-    top: 2rem;
-    height: 25rem;
-    width: 100%;
-  }
-
-  .headlines {
-    top: 10.5rem;
-    height: 9.5rem;
-    width: 100%;
-  }
-  .georgiy {
-    top: 4rem;
-    height: 4.5rem;
-    width: 9rem;
-  }
-  .jumboTypingEffect:after {
-    height: 3rem !important;
-  }
-}
-
-@media all and (max-width: 750px) {
-  .heroJumbo {
-    font-size: 2.5rem;
-  }
-
-  .backgroundImage {
-    top: 2.2rem;
-    height: 22rem;
-    width: 100%;
-  }
-
-  .headlines {
-    top: 9.5rem;
-    height: 9rem;
-    width: 100%;
-  }
-  .georgiy {
-    top: 3.5rem;
-    height: 4rem;
-    width: 8rem;
-  }
-}
-
-@media all and (max-width: 500px) {
-  .heroJumbo {
-    font-size: 2rem;
-  }
-  .textAndUmbrella {
-    width: 17rem;
-  }
-
-  .backgroundImage {
-    top: 0rem;
-    height: 24rem;
-    width: 100%;
-  }
-
-  .headlines {
-    top: 9.3rem;
-    height: 7rem;
-    width: 100%;
-  }
-  .georgiy {
-    top: 2.8rem;
-    height: 3.5rem;
-    width: 7.5rem;
-  }
-  .jumboTypingEffect:after {
-    height: 2rem !important;
-  }
-}
-
-@media all and (max-width: 350px) {
-  .heroJumbo {
-    font-size: 1.7rem;
-  }
-  .textAndUmbrella {
-    width: 14rem;
-  }
-
-  .backgroundImage {
-    top: 0rem;
-    height: 20rem;
-    width: 100%;
-  }
-
-  .headlines {
-    top: 8.1rem;
-    height: 6rem;
-    width: 100%;
-  }
-  .georgiy {
-    top: 2.4rem;
-    height: 3.5rem;
-    width: 5rem;
-  }
-  .jumboTypingEffect:after {
-    height: 2rem !important;
-  }
-}
-
 .flex-center {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -219,6 +122,179 @@
   -webkit-animation: blink 0.7s infinite;
   animation: blink 0.7s infinite;
 }
+
+// ! Responsive Media Queries
+
+@media all and (max-width: 1200px) {
+  .mainContainer {
+    // !!! IMPORTANT: adapt to: heroSection.module.scss .mainContainer { height & min-height }
+    height: 85vh;
+    min-height: 550px;
+  }
+  .heroJumbo {
+    font-size: 3.5rem;
+  }
+
+  .headlines {
+    top: 300px;
+    // height: 9.5rem;
+    width: 100%;
+  }
+  .georgiy {
+    top: 4.5rem;
+    width: 11rem;
+  }
+
+  .parallaxContainer {
+    height: $matrixImgHeight1200;
+    width: $matrixImgWidth1200;
+  }
+
+  .parallaxChildContainer {
+    height: $matrixImgHeight1200;
+    width: $matrixImgWidth1200;
+  }
+
+  .matrixGeorgiyImg {
+    height: $matrixImgHeight1200;
+    width: $matrixImgWidth1200;
+  }
+}
+
+@media all and (max-width: 900px) {
+  .mainContainer {
+    // !!! IMPORTANT: adapt to: heroSection.module.scss .mainContainer { height & min-height }
+    height: 85vh;
+    min-height: 450px;
+  }
+  .heroJumbo {
+    font-size: 3rem;
+  }
+
+  .headlines {
+    top: 270px;
+    width: 100%;
+  }
+  .georgiy {
+    top: 4rem;
+    width: 9.5rem;
+  }
+
+  .parallaxContainer {
+    height: $matrixImgHeight900;
+    width: $matrixImgWidth900;
+  }
+
+  .parallaxChildContainer {
+    height: $matrixImgHeight900;
+    width: $matrixImgWidth900;
+  }
+  .matrixGeorgiyImg {
+    height: $matrixImgHeight900;
+    width: $matrixImgWidth900;
+  }
+}
+
+@media all and (max-width: 750px) {
+  .mainContainer {
+    // !!! IMPORTANT: adapt to: heroSection.module.scss .mainContainer { height & min-height }
+    height: 85vh;
+    min-height: 400px;
+  }
+  .heroJumbo {
+    font-size: 2.3rem;
+  }
+
+  .headlines {
+    top: 200px;
+    width: 100%;
+  }
+  .georgiy {
+    top: 2.4rem;
+    width: 7rem;
+  }
+
+  .parallaxContainer {
+    height: $matrixImgHeight750;
+    width: $matrixImgWidth750;
+  }
+
+  .parallaxChildContainer {
+    height: $matrixImgHeight750;
+    width: $matrixImgWidth750;
+  }
+  .matrixGeorgiyImg {
+    height: $matrixImgHeight750;
+    width: $matrixImgWidth750;
+  }
+}
+
+@media all and (max-width: 500px) {
+  .mainContainer {
+    // !!! IMPORTANT: adapt to: heroSection.module.scss .mainContainer { height & min-height }
+    min-height: 340px;
+  }
+  .heroJumbo {
+    font-size: 1.9rem;
+  }
+
+  .headlines {
+    top: 180px;
+  }
+  .georgiy {
+    top: 2rem;
+    width: 6rem;
+  }
+
+  .parallaxContainer {
+    height: $matrixImgHeight500;
+    width: $matrixImgWidth500;
+  }
+
+  .parallaxChildContainer {
+    height: $matrixImgHeight500;
+    width: $matrixImgWidth500;
+  }
+  .matrixGeorgiyImg {
+    height: $matrixImgHeight500;
+    width: $matrixImgWidth500;
+  }
+}
+
+@media all and (max-width: 350px) {
+  .mainContainer {
+    // !!! IMPORTANT: adapt to: heroSection.module.scss .mainContainer { height & min-height }
+    min-height: 290px;
+    min-width: 350px;
+  }
+  .heroJumbo {
+    font-size: 1.9rem;
+  }
+
+  .headlines {
+    top: 180px;
+  }
+  .georgiy {
+    top: 2rem;
+    width: 6rem;
+  }
+
+  .parallaxContainer {
+    height: $matrixImgHeight500;
+    width: $matrixImgWidth500;
+  }
+
+  .parallaxChildContainer {
+    height: $matrixImgHeight500;
+    width: $matrixImgWidth500;
+  }
+  .matrixGeorgiyImg {
+    height: $matrixImgHeight500;
+    width: $matrixImgWidth500;
+  }
+}
+
+// !! Keyframes for blinking cursor
 
 @-webkit-keyframes blink {
   0% {

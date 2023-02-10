@@ -217,8 +217,8 @@ img.onload = function () {
   // ! !!!!!!!!!!!!!!!!!! EVENT LISTENERS !!!!!!!!!!!!!!!!!!
 
   //
-  window.addEventListener("touchmove", touchMoveEvent);
-  window.addEventListener("touchstart", touchStartEvent);
+  canvas.addEventListener("touchmove", touchMoveEvent);
+  canvas.addEventListener("touchstart", touchStartEvent);
 
   let iframe = window.parent.document.getElementById("kaleidoskop");
 

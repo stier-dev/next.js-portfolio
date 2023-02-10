@@ -4,7 +4,7 @@ import DesktopMenueLink from "./DesktopMenueLink";
 
 export default function DesktopMenue() {
   return (
-    <div className={style.noPointerEvents}>
+    <div className={`${style.pointerEvents}`}>
       <div className={style.menueContainer}>
         <div className={`${style.menueItemContainer} ${style.portfolio}`}>
           <div className={`${style.linkTextContainer}`}>

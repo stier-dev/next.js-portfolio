@@ -7,9 +7,13 @@
   margin: 0;
   padding: 0;
   background-color: black;
-  height: 85vh;
+  // !!! IMPORTANT: adapt to: headlines.module.scss .mainContainer { height & min-height }
+  min-height: 700px;
+  height: 90vh;
+  // !!!
   overflow-x: hidden;
   overflow-y: hidden;
+  transition: all 400ms ease-in-out;
 }
 
 .iFrame {
@@ -38,26 +42,32 @@
   top: 0;
 }
 
-@media (min-width: 1201px) {
-  .mainContainer {
-    min-height: 650px;
-  }
-}
-
 @media (max-width: 1200px) {
   .mainContainer {
+    height: 85vh;
     min-height: 550px;
   }
 }
 
+@media (max-width: 900px) {
+  .mainContainer {
+    height: 85vh;
+    min-height: 450px;
+  }
+}
 @media (max-width: 750px) {
   .mainContainer {
-    min-height: 500px;
+    min-height: 380px;
   }
 }
 
 @media (max-width: 500px) {
   .mainContainer {
-    min-height: 450px;
+    min-height: 340px;
+  }
+}
+@media (max-width: 350px) {
+  .mainContainer {
+    min-height: 290px;
   }
 }

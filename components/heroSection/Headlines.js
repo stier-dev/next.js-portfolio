@@ -2,6 +2,10 @@ import Image from "next/image";
 import { useState, useEffect } from "react";
 import style from "@/styles/heroSection/headlines.module.scss";
 import { motion } from "framer-motion";
+import {
+  MouseParallaxContainer,
+  MouseParallaxChild,
+} from "react-parallax-mouse";
 
 export default function Headlines() {
   let jumboH1 = undefined;
@@ -37,47 +41,70 @@ export default function Headlines() {
   }, []);
 
   return (
-    <div className={style.textAndUmbrella}>
-      <motion.div
-        className={style.backgroundImage}
-        initial="hidden"
-        animate="visible"
-        variants={{
-          hidden: {
-            scale: 0.8,
-            opacity: 0,
-          },
-          visible: {
-            scale: 1,
-            opacity: 1,
-            transition: {
-              duration: 0.5,
-              delay: 0,
-            },
-          },
-        }}
+    <div className={style.mainContainer}>
+      <MouseParallaxContainer
+        globalFactorX={0.1}
+        globalFactorY={0.1}
+        className={style.parallaxContainer}
+        useWindowMouseEvents={true}
       >
-        <Image
-          fill
-          src={"/img/heroSection/umbrella.svg"}
-          alt="Georgi als Neo von Matrix"
-        />
-      </motion.div>
-      <div className={style.headlines}>
-        <h1
-          id="heroJumbo"
-          className={`${style.heroJumbo} ${
-            ready ? style.glitch : style.jumboTypingEffect
-          }`}
-        ></h1>
-        <div
-          className={`${style.georgiy} ${
-            ready ? style.georgiyVisible : style.georgiyInVisible
-          }`}
+        <motion.div
+          initial="hidden"
+          animate="visible"
+          variants={{
+            hidden: {
+              scale: 0.8,
+              opacity: 0,
+            },
+            visible: {
+              scale: 1,
+              opacity: 1,
+              transition: {
+                duration: 0.5,
+                delay: 0,
+              },
+            },
+          }}
         >
-          <Image fill src={"/img/heroSection/georgi.svg"} alt="Georgi Stier" />
-        </div>
-      </div>
+          <MouseParallaxChild
+            factorX={0.3}
+            factorY={0.5}
+            className={style.parallaxChildContainer}
+          >
+            <Image
+              className={style.matrixGeorgiImg}
+              fill
+              src={"/img/heroSection/matrix_georgi.png"}
+              alt="Georgi als Neo von Matrix"
+              blurDataURL="/img/heroSection/matrix_georgi_blur.png"
+              placeholder="blur"
+            />
+          </MouseParallaxChild>
+        </motion.div>
+        <MouseParallaxChild
+          factorX={0.5}
+          factorY={0.8}
+          className={style.headlines}
+        >
+          <h1
+            id="heroJumbo"
+            className={`${style.heroJumbo} ${
+              ready ? style.glitch : style.jumboTypingEffect
+            }`}
+          ></h1>
+          <div
+            className={`${style.georgiy} ${
+              ready ? style.georgiyVisible : style.georgiyInVisible
+            }`}
+          >
+            <Image
+              fill
+              src={"/img/heroSection/georgi.svg"}
+              alt="Georgi Stier"
+            />
+          </div>
+        </MouseParallaxChild>
+      </MouseParallaxContainer>
     </div>
   );
 }

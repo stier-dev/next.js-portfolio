@@ -17,7 +17,7 @@ let mouse = {
   y: undefined,
 };
 
-window.addEventListener("mousemove", (event) => {
+window.parent.addEventListener("mousemove", (event) => {
   mouse.x = event.x;
   mouse.y = event.y;
 });
