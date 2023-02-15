@@ -7,6 +7,7 @@ let animationOn = false;
 const blackOverlay = document.getElementById("blackOverlay");
 const canvas = document.getElementById("kaleidoskopCanvas");
 const ctx = canvas.getContext("2d", { alpha: false });
+let currentWindowWidth = window.parent.innerWidth;
 
 var half_PI = Math.PI / 2,
   two_PI = Math.PI * 2,
@@ -22,8 +23,32 @@ var kaleidoskop = {
   zoom: 4,
 };
 
-canvas.width = kaleidoskop.radius * 2;
-canvas.height = kaleidoskop.radius * 2;
+function setRadiusSizeAndMargin() {
+  currentWindowWidth = window.parent.innerWidth;
+  console.log(currentWindowWidth);
+  if (currentWindowWidth >= 850) {
+    console.log("over 850");
+    kaleidoskop.radius = 400;
+  } else if (currentWindowWidth <= 849 && currentWindowWidth >= 590) {
+    console.log("under 849");
+
+    kaleidoskop.radius = 250;
+  } else if (currentWindowWidth <= 589 && currentWindowWidth >= 400) {
+    console.log("under 589");
+    kaleidoskop.radius = 185;
+  } else if (currentWindowWidth <= 399) {
+    console.log("under 399");
+    kaleidoskop.radius = 130;
+  }
+
+  // ! adapt to .canvasContainer & .circleBorder in css
+
+  canvas.width = kaleidoskop.radius * 2;
+  canvas.height = kaleidoskop.radius * 2;
+  canvas.style.marginLeft = -kaleidoskop.radius + "px";
+  canvas.style.marginTop = -kaleidoskop.radius + "px";
+}
+setRadiusSizeAndMargin();
 
 var img = new Image();
 
@@ -63,8 +88,7 @@ img.onload = function () {
   let rotation = kaleidoskop.offsetRotation;
 
   canvas.style.position = "relative";
-  canvas.style.marginLeft = -kaleidoskop.radius + "px";
-  canvas.style.marginTop = -kaleidoskop.radius + "px";
+  // canvas margin declared in SetRadiusSizeAndMargin function
   canvas.style.left = "50%";
   canvas.style.top = "50%";
 
@@ -238,7 +262,7 @@ img.onload = function () {
     const rect = element.getBoundingClientRect();
     if (
       rect.top - window.parent.innerHeight <= 0 &&
-      rect.top >= 0 - iframe.offsetHeight
+      rect.top >= 0 - element.offsetHeight
     ) {
       return true;
     } else {
@@ -278,6 +302,10 @@ img.onload = function () {
     if (initialLoad) {
       initialLoad = false;
       blackOverlay.classList.add("invisible");
+      console.log("animationOn");
+      console.log(animationOn);
+      movementX = 130;
+      movementY = -130;
     }
     if (animationOn) {
       if (!mouseEventOn) {
@@ -303,6 +331,18 @@ img.onload = function () {
   kaleidoskopBtn.addEventListener("click", () => {
     toggleAnimation();
   });
+  // ! make responsive with window resize and canvas.width
+
+  window.parent.addEventListener(
+    "resize",
+    throttleFunction(() => {
+      console.log("working");
+      setRadiusSizeAndMargin();
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      draw();
+    }, throttleDelay)
+  );
+
   draw();
 };
 img.src = "./magic_forest.jpg";

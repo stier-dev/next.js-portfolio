@@ -1,4 +1,4 @@
-.iFrame {
+.iframe {
   position: relative;
   left: 0;
   width: 100vw;
@@ -8,4 +8,16 @@
   margin: 0;
   overflow-x: hidden;
   overflow-y: hidden;
+}
+
+@media (max-width: 850px) {
+  .iframe {
+    height: 850px;
+  }
+}
+
+@media (max-width: 589px) {
+  .iframe {
+    height: 650px;
+  }
 }

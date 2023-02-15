@@ -16,11 +16,67 @@ let mouse = {
   x: undefined,
   y: undefined,
 };
+// ! throttle function
 
-window.parent.addEventListener("mousemove", (event) => {
+let throttleDelay = 100;
+const throttleFunction = (func, delay) => {
+  // Previously called time of the function
+  let prev = 0;
+  return (...args) => {
+    let now = new Date().getTime();
+    if (now - prev > delay) {
+      prev = now;
+      return func(...args);
+    }
+  };
+};
+
+// ! Toggle Event Listener
+let iframe = window.parent.document.getElementById("matrix");
+
+function iframeIsInViewport(element) {
+  const rect = element.getBoundingClientRect();
+  if (
+    rect.top - window.parent.innerHeight <= 0 &&
+    rect.top >= 0 - element.offsetHeight
+  ) {
+    return true;
+  } else {
+    return false;
+  }
+}
+function mouseMoveEventListener(event) {
+  throttleFunction(mousemove(event), throttleDelay);
+}
+
+function mousemove(event) {
   mouse.x = event.x;
   mouse.y = event.y;
-});
+}
+
+window.parent.addEventListener(
+  "wheel",
+  throttleFunction(() => {
+    let isVisible = iframeIsInViewport(iframe);
+    toggleEventListener(isVisible);
+  }, 200)
+);
+
+window.parent.addEventListener("mousemove", mouseMoveEventListener);
+let mouseEventOn = true;
+
+function toggleEventListener(bolean) {
+  if (bolean && !mouseEventOn) {
+    console.log("adding matrix event listeners");
+    window.parent.addEventListener("mousemove", mouseMoveEventListener);
+    mouseEventOn = true;
+  } else if (!bolean && mouseEventOn) {
+    console.log("removing matrix event listeners");
+    window.parent.removeEventListener("mousemove", mouseMoveEventListener);
+    mouseEventOn = false;
+  }
+}
+
 function findMaxHeightOfAninmation() {
   if (canvas.height > 400) {
     return 300;

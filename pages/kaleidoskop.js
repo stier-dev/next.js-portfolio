@@ -6,7 +6,7 @@ export default function HeroSection() {
       <iframe
         src="/iframe/kaleidoskop/kaleidoskop.html"
         width="100%"
-        className={style.iFrame}
+        className={style.iframe}
       ></iframe>
     </div>
   );
