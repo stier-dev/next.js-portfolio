@@ -9,35 +9,31 @@ const canvas = document.getElementById("kaleidoskopCanvas");
 const ctx = canvas.getContext("2d", { alpha: false });
 let currentWindowWidth = window.parent.innerWidth;
 
-var half_PI = Math.PI / 2,
+let half_PI = Math.PI / 2,
   two_PI = Math.PI * 2,
   ease = 0.001;
 
-var kaleidoskop = {
+const kaleidoskop = {
   offsetScale: 0.8,
   offsetRotation: 0,
-  offsetX: 0,
-  offsetY: 0,
+  offsetX: Math.random() * 200,
+  offsetY: Math.random() * 200,
   radius: 400,
   slices: 16,
   zoom: 4,
 };
 
+console.log(kaleidoskop.offsetX, kaleidoskop.offsetY);
+
 function setRadiusSizeAndMargin() {
   currentWindowWidth = window.parent.innerWidth;
-  console.log(currentWindowWidth);
   if (currentWindowWidth >= 850) {
-    console.log("over 850");
     kaleidoskop.radius = 400;
   } else if (currentWindowWidth <= 849 && currentWindowWidth >= 590) {
-    console.log("under 849");
-
     kaleidoskop.radius = 250;
   } else if (currentWindowWidth <= 589 && currentWindowWidth >= 400) {
-    console.log("under 589");
     kaleidoskop.radius = 185;
   } else if (currentWindowWidth <= 399) {
-    console.log("under 399");
     kaleidoskop.radius = 130;
   }
 
@@ -116,9 +112,9 @@ img.onload = function () {
       then = now - (elapsed % framesPerSecondInterval);
 
       if (!reverse) {
-        rotation -= 0.001;
+        rotation -= 0.0015;
       } else {
-        rotation += 0.001;
+        rotation += 0.0015;
       }
       if (rotation < 0.5) {
         reverse = true;
@@ -215,19 +211,15 @@ img.onload = function () {
 
   // eslint-disable-next-line no-unused-vars
   function touchmove(e) {
-    console.log("touchmove");
     //  * move Image
-    // console.log(e);
   }
   // eslint-disable-next-line no-unused-vars
   function touchstart(e) {
-    console.log(movementX);
-    movementX = movementX - movementX * 2;
-    console.log(movementX);
-
-    // console.log(kaleidoskop.offsetRotation);
-    // * invert Rotation
-    // console.log(e);
+    let random = 0;
+    random = Math.random() * (0.1 - 0.01) + 0.01;
+    movementX = movementX - random;
+    random = Math.random() * (0.1 - 0.01) + 0.01;
+    movementY = movementY - random;
   }
 
   //  ! Touch throttle
@@ -241,8 +233,8 @@ img.onload = function () {
   // ! !!!!!!!!!!!!!!!!!! EVENT LISTENERS !!!!!!!!!!!!!!!!!!
 
   //
-  canvas.addEventListener("touchmove", touchMoveEvent);
-  canvas.addEventListener("touchstart", touchStartEvent);
+  window.parent.addEventListener("touchmove", touchMoveEvent);
+  window.parent.addEventListener("touchstart", touchStartEvent);
 
   let iframe = window.parent.document.getElementById("kaleidoskop");
 
@@ -285,11 +277,9 @@ img.onload = function () {
   // ! add & remove Mouse Movement EventListener
   function turnOffMouseEventOffScreen(bolean) {
     if (!bolean && mouseEventOn) {
-      console.log("remove MousemoveEventListener");
       window.removeEventListener("mousemove", mouseEvent);
       mouseEventOn = false;
     } else if (bolean && !mouseEventOn && animationOn) {
-      console.log("add MousemoveEventListener");
       window.addEventListener("mousemove", mouseEvent);
       mouseEventOn = true;
     }
@@ -302,8 +292,6 @@ img.onload = function () {
     if (initialLoad) {
       initialLoad = false;
       blackOverlay.classList.add("invisible");
-      console.log("animationOn");
-      console.log(animationOn);
       movementX = 130;
       movementY = -130;
     }
@@ -319,7 +307,6 @@ img.onload = function () {
     }
     if (!animationOn) {
       if (mouseEventOn) {
-        console.log("remove MousemoveEventListener");
         window.removeEventListener("mousemove", mouseEvent);
         mouseEventOn = false;
       }
@@ -336,7 +323,6 @@ img.onload = function () {
   window.parent.addEventListener(
     "resize",
     throttleFunction(() => {
-      console.log("working");
       setRadiusSizeAndMargin();
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       draw();
