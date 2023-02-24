@@ -8,7 +8,9 @@ export default function DesktopMenue() {
       <div className={style.menueContainer}>
         <div className={`${style.menueItemContainer} ${style.portfolio}`}>
           <div className={`${style.linkTextContainer}`}>
-            <h3 className={`${style.menueText}`}>Portfolio</h3>
+            <DesktopMenueLink reference="/#heroSection" text="Portfolio" />
+
+            {/* <h3 className={`${style.menueText}`}>Portfolio</h3> */}
           </div>
         </div>
         <div className={style.menueItemContainer}>

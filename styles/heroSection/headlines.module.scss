@@ -135,6 +135,11 @@ $matrixImgWidth500: 340px;
     font-size: 3.5rem;
   }
 
+  .jumboTypingEffect::after {
+    height: 3rem;
+    bottom: 0.5rem;
+  }
+
   .headlines {
     top: 300px;
     // height: 9.5rem;
@@ -171,6 +176,11 @@ $matrixImgWidth500: 340px;
     font-size: 3rem;
   }
 
+  .jumboTypingEffect::after {
+    height: 2.2rem;
+    bottom: 0.5rem;
+  }
+
   .headlines {
     top: 270px;
     width: 100%;
@@ -203,6 +213,11 @@ $matrixImgWidth500: 340px;
   }
   .heroJumbo {
     font-size: 2.3rem;
+  }
+
+  .jumboTypingEffect::after {
+    height: 1.8rem;
+    bottom: 0.4rem;
   }
 
   .headlines {
@@ -238,6 +253,11 @@ $matrixImgWidth500: 340px;
     font-size: 1.9rem;
   }
 
+  .jumboTypingEffect::after {
+    height: 1.5rem;
+    bottom: 0.3rem;
+  }
+
   .headlines {
     top: 180px;
   }
@@ -266,31 +286,6 @@ $matrixImgWidth500: 340px;
     // !!! IMPORTANT: adapt to: heroSection.module.scss .mainContainer { height & min-height }
     min-height: 290px;
     min-width: 350px;
-  }
-  .heroJumbo {
-    font-size: 1.9rem;
-  }
-
-  .headlines {
-    top: 180px;
-  }
-  .georgiy {
-    top: 2rem;
-    width: 6rem;
-  }
-
-  .parallaxContainer {
-    height: $matrixImgHeight500;
-    width: $matrixImgWidth500;
-  }
-
-  .parallaxChildContainer {
-    height: $matrixImgHeight500;
-    width: $matrixImgWidth500;
-  }
-  .matrixGeorgiyImg {
-    height: $matrixImgHeight500;
-    width: $matrixImgWidth500;
   }
 }
 

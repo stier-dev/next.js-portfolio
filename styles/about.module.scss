@@ -1,0 +1,347 @@
+@import "/styles/abstracts/colors";
+@import "/styles/abstracts/fonts";
+
+.mainContainer {
+  position: relative;
+  width: 100vw;
+  height: 100%;
+  overflow: hidden;
+  // background-color: rgb(71, 63, 63);
+}
+
+.img {
+  object-fit: cover;
+  object-position: left;
+}
+
+.logoImg {
+  object-fit: cover;
+  object-position: left;
+  filter: grayscale(100%);
+}
+
+.logoImg:hover {
+  filter: grayscale(0%);
+}
+
+.background {
+  position: relative;
+  width: 100vw;
+  background-color: black;
+  pointer-events: none;
+}
+
+.backgroundImgContainer {
+  position: fixed;
+  top: 100px;
+  left: 0;
+  width: 30vw;
+  height: 80vw;
+}
+
+.textContainer {
+  position: relative;
+  top: 200px;
+  left: 30vw;
+  width: 600px;
+  z-index: 2;
+  margin-bottom: 450px;
+  // background-color: gray;
+}
+
+.headline {
+  font-family: $head-font;
+  font-size: 3rem;
+  letter-spacing: 0.17rem;
+  color: $yellow;
+  margin-top: 6rem;
+  text-transform: uppercase;
+}
+
+.subHeadline {
+  font-size: 1.5rem;
+  letter-spacing: 0.17rem;
+  color: $lightBlue;
+  margin-top: 10;
+  margin-left: -2rem;
+  font-weight: 100 !important;
+}
+
+.paragraph {
+  font-size: 1rem;
+  letter-spacing: 0.1rem;
+  color: white;
+}
+
+.flaggenContainer {
+  position: relative;
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+.flagge {
+  position: relative;
+  height: 30px;
+  width: 55px;
+  border: 1px solid white;
+  margin-right: 30px;
+}
+
+.logosContainer {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-top: 3rem;
+  width: 650px;
+  align-items: center;
+}
+
+.aid {
+  position: relative;
+  height: 34px;
+  width: 80px;
+  margin: 1rem 2rem;
+}
+
+.diploma {
+  position: relative;
+  height: 40px;
+  width: 200px;
+  margin: 1rem 2rem;
+}
+
+.reedu {
+  position: relative;
+  height: 100px;
+  width: 150px;
+  margin: 1rem 2rem;
+}
+
+.sensebox {
+  position: relative;
+  height: 100px;
+  width: 260px;
+  margin: 1rem 2rem;
+}
+
+.wbc {
+  position: relative;
+  height: 70px;
+  width: 140px;
+  margin: 1rem 2rem;
+}
+
+.ppt {
+  position: relative;
+  height: 45px;
+  width: 280px;
+  margin: 1rem 2rem;
+}
+
+.re {
+  position: relative;
+  height: 100px;
+  width: 120px;
+  margin: 1rem 2rem;
+}
+
+.igs {
+  position: relative;
+  height: 80px;
+  width: 230px;
+  margin: 1rem 2rem;
+}
+
+.ll {
+  position: relative;
+  height: 120px;
+  width: 230px;
+  margin: 1rem 2rem;
+}
+
+.codeFor {
+  position: relative;
+  height: 48px;
+  width: 200px;
+  margin: 1rem 2rem;
+}
+
+.vodafone {
+  position: relative;
+  height: 40px;
+  width: 160px;
+  margin: 1rem 2rem;
+}
+
+// ! media queries
+// .textContainer {
+//   position: relative;
+//   top: 200px;
+//   left: 25vw;
+//   width: 600px;
+//   z-index: 2;
+//   margin-bottom: 450px;
+// }
+
+@media (max-width: 900px) {
+  .textContainer {
+    top: 100px;
+    margin-bottom: 250px;
+    left: 25vw;
+  }
+}
+
+@media (max-width: 850px) {
+  .textContainer {
+    width: 450px;
+    margin-bottom: 170px;
+  }
+
+  .headline {
+    font-size: 2.5rem;
+    letter-spacing: 0.17rem;
+    margin-top: 4.3rem;
+  }
+
+  .subHeadline {
+    font-size: 1.4rem;
+    letter-spacing: 0.17rem;
+    margin-top: 10;
+  }
+  .logosContainer {
+    margin-top: 2.5rem;
+    margin-left: -100px;
+    transform: scale(0.8);
+  }
+}
+
+@media (max-width: 670px) {
+  .textContainer {
+    width: 350px;
+    margin-bottom: 80px;
+    left: 30vw;
+  }
+
+  .backgroundImgContainer {
+    width: 40vw;
+    height: 90vw;
+  }
+
+  .paragraph {
+    font-size: 0.85rem;
+    letter-spacing: 0.08rem;
+  }
+
+  .headline {
+    font-size: 2.3rem;
+    letter-spacing: 0.15rem;
+    margin-top: 4rem;
+  }
+
+  .subHeadline {
+    font-size: 1.3rem;
+    letter-spacing: 0.17rem;
+    margin-top: 10;
+    margin-left: -1rem;
+  }
+  .logosContainer {
+    margin-top: -100px;
+    margin-left: -150px;
+    transform: scale(0.6);
+  }
+
+  .flagge {
+    height: 22px;
+    width: 40px;
+    margin-right: 20px;
+  }
+}
+
+@media (max-width: 560px) {
+  .textContainer {
+    width: 300px;
+    margin-bottom: 60px;
+  }
+
+  .paragraph {
+    font-size: 0.8rem;
+    letter-spacing: 0.06rem;
+  }
+
+  .headline {
+    font-size: 2rem;
+    letter-spacing: 0.11rem;
+    margin-top: 2.8rem;
+  }
+
+  .subHeadline {
+    font-size: 1.2rem;
+    letter-spacing: 0.12rem;
+    margin-top: 10;
+  }
+  .logosContainer {
+    margin-top: -140px;
+    margin-left: -190px;
+    transform: scale(0.5);
+  }
+}
+
+@media (max-width: 450px) {
+  .textContainer {
+    width: 240px;
+    margin-bottom: 0px;
+  }
+
+  .headline {
+    font-size: 1.4rem;
+    letter-spacing: 0.08rem;
+    margin-top: 2rem;
+  }
+
+  .subHeadline {
+    font-size: 1.05rem;
+    letter-spacing: 0.06rem;
+    margin-left: -0.8rem;
+  }
+
+  .paragraph {
+    font-size: 0.7rem;
+    letter-spacing: 0.055rem;
+  }
+
+  .logosContainer {
+    margin-top: -175px;
+    margin-left: -210px;
+    transform: scale(0.4);
+  }
+}
+
+@media (max-width: 360px) {
+  .textContainer {
+    top: 70px;
+    width: 200px;
+    margin-bottom: -110px;
+  }
+
+  .paragraph {
+    font-size: 0.6rem;
+    letter-spacing: 0.05rem;
+  }
+
+  .headline {
+    font-size: 1.3rem;
+    letter-spacing: 0.07rem;
+  }
+
+  .subHeadline {
+    font-size: 0.9rem;
+    letter-spacing: 0.05rem;
+  }
+
+  .logosContainer {
+    margin-top: -175px;
+    margin-left: -230px;
+    transform: scale(0.35);
+  }
+}

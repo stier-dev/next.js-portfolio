@@ -78,10 +78,16 @@
   top: -200px;
   left: 0;
   min-height: 120px;
-  width: 100%;
+  width: 100vw;
   background-color: black;
   transition: all 500ms ease-in-out;
   opacity: 0;
+  pointer-events: all;
+}
+
+.subMenue:hover {
+  top: 0px;
+  opacity: 1;
 }
 
 .twoItems {
@@ -100,7 +106,8 @@
 }
 
 .portfolio {
-  pointer-events: none;
+  width: 15rem;
+  justify-content: end;
 }
 
 .portfolio:hover ~ .subMenueClippingMask {
@@ -108,26 +115,17 @@
     opacity: 1;
   }
   .subMenue {
-    opacity: 1;
-  }
-}
-.subMenue:hover {
-  top: 0px;
-  opacity: 1;
-}
-
-.portfolio:hover ~ .subMenueClippingMask {
-  .subMenue {
     top: 0px;
     opacity: 1;
   }
 }
 
 .subMenue:hover ~ .divisionLine {
-  .subMenue {
-    top: 0px;
-    opacity: 1;
-  }
+  opacity: 1;
+}
+.subMenue:hover {
+  top: 0px;
+  opacity: 1;
 }
 
 @media all and (min-width: 501px) {

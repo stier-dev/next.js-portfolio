@@ -9,6 +9,16 @@ const canvas = document.getElementById("kaleidoskopCanvas");
 const ctx = canvas.getContext("2d", { alpha: false });
 let currentWindowWidth = window.parent.innerWidth;
 
+const mouseTouchHeadline = document.getElementById("mouseTouchHeadline");
+
+function headlineText() {
+  if ("ontouchstart" in window) {
+    mouseTouchHeadline.innerHTML = "Berühre oder Streiche über das Bild";
+  } else {
+    mouseTouchHeadline.innerHTML = "Bewege die Maus über das Bild";
+  }
+}
+headlineText();
 let half_PI = Math.PI / 2,
   two_PI = Math.PI * 2,
   ease = 0.001;
@@ -22,8 +32,6 @@ const kaleidoskop = {
   slices: 16,
   zoom: 4,
 };
-
-console.log(kaleidoskop.offsetX, kaleidoskop.offsetY);
 
 function setRadiusSizeAndMargin() {
   currentWindowWidth = window.parent.innerWidth;
