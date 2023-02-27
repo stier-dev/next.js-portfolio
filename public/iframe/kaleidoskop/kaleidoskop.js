@@ -43,6 +43,7 @@ function setRadiusSizeAndMargin() {
     kaleidoskop.radius = 185;
   } else if (currentWindowWidth <= 399) {
     kaleidoskop.radius = 130;
+    kaleidoskop.zoom = 10;
   }
 
   // ! adapt to .canvasContainer & .circleBorder in css
