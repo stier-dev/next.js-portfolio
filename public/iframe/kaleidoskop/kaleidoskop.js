@@ -220,8 +220,9 @@ img.onload = function () {
 
   // eslint-disable-next-line no-unused-vars
   function touchmove(e) {
-    //  * move Image
+    kaleidoskop.offsetX = kaleidoskop.offsetX + 0.15;
   }
+
   // eslint-disable-next-line no-unused-vars
   function touchstart(e) {
     let random = 0;
@@ -241,7 +242,9 @@ img.onload = function () {
 
   // ! !!!!!!!!!!!!!!!!!! EVENT LISTENERS !!!!!!!!!!!!!!!!!!
 
-  //
+  // ? maybe window.parent
+  window.addEventListener("touchmove", touchMoveEvent);
+  window.addEventListener("touchstart", touchStartEvent);
   window.parent.addEventListener("touchmove", touchMoveEvent);
   window.parent.addEventListener("touchstart", touchStartEvent);
 
