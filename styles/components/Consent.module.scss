@@ -259,7 +259,7 @@
 
 @media (max-width: 430px) {
   .mainContainer {
-    height: 170px;
+    height: 160px;
   }
 
   .text {
@@ -291,14 +291,15 @@
   }
 
   .btn {
-    padding: 0.25rem 0.5rem;
+    padding: 0.2rem 0.4rem;
     margin-bottom: 0.35rem;
+    font-size: 0.5rem;
   }
 }
 
 @media (max-width: 355px) {
   .mainContainer {
-    height: 190px;
+    height: 180px;
   }
 
   .text {
@@ -317,7 +318,7 @@
 }
 @media (max-width: 270px) {
   .mainContainer {
-    height: 270px;
+    height: 260px;
   }
 
   .text {
