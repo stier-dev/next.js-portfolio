@@ -45,7 +45,7 @@
   left: 30vw;
   width: 600px;
   z-index: 2;
-  margin-bottom: 450px;
+  margin-bottom: 300px;
   // background-color: gray;
 }
 
@@ -92,7 +92,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  margin-top: 3rem;
+  margin-top: 5rem;
   width: 650px;
   align-items: center;
 }
@@ -174,21 +174,24 @@
   margin: 1rem 2rem;
 }
 
-// ! media queries
-// .textContainer {
-//   position: relative;
-//   top: 200px;
-//   left: 25vw;
-//   width: 600px;
-//   z-index: 2;
-//   margin-bottom: 450px;
-// }
+.contactContainer {
+  margin-top: 100px;
+}
+
+@media (max-width: 1200px) {
+  .contactContainer {
+    margin-left: 5vw;
+  }
+}
 
 @media (max-width: 900px) {
   .textContainer {
     top: 100px;
-    margin-bottom: 250px;
+    margin-bottom: 200px;
     left: 25vw;
+  }
+  .contactContainer {
+    margin-top: 80px;
   }
 }
 
@@ -215,12 +218,17 @@
     margin-left: -100px;
     transform: scale(0.8);
   }
+  .contactContainer {
+    margin-top: 0;
+    width: 100vw;
+    margin-left: -25vw;
+  }
 }
 
 @media (max-width: 670px) {
   .textContainer {
     width: 350px;
-    margin-bottom: 80px;
+    margin-bottom: 40px;
     left: 30vw;
   }
 
@@ -257,12 +265,18 @@
     width: 40px;
     margin-right: 20px;
   }
+
+  .contactContainer {
+    margin-top: -100px;
+    width: 100vw;
+    margin-left: -30vw;
+  }
 }
 
 @media (max-width: 560px) {
   .textContainer {
     width: 300px;
-    margin-bottom: 60px;
+    margin-bottom: 20px;
   }
 
   .paragraph {
@@ -291,7 +305,7 @@
 @media (max-width: 450px) {
   .textContainer {
     width: 240px;
-    margin-bottom: 0px;
+    margin-bottom: -60px;
   }
 
   .headline {
@@ -322,13 +336,16 @@
     margin-left: -210px;
     transform: scale(0.4);
   }
+  .contactContainer {
+    margin-top: -130px;
+  }
 }
 
 @media (max-width: 360px) {
   .textContainer {
     top: 70px;
     width: 200px;
-    margin-bottom: -110px;
+    margin-bottom: -120px;
   }
 
   .paragraph {

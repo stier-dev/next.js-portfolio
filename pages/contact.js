@@ -52,7 +52,7 @@ export default function Contact() {
   }
 
   return (
-    <div id="contact" className={style.mainContainer}>
+    <div className={style.mainContainer}>
       <div className={style.headlinesContainer}>
         <h1 className={style.headline}>KONTAKT</h1>
         <div className={style.contactContainer}>

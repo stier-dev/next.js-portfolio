@@ -10,13 +10,14 @@
 }
 
 .mainContainer {
+  scroll-margin-top: 100px;
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  width: 100vw;
   padding-bottom: 100px;
+  z-index: 10;
 }
 
 .formAndSucessScreenContainer {
@@ -121,7 +122,7 @@
   height: 130%;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.733);
-  z-index: 1;
+  z-index: 5;
 }
 
 .sentTextContainer {
@@ -138,6 +139,7 @@
   border: 1px solid rgb(122, 122, 122);
   border-radius: 5px;
   transition: all 1s;
+  // z-index: 11;
 }
 
 .sentHeadline {
@@ -192,6 +194,7 @@
   height: 1px;
   background-color: white;
   overflow: hidden;
+  z-index: 4;
 }
 
 .inputBox .stripe:before {
@@ -231,15 +234,24 @@
   letter-spacing: 00.05rem;
   font-size: 1rem;
   margin-top: 20px;
-  // margin-bottom: 10px;
+}
+
+.input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 50px #000000 inset !important;
+  -webkit-text-fill-color: white !important;
+}
+
+.inputBox:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 50px #000000 inset !important;
+  -webkit-text-fill-color: white !important;
 }
 
 .messageInputBox .messageInput {
   // background: transparent;
   background-color: black;
-  margin: 10px;
-  width: calc(100% - 20px);
-  height: 200px;
+  margin: 2px;
+  width: calc(100% - 4px);
+  height: 215px;
   margin-bottom: 50px;
   color: white;
   border: none;
@@ -248,7 +260,16 @@
   font-size: 1rem;
   letter-spacing: 00.05rem;
   resize: none;
-  z-index: 2;
+  z-index: -2;
+}
+
+.messageInput:autofill {
+  // background: transparent;
+  background-color: pink;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  resize: none;
 }
 
 .messageInputBox .messageInputBackground {
@@ -258,7 +279,8 @@
   width: calc(100% - 4px);
   height: 216px;
   background-color: black;
-  z-index: -1;
+  pointer-events: none;
+  z-index: -2;
 }
 
 .messageInputBox .stripe {
@@ -269,7 +291,8 @@
   height: 220px;
   background-color: rgba(255, 255, 255, 0.655);
   overflow: hidden;
-  z-index: -2;
+  pointer-events: none;
+  z-index: -1;
 }
 
 .messageInputBox .stripe:before {
@@ -292,6 +315,7 @@
   pointer-events: none;
   color: $darkGray;
   transition: all 0.5s;
+  z-index: 3;
 }
 
 // .messageInput:enabled ~ .messageInputTitle,
@@ -301,7 +325,6 @@
   font-size: 0.75rem;
   left: 0;
 }
-
 .messageInputBox .activeMessageInputTitle {
   color: $blue;
   transform: translateY(-34px);
@@ -485,5 +508,3 @@ $btnHeight: 40px;
     font-size: 0.7em;
   }
 }
-
-// ! tilde ~ testen bei click Events und so

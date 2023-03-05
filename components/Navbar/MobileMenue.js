@@ -34,19 +34,16 @@ export default function MobileMainMenue(props) {
             <MenueLink reference="/#heroSection" text="Startseite" />
           </div>
           <div className={`${style.menueItem} ${style.two}`}>
-            <MenueLink reference="/#memory" text="Memory Spiel" />
+            <MenueLink reference="/#madeWith" text="Programmiersprachen" />
           </div>
           <div className={`${style.menueItem} ${style.three}`}>
-            <MenueLink reference="/#contact" text="Kontakt Formular" />
+            <MenueLink reference="/#memory" text="Memory Spiel" />
           </div>
           <div className={`${style.menueItem} ${style.four}`}>
-            <MenueLink reference="/#jokes" text="Witze API" />
+            <MenueLink reference="/#kaleidoskop" text="Kaleidoskop" />
           </div>
           <div className={`${style.menueItem} ${style.five}`}>
-            <MenueLink reference="/#Svg" text="SVG Animation" />
-          </div>
-          <div className={`${style.menueItem} ${style.six}`}>
-            <MenueLink reference="/#3d" text="3D Animation" />
+            <MenueLink reference="/#contact" text="Kontakt Formular" />
           </div>
         </div>
       </div>

@@ -220,7 +220,7 @@ img.onload = function () {
 
   // eslint-disable-next-line no-unused-vars
   function touchmove(e) {
-    kaleidoskop.offsetX = kaleidoskop.offsetX + 0.15;
+    kaleidoskop.offsetX = kaleidoskop.offsetX + 0.25;
   }
 
   // eslint-disable-next-line no-unused-vars

@@ -28,26 +28,29 @@ export default function DesktopMenue() {
                 <DesktopMenueLink reference="/#heroSection" text="Startseite" />
               </div>
               <div className={`${style.menueItemContainer} ${style.two}`}>
-                <DesktopMenueLink reference="/#memory" text="Memory Spiel" />
+                <DesktopMenueLink
+                  reference="/#madeWith"
+                  text="Programmiersprachen"
+                />
               </div>
             </div>
             <div className={style.twoItems}>
               <div className={`${style.menueItemContainer} ${style.three}`}>
-                <DesktopMenueLink
-                  reference="/#contact"
-                  text="Kontakt Formular"
-                />
+                <DesktopMenueLink reference="/#memory" text="Memory Spiel" />
               </div>
               <div className={`${style.menueItemContainer} ${style.four}`}>
-                <DesktopMenueLink reference="/#jokes" text="Witze API" />
+                <DesktopMenueLink
+                  reference="/#kaleidoskop"
+                  text="Kaleidoskop"
+                />
               </div>
-            </div>
-            <div className={style.twoItems}>
-              <div className={`${style.menueItemContainer} ${style.five}`}>
-                <DesktopMenueLink reference="/#Svg" text="SVG Animation" />
-              </div>
-              <div className={`${style.menueItemContainer} ${style.six}`}>
-                <DesktopMenueLink reference="/#3d" text="3D Animation" />
+              <div className={style.twoItems}>
+                <div className={`${style.menueItemContainer} ${style.five}`}>
+                  <DesktopMenueLink
+                    reference="/#contact"
+                    text="Kontakt Formular"
+                  />
+                </div>
               </div>
             </div>
           </div>

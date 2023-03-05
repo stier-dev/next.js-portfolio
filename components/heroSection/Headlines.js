@@ -74,7 +74,7 @@ export default function Headlines() {
             <Image
               className={style.matrixGeorgiImg}
               fill
-              src={"/img/heroSection/matrix_georgi.png"}
+              src={"/img/heroSection/matrix_georgi_big.png"}
               alt="Georgi als Neo von Matrix"
               blurDataURL="/img/heroSection/matrix_georgi_blur.png"
               placeholder="blur"

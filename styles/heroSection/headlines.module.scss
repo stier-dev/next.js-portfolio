@@ -1,19 +1,19 @@
 @import "/styles/abstracts/colors";
 
-$matrixImgHeight: 800px;
-$matrixImgWidth: 680px;
+$matrixImgHeight: 1300px;
+$matrixImgWidth: 1200px;
 
-$matrixImgHeight1200: 680px;
-$matrixImgWidth1200: 570px;
+$matrixImgHeight1200: 1200px;
+$matrixImgWidth1200: 1130px;
 
-$matrixImgHeight900: 600px;
-$matrixImgWidth900: 510px;
+$matrixImgHeight900: 1100px;
+$matrixImgWidth900: 1050px;
 
-$matrixImgHeight750: 500px;
-$matrixImgWidth750: 400px;
+$matrixImgHeight750: 960px;
+$matrixImgWidth750: 900px;
 
-$matrixImgHeight500: 400px;
-$matrixImgWidth500: 340px;
+$matrixImgHeight500: 900px;
+$matrixImgWidth500: 850px;
 
 .mainContainer {
   height: 90vh;
@@ -33,6 +33,7 @@ $matrixImgWidth500: 340px;
 // ! parallax Georgi
 .parallaxContainer {
   display: flex;
+  justify-content: center;
   height: $matrixImgHeight;
   width: $matrixImgWidth;
 
@@ -62,7 +63,7 @@ $matrixImgWidth500: 340px;
   position: absolute;
   display: flex;
   justify-content: center;
-  top: 335px;
+  top: 530px;
   height: 12rem;
   width: 100%;
   z-index: 10;
@@ -141,8 +142,7 @@ $matrixImgWidth500: 340px;
   }
 
   .headlines {
-    top: 300px;
-    // height: 9.5rem;
+    top: 480px;
     width: 100%;
   }
   .georgiy {
@@ -182,7 +182,7 @@ $matrixImgWidth500: 340px;
   }
 
   .headlines {
-    top: 270px;
+    top: 440px;
     width: 100%;
   }
   .georgiy {
@@ -221,7 +221,7 @@ $matrixImgWidth500: 340px;
   }
 
   .headlines {
-    top: 200px;
+    top: 380px;
     width: 100%;
   }
   .georgiy {
@@ -259,7 +259,7 @@ $matrixImgWidth500: 340px;
   }
 
   .headlines {
-    top: 180px;
+    top: 370px;
   }
   .georgiy {
     top: 2rem;

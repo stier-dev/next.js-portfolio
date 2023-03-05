@@ -85,7 +85,7 @@ export default function MadeWith() {
     if (runAnimation) {
       const blinkInterval = setInterval(() => {
         blinkArray();
-      }, 500);
+      }, 300);
       return () => clearInterval(blinkInterval);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
