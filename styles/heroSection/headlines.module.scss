@@ -21,7 +21,7 @@ $matrixImgWidth500: 850px;
   min-height: 750px;
   height: 90vh;
   // !!!
-  width: 100vw;
+  // width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -36,7 +36,7 @@ $matrixImgWidth500: 850px;
   justify-content: center;
   height: $matrixImgHeight;
   width: $matrixImgWidth;
-
+  // overflow: visible;
   margin: 0%;
   padding: 0%;
 }
@@ -51,8 +51,8 @@ $matrixImgWidth500: 850px;
 }
 
 .matrixGeorgiyImg {
-  height: $matrixImgHeight;
-  width: $matrixImgWidth;
+  // height: $matrixImgHeight;
+  // width: $matrixImgWidth;
   z-index: 3;
   margin: 0%;
   padding: 0%;
@@ -160,10 +160,10 @@ $matrixImgWidth500: 850px;
     width: $matrixImgWidth1200;
   }
 
-  .matrixGeorgiyImg {
-    height: $matrixImgHeight1200;
-    width: $matrixImgWidth1200;
-  }
+  // .matrixGeorgiyImg {
+  //   height: $matrixImgHeight1200;
+  //   width: $matrixImgWidth1200;
+  // }
 }
 
 @media all and (max-width: 900px) {
@@ -199,10 +199,10 @@ $matrixImgWidth500: 850px;
     height: $matrixImgHeight900;
     width: $matrixImgWidth900;
   }
-  .matrixGeorgiyImg {
-    height: $matrixImgHeight900;
-    width: $matrixImgWidth900;
-  }
+  // .matrixGeorgiyImg {
+  //   height: $matrixImgHeight900;
+  //   width: $matrixImgWidth900;
+  // }
 }
 
 @media all and (max-width: 750px) {
@@ -238,10 +238,10 @@ $matrixImgWidth500: 850px;
     height: $matrixImgHeight750;
     width: $matrixImgWidth750;
   }
-  .matrixGeorgiyImg {
-    height: $matrixImgHeight750;
-    width: $matrixImgWidth750;
-  }
+  // .matrixGeorgiyImg {
+  //   height: $matrixImgHeight750;
+  //   width: $matrixImgWidth750;
+  // }
 }
 
 @media all and (max-width: 500px) {
@@ -275,10 +275,10 @@ $matrixImgWidth500: 850px;
     height: $matrixImgHeight500;
     width: $matrixImgWidth500;
   }
-  .matrixGeorgiyImg {
-    height: $matrixImgHeight500;
-    width: $matrixImgWidth500;
-  }
+  // .matrixGeorgiyImg {
+  //   height: $matrixImgHeight500;
+  //   width: $matrixImgWidth500;
+  // }
 }
 
 @media all and (max-width: 350px) {
