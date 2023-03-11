@@ -1,7 +1,7 @@
 import Head from "next/head";
 import style from "@/styles/components/Layout.module.scss";
 import Footer from "./Footer";
-import Navbar from "@/components/Navbar";
+
 import Consent from "./Consent";
 
 // {/* <Suspense fallback={<div>Loading....</div>}> */}
@@ -26,7 +26,6 @@ export default function Layout({ title, keywords, description, children }) {
         <meta name="keywords" content={keywords} />
       </Head>
 
-      <Navbar />
       <Consent />
 
       <div className={style.container}>{children}</div>

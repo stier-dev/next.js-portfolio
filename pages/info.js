@@ -1,10 +1,12 @@
 import style from "@/styles/info.module.scss";
 import Image from "next/image";
 import Contact from "./kontakt";
+import Navbar from "@/components/Navbar";
 
 export default function About() {
   return (
     <div id="start" className={style.mainContainer}>
+      <Navbar />
       <div className={style.textContainer}>
         <h1 className={style.headline}>Über mich</h1>
         <p className={style.paragraph}>

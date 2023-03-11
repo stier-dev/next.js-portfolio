@@ -1,8 +1,11 @@
 import style from "@/styles/components/navbar/navMobile.module.scss";
 import MenueLink from "./MobileMenueLink";
+import MenueScrollLink from "./MobileMenueScrollLink";
+import { useRouter } from "next/router";
 
 export default function MobileMainMenue(props) {
   let toggle = props.state;
+  const router = useRouter();
 
   return (
     <div
@@ -31,19 +34,40 @@ export default function MobileMainMenue(props) {
       <div className={style.mobileSubMenueClippingMask}>
         <div className={style.mobileSubMenue}>
           <div className={`${style.menueItem} ${style.one}`}>
-            <MenueLink reference="/#startseite" text="Startseite" />
+            {router.pathname === "/" ? (
+              <MenueScrollLink reference="startseite" text="Startseite" />
+            ) : (
+              <MenueLink reference="/#startseite" text="Startseite" />
+            )}
           </div>
           <div className={`${style.menueItem} ${style.two}`}>
-            <MenueLink reference="/#sprachen" text="Sprachen" />
+            {router.pathname === "/" ? (
+              <MenueScrollLink reference="sprachen" text="Sprachen" />
+            ) : (
+              <MenueLink reference="/#sprachen" text="Sprachen" />
+            )}
+            {/* <MenueScrollLink reference="sprachen" text="Sprachen" /> */}
           </div>
           <div className={`${style.menueItem} ${style.three}`}>
-            <MenueLink reference="/#memory" text="Memory Spiel" />
+            {router.pathname === "/" ? (
+              <MenueScrollLink reference="memory" text="Memory Spiel" />
+            ) : (
+              <MenueLink reference="/#memory" text="Memory Spiel" />
+            )}
           </div>
           <div className={`${style.menueItem} ${style.four}`}>
-            <MenueLink reference="/#kaleidoskop" text="Kaleidoskop" />
+            {router.pathname === "/" ? (
+              <MenueScrollLink reference="kaleidoskop" text="Kaleidoskop" />
+            ) : (
+              <MenueLink reference="/#kaleidoskop" text="Kaleidoskop" />
+            )}
           </div>
           <div className={`${style.menueItem} ${style.five}`}>
-            <MenueLink reference="/#kontakt" text="Kontakt Formular" />
+            {router.pathname === "/" ? (
+              <MenueScrollLink reference="kontakt" text="Kontakt Formular" />
+            ) : (
+              <MenueLink reference="/#kontakt" text="Kontakt Formular" />
+            )}
           </div>
         </div>
       </div>

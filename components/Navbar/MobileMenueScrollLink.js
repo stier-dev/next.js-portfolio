@@ -1,10 +1,17 @@
 import style from "@/styles/components/navbar/navMobile.module.scss";
-import Link from "next/link";
+import { Link } from "react-scroll";
 
 export default function MobileMenueLink({ reference, text }) {
   return (
     <div>
-      <Link href={reference} scroll={false} legacyBehavior>
+      <Link
+        activeClass="active"
+        to={reference}
+        spy={true}
+        smooth={false}
+        offset={-50}
+        duration={100}
+      >
         <h3 className={`${style.menueText} ${style.subMenueText}`}>{text}</h3>
       </Link>
     </div>

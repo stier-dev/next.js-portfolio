@@ -67,11 +67,11 @@ let mouseEventOn = true;
 
 function toggleEventListener(bolean) {
   if (bolean && !mouseEventOn) {
-    console.log("adding matrix event listeners");
+    // console.log("adding matrix event listeners");
     window.parent.addEventListener("mousemove", mouseMoveEventListener);
     mouseEventOn = true;
   } else if (!bolean && mouseEventOn) {
-    console.log("removing matrix event listeners");
+    // console.log("removing matrix event listeners");
     window.parent.removeEventListener("mousemove", mouseMoveEventListener);
     mouseEventOn = false;
   }
