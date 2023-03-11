@@ -76,7 +76,7 @@ export default function MadeWith() {
       }
     );
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    madeWith = document.querySelector("#madeWith");
+    madeWith = document.querySelector("#startseite");
     madeWithObserver.observe(madeWith);
   }, []);
 
@@ -92,7 +92,7 @@ export default function MadeWith() {
   }, [runAnimation]);
 
   return (
-    <div id="madeWith" className={style.mainContainer}>
+    <div id="sprachen" className={style.mainContainer}>
       <div className={style.arrowContainer}>
         <div className={style.stripe} />
         <div className={style.arrow} />

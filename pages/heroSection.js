@@ -3,7 +3,7 @@ import Headlines from "@/components/heroSection/Headlines";
 
 export default function HeroSection() {
   return (
-    <div id="heroSection" className={style.mainContainer}>
+    <div id="startseite" className={style.mainContainer}>
       <iframe
         id="matrix"
         src="/iframe/matrix.html"

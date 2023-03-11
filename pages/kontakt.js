@@ -1,6 +1,6 @@
 import { useForm } from "react-hook-form";
 import { useState } from "react";
-import style from "@/styles/contact.module.scss";
+import style from "@/styles/kontakt.module.scss";
 import axios from "axios";
 import Image from "next/image";
 
@@ -52,7 +52,7 @@ export default function Contact() {
   }
 
   return (
-    <div className={style.mainContainer}>
+    <div id="start" className={style.mainContainer}>
       <div className={style.headlinesContainer}>
         <h1 className={style.headline}>KONTAKT</h1>
         <div className={style.contactContainer}>

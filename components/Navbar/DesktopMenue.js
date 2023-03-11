@@ -8,16 +8,16 @@ export default function DesktopMenue() {
       <div className={style.menueContainer}>
         <div className={`${style.menueItemContainer} ${style.portfolio}`}>
           <div className={`${style.linkTextContainer}`}>
-            <DesktopMenueLink reference="/#heroSection" text="Portfolio" />
+            <DesktopMenueLink reference="/#startseite" text="Portfolio" />
 
             {/* <h3 className={`${style.menueText}`}>Portfolio</h3> */}
           </div>
         </div>
         <div className={style.menueItemContainer}>
-          <DesktopMenueLink reference="/about" text="über Mich" />
+          <DesktopMenueLink reference="/info/#start" text="über Mich" />
         </div>
         <div className={style.menueItemContainer}>
-          <DesktopMenueLink reference="/contact" text="Kontakt" />
+          <DesktopMenueLink reference="/kontakt/#start" text="Kontakt" />
         </div>
         {/* MOBILE MENUE */}
 
@@ -25,13 +25,10 @@ export default function DesktopMenue() {
           <div className={style.subMenue}>
             <div className={style.twoItems}>
               <div className={`${style.menueItemContainer} ${style.one}`}>
-                <DesktopMenueLink reference="/#heroSection" text="Startseite" />
+                <DesktopMenueLink reference="/#startseite" text="Startseite" />
               </div>
               <div className={`${style.menueItemContainer} ${style.two}`}>
-                <DesktopMenueLink
-                  reference="/#madeWith"
-                  text="Programmiersprachen"
-                />
+                <DesktopMenueLink reference="/#sprachen" text="Sprachen" />
               </div>
             </div>
             <div className={style.twoItems}>
@@ -47,7 +44,7 @@ export default function DesktopMenue() {
               <div className={style.twoItems}>
                 <div className={`${style.menueItemContainer} ${style.five}`}>
                   <DesktopMenueLink
-                    reference="/#contact"
+                    reference="/#kontakt"
                     text="Kontakt Formular"
                   />
                 </div>

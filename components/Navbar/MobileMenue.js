@@ -17,11 +17,11 @@ export default function MobileMainMenue(props) {
       </div>
 
       <div className={`${style.menueItem} ${toggle ? style.about : ""}`}>
-        <MenueLink reference="/about" text="über Mich" />
+        <MenueLink reference="/info/#start" text="über Mich" />
       </div>
 
       <div className={`${style.menueItem} ${toggle ? style.contact : ""}`}>
-        <MenueLink reference="/contact" text="Kontakt" />
+        <MenueLink reference="/kontakt/#start" text="Kontakt" />
       </div>
       {/* Mobile Sub Menue */}
       {/* Mobile Sub Menue */}
@@ -31,10 +31,10 @@ export default function MobileMainMenue(props) {
       <div className={style.mobileSubMenueClippingMask}>
         <div className={style.mobileSubMenue}>
           <div className={`${style.menueItem} ${style.one}`}>
-            <MenueLink reference="/#heroSection" text="Startseite" />
+            <MenueLink reference="/#startseite" text="Startseite" />
           </div>
           <div className={`${style.menueItem} ${style.two}`}>
-            <MenueLink reference="/#madeWith" text="Programmiersprachen" />
+            <MenueLink reference="/#sprachen" text="Sprachen" />
           </div>
           <div className={`${style.menueItem} ${style.three}`}>
             <MenueLink reference="/#memory" text="Memory Spiel" />
@@ -43,7 +43,7 @@ export default function MobileMainMenue(props) {
             <MenueLink reference="/#kaleidoskop" text="Kaleidoskop" />
           </div>
           <div className={`${style.menueItem} ${style.five}`}>
-            <MenueLink reference="/#contact" text="Kontakt Formular" />
+            <MenueLink reference="/#kontakt" text="Kontakt Formular" />
           </div>
         </div>
       </div>

@@ -1,53 +1,173 @@
+@import "/styles/abstracts/colors";
+
 .footerContainer {
-  // display: flex;
   position: relative;
   width: 100vw;
-  // height: 800px;
   background-size: cover;
   background-position: center top;
   overflow-x: hidden;
+  overflow-y: hidden;
 }
 
-// .galaxy {
-//   left: 0px;
-//   top: 0px;
-//   height: 400px;
-//   width: 100vw;
-//   background-image: url("/img/footer/galaxy.jpg");
-// }
-
-// .water {
-//   position: relative;
-//   left: 0px;
-//   // top: 500px;
-//   width: 100vw;
-//   height: 300px;
-//   background-color: orange;
-// }
-
-// .textContent {
-//   background-color: white;
-//   transform: translateY(-200px);
-//   width: 500px;
-//   height: 300px;
-//   margin: auto;
-// }
 .footerTextContainer {
+  position: absolute;
+  top: 250px;
   width: 500px;
-  height: 250px;
-  background-color: pink;
-  margin: auto;
+  height: 300px;
+  border: 1.5px solid $darkYellow;
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.8) 0%,
+    rgba(0, 0, 0, 0.7) 44%
+  );
+  border-radius: 5px;
+  margin-bottom: 200px;
+  left: 50%;
+  transform: translateX(-50%);
+  overflow: hidden;
+}
+
+.logoContainer {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin-top: 25px;
+}
+
+.logo {
+  position: relative;
+  height: 100px;
+  width: 200px;
+  opacity: 0.8;
+}
+
+.logo:hover {
+  opacity: 1;
 }
 
 .linksContainer {
   display: flex;
   justify-content: center;
   align-self: center;
-  background-color: gray;
   width: 500px;
 }
+
 .link {
-  //   width: 5rem;
   margin: 1rem 1rem;
   cursor: pointer;
+  opacity: 0.6;
+}
+
+.link:hover {
+  opacity: 1;
+}
+
+.galaxyClippingMask {
+  position: relative;
+  top: -5px;
+  left: 0;
+  width: 100vw;
+  height: 600px;
+  overflow: hidden;
+}
+
+.galaxyImg {
+  position: relative;
+  top: 0;
+  height: 1061px;
+  width: 2000px;
+  overflow: hidden;
+}
+// ! Telephone Number and Mail
+.contactInfos {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+.iconAndText {
+  opacity: 0.6;
+  display: flex;
+  align-items: baseline;
+  margin: 0rem 2rem;
+  font-size: 0.9rem;
+}
+.iconAndText:hover {
+  opacity: 1;
+}
+.image {
+  position: relative;
+  width: 0.8rem;
+  height: 0.8rem;
+  margin-right: 0.8rem;
+}
+.tel {
+  width: 0.7rem;
+  height: 0.7rem;
+}
+.mail {
+  top: 0.2rem;
+  height: 0.9rem;
+  width: 0.9rem;
+}
+.contact {
+  font-size: 1rem;
+  position: relative;
+  left: -0.1rem;
+  margin: 0;
+  font-weight: 400;
+}
+
+@media (max-width: 550px) {
+  .galaxyImg {
+    position: relative;
+    top: 0;
+    height: 600px;
+    width: 1000px;
+    overflow: hidden;
+  }
+  .footerTextContainer {
+    position: absolute;
+    top: 180px;
+    width: 400px;
+    height: 350px;
+    margin-bottom: 100px;
+  }
+  .linksContainer {
+    width: 100%;
+  }
+  .iconAndText {
+    font-size: 0.9rem;
+  }
+  .contact {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  .contactInfos {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media (max-width: 420px) {
+  .galaxyClippingMask {
+    height: 530px;
+  }
+  .galaxyImg {
+    height: 500px;
+    width: 800px;
+  }
+  .footerTextContainer {
+    height: 350px;
+    background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 1) 0%,
+      rgba(0, 0, 0, 0.7) 44%
+    );
+    border: none;
+    border-top: 1.5px solid $darkYellow;
+  }
+  // .contactInfos {
+  //   padding-bottom: 1rem;
+  // }
 }

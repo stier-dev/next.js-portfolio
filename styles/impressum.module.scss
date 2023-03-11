@@ -1,23 +1,30 @@
 @import "/styles/abstracts/colors";
 
+.all {
+  width: 100%;
+  margin-bottom: 0;
+}
+
 .mainContainer {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   margin-bottom: 4rem;
+  scroll-margin-top: 100px;
 }
 
 .textContainer {
   max-width: 600px;
+  width: 80vw;
 }
 
-#impressumJumbo {
+.impressumJumbo {
   font-size: 3rem;
   margin-top: 4rem;
   margin-bottom: 5rem;
 }
-#datenschutzJumbo {
+.datenschutzJumbo {
   font-size: 2.5rem;
   margin-top: 4rem;
   margin-bottom: 5rem;
@@ -34,12 +41,56 @@
   margin-left: -1rem;
 }
 
-.all {
-  width: 100%;
-  margin-bottom: 0;
-}
-
 .smallGray {
   font-size: 0.6rem;
   color: $darkGray;
+}
+
+@media (max-width: 600px) {
+  .datenschutzJumbo {
+    font-size: 1.8rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+  .impressumJumbo {
+    font-size: 2.2rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+  .mainContainer {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 430px) {
+  .datenschutzJumbo {
+    font-size: 1.4rem;
+    margin-top: 3rem;
+    margin-bottom: 4rem;
+  }
+  .impressumJumbo {
+    font-size: 1.8rem;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 335px) {
+  .datenschutzJumbo {
+    font-size: 1.1rem;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+  }
+  .impressumJumbo {
+    font-size: 1.8rem;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+  }
+
+  .headline {
+    font-size: 1.1rem;
+  }
+  .mainContainer {
+    font-size: 0.75rem;
+  }
 }
