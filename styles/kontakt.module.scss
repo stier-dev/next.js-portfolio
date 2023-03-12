@@ -31,6 +31,12 @@
   flex-wrap: wrap;
   width: 100%;
 }
+
+.headline {
+  color: $yellow;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 2.5rem;
+}
 .contactContainer {
   display: flex;
   justify-content: center;
@@ -464,6 +470,10 @@ $btnHeight: 40px;
 }
 
 @media (max-width: 350px) {
+  .headline {
+    font-size: 2rem;
+    margin: 0.5rem 0;
+  }
   .sentHeadline {
     font-size: 1.2rem;
   }

@@ -1,7 +1,7 @@
-@font-face {
-  font-family: "Zaio";
+/* @font-face {
+  font-family: "Courier New";
   src: url("/fonts/Zaio.woff") format("woff");
-}
+} */
 
 /* caleidoskop Canvas responsive Media queries inside kaleidoskop.js */
 
@@ -72,9 +72,9 @@ body {
 }
 
 h1 {
-  font-size: 3.5rem;
+  font-size: 3.3rem;
   letter-spacing: 0.17rem;
-  font-family: "Zaio";
+  font-family: "Courier New";
   color: #ffb124;
   text-align: center;
   width: 100%;
@@ -168,6 +168,10 @@ h2 {
     width: 520px;
     top: 240px;
   }
+
+  h1 {
+    font-size: 2.1rem;
+  }
   h2 {
     margin: 0;
   }
@@ -188,8 +192,8 @@ h2 {
     top: 204px;
   }
   h1 {
-    letter-spacing: 0.15rem;
-    font-size: 2.5rem;
+    letter-spacing: 0.1rem;
+    font-size: 2rem;
   }
   h2 {
     font-size: 1rem;
@@ -207,13 +211,18 @@ h2 {
 /* ! #kaleidoscopCanvas values are defined inside kaleidoskop.js in the setRadiusSizeAndMargin function */
 
 @media (max-width: 450px) {
-  h1 {
-    letter-spacing: 0.13rem;
-    font-size: 2rem;
-  }
   h2 {
     font-size: 0.8rem;
     letter-spacing: 0.06rem;
+  }
+  #kaleidoskopBtn {
+    width: 5rem;
+    height: 1.8rem;
+    border: 1px solid white;
+    border-radius: 0.2rem;
+    padding: 0.4rem 0.8rem;
+    font-size: 0.8rem;
+    margin-top: 0;
   }
 }
 
