@@ -9,12 +9,84 @@
 .contactContainer {
   scroll-margin-top: 100px;
 }
-
+// ? Adjust .memorySection height to .mainContainer in Memory.module.scss !!! otherwise it will display wrong!
+// the placeholder for this section has to have the same height as the section itself, so that scrolling works properly
 .memorySection {
-  min-height: 500px;
+  height: 1250px;
   width: 100vw;
+  background-color: black;
+  scroll-margin-top: 100px;
 }
 .kaleidoskopSection {
-  min-height: 500px;
+  height: 1100px;
   width: 100vw;
+  scroll-margin-top: 100px;
+  background-color: black;
+}
+
+// ! memory Queries
+
+@media (max-width: 840px) {
+  // ? Adjust .memorySection height to .mainContainer in Memory.module.scss !!! otherwise it will display wrong!
+  // the placeholder for this section has to have the same height as the section itself, so that scrolling works properly
+  .memorySection {
+    height: 880px;
+  }
+}
+
+@media (max-width: 590px) {
+  // ? Adjust .memorySection height to .mainContainer in Memory.module.scss !!! otherwise it will display wrong!
+  // the placeholder for this section has to have the same height as the section itself, so that scrolling works properly
+  .memorySection {
+    height: 700px;
+  }
+}
+@media (max-width: 450px) {
+  // ? Adjust .memorySection height to .mainContainer in Memory.module.scss !!! otherwise it will display wrong!
+  // the placeholder for this section has to have the same height as the section itself, so that scrolling works properly
+  .memorySection {
+    height: 615px;
+  }
+}
+
+@media (max-width: 400px) {
+  // ? Adjust .memorySection height to .mainContainer in Memory.module.scss !!! otherwise it will display wrong!
+  // the placeholder for this section has to have the same height as the section itself, so that scrolling works properly
+  .memorySection {
+    height: 740px;
+  }
+}
+
+@media (max-width: 325px) {
+  // ? Adjust .memorySection height to .mainContainer in Memory.module.scss !!! otherwise it will display wrong!
+  // the placeholder for this section has to have the same height as the section itself, so that scrolling works properly
+  .memorySection {
+    height: 590px;
+  }
+}
+
+// ! kaleidoskop Queries
+
+@media (max-width: 850px) {
+  // ? Adjust .kaleidoskopSection height to .iframe in kaleidoskop.module.scss !!! otherwise it will display wrong!
+  // the placeholder for this section has to have the same height as the section itself, so that scrolling works properly
+  .kaleidoskopSection {
+    height: 850px;
+  }
+}
+
+@media (max-width: 589px) {
+  // ? Adjust .kaleidoskopSection height to .iframe in kaleidoskop.module.scss !!! otherwise it will display wrong!
+  // the placeholder for this section has to have the same height as the section itself, so that scrolling works properly
+  .kaleidoskopSection {
+    height: 650px;
+  }
+}
+
+@media (max-width: 399px) {
+  // ? Adjust .kaleidoskopSection height to .iframe in kaleidoskop.module.scss !!! otherwise it will display wrong!
+  // the placeholder for this section has to have the same height as the section itself, so that scrolling works properly
+  .kaleidoskopSection {
+    height: 530px;
+  }
 }

@@ -2,6 +2,8 @@
   scroll-margin-top: 100px;
 }
 
+// ? Adjust .iframe height to .kaleidoskopSection in Index.module.scss !!! otherwise it will display wrong!
+// the placeholder for this section has to have the same height as the section itself, so that scrolling works properly
 .iframe {
   position: relative;
   left: 0;
@@ -15,18 +17,24 @@
 }
 
 @media (max-width: 850px) {
+  // ? Adjust .iframe height to .kaleidoskopSection in Index.module.scss !!! otherwise it will display wrong!
+  // the placeholder for this section has to have the same height as the section itself, so that scrolling works properly
   .iframe {
     height: 850px;
   }
 }
 
 @media (max-width: 589px) {
+  // ? Adjust .iframe height to .kaleidoskopSection in Index.module.scss !!! otherwise it will display wrong!
+  // the placeholder for this section has to have the same height as the section itself, so that scrolling works properly
   .iframe {
     height: 650px;
   }
 }
 
 @media (max-width: 399px) {
+  // ? Adjust .iframe height to .kaleidoskopSection in Index.module.scss !!! otherwise it will display wrong!
+  // the placeholder for this section has to have the same height as the section itself, so that scrolling works properly
   .iframe {
     height: 530px;
   }

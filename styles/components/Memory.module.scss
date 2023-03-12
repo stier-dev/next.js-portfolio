@@ -13,16 +13,19 @@
   top: 300px;
 }
 
+// ? Adjust .mainContainer height to .memorySection in Index.module.scss !!! otherwise it will display wrong!
+// the placeholder for this section has to have the same height as the section itself, so that scrolling works properly
 .mainContainer {
   scroll-margin-top: 100px;
   position: relative;
   width: 100vw;
-  margin-bottom: 3rem;
+  padding-bottom: 3rem;
   background-color: black;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  height: 1200px;
 }
 
 .textAndGameContainer {
@@ -63,6 +66,7 @@
 .memoryHeadline {
   color: $yellow;
   font-family: $head-font;
+  text-transform: uppercase;
   letter-spacing: 0.2rem;
   font-size: 4rem;
 }
@@ -317,6 +321,11 @@
 // ? MEDIA QUERIES
 
 @media (max-width: 840px) {
+  // ? Adjust .mainContainer height to .memorySection in Index.module.scss !!! otherwise it will display wrong!
+  // the placeholder for this section has to have the same height as the section itself, so that scrolling works properly
+  .mainContainer {
+    height: 880px;
+  }
   .textAndGameContainer {
     max-width: 700px;
   }
@@ -328,12 +337,16 @@
   .winningHeadline {
     font-size: 5rem;
   }
-
   .winningSub {
     font-size: 1.5rem;
   }
 }
 @media (max-width: 590px) {
+  // ? Adjust .mainContainer height to .memorySection in Index.module.scss !!! otherwise it will display wrong!
+  // the placeholder for this section has to have the same height as the section itself, so that scrolling works properly
+  .mainContainer {
+    height: 700px;
+  }
   .memoryHeadline {
     letter-spacing: 0.15rem;
     font-size: 3rem;
@@ -366,6 +379,11 @@
   }
 }
 @media (max-width: 450px) {
+  // ? Adjust .mainContainer height to .memorySection in Index.module.scss !!! otherwise it will display wrong!
+  // the placeholder for this section has to have the same height as the section itself, so that scrolling works properly
+  .mainContainer {
+    height: 615px;
+  }
   .memoryHeadline {
     letter-spacing: 0.15rem;
     font-size: 2.5rem;
@@ -392,5 +410,47 @@
   }
   .winningSub {
     font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 400px) {
+  // ? Adjust .mainContainer height to .memorySection in Index.module.scss !!! otherwise it will display wrong!
+  // the placeholder for this section has to have the same height as the section itself, so that scrolling works properly
+  .mainContainer {
+    height: 740px;
+  }
+  .memoryHeadline {
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width: 325px) {
+  // ? Adjust .mainContainer height to .memorySection in Index.module.scss !!! otherwise it will display wrong!
+  // the placeholder for this section has to have the same height as the section itself, so that scrolling works properly
+  .mainContainer {
+    height: 590px;
+  }
+  .memoryHeadline {
+    font-size: 1.8rem;
+  }
+  .stats {
+    font-size: 0.6rem;
+    width: auto;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+  }
+  .resetBtn {
+    height: 2rem;
+    padding: 0rem !important;
+    width: 6rem;
+  }
+
+  .textAndGameContainer {
+    max-width: 700px;
+  }
+  .oneCard {
+    height: 100px;
+    width: 71px;
+    margin: 3px 6px;
   }
 }

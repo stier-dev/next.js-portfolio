@@ -1,4 +1,5 @@
 @import "/styles/abstracts/colors";
+@import "/styles/abstracts/fonts";
 
 $matrixImgHeight: 1300px;
 $matrixImgWidth: 1200px;
@@ -74,7 +75,8 @@ $matrixImgWidth500: 850px;
   position: absolute;
   top: 0px;
   margin: 0.1rem;
-  font-family: "Zaio";
+  font-family: $head-font;
+  text-transform: uppercase;
   color: white;
   text-align: center;
   text-transform: uppercase;
