@@ -1,6 +1,7 @@
 import style from "@/styles/impressum.module.scss";
+import { FC } from "react";
 
-export default function Datenschutz() {
+const Datenschutz: FC = () => {
   return (
     <div id="start" className={style.mainContainer}>
       <div className={style.textContainer}>
@@ -794,4 +795,6 @@ export default function Datenschutz() {
       </div>
     </div>
   );
-}
+};
+
+export default Datenschutz;

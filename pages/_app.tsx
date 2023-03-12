@@ -5,7 +5,10 @@ import Script from "next/script";
 import { getCookie } from "cookies-next";
 import { useEffect } from "react";
 
-function MyApp({ Component, pageProps }) {
+export const MyApp: React.FC<{
+  Component: React.FC;
+  pageProps: React.PropsWithChildren<unknown>;
+}> = ({ Component, pageProps }) => {
   useEffect(() => {
     // when writing this function with empty scopes it is called only on the initial render
   }, []);
@@ -73,6 +76,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       </Layout>
     </>
   );
-}
+};
 
 export default MyApp;
