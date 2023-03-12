@@ -44,7 +44,7 @@
   flex-wrap: wrap;
   width: 100vw;
   margin-top: 3rem;
-  margin-bottom: 5rem;
+  margin-bottom: 3rem;
 }
 
 .nextReact {
@@ -226,10 +226,27 @@
   margin: 0rem 0.2rem;
 }
 
+.githubLinkContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1.2rem;
+}
+
+.githubLink {
+  color: $lightBlue;
+}
+
+.githubLink:hover {
+  // color: white;
+  text-decoration: underline;
+}
+
 @media all and (max-width: 750px) {
   .textAndIcons {
     margin-top: 1.5rem;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
   }
   .nextText {
     font-size: 0.75rem;
@@ -278,12 +295,16 @@
   .procreateImg {
     width: 65px;
   }
+
+  .githubLinkContainer {
+    margin-top: 0.5rem;
+  }
 }
 
 @media all and (max-width: 500px) {
   .textAndIcons {
     margin-top: 1rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1.2rem;
   }
   .nextText {
     font-size: 0.6rem;
@@ -376,5 +397,26 @@
   }
   .procreateImg {
     width: 60px;
+  }
+}
+
+@media all and (max-width: 325px) {
+  .textAndIcons {
+    margin-bottom: 2rem;
+  }
+
+  .githubLinkContainer {
+    margin-top: 0rem;
+  }
+  .githubText {
+    height: auto;
+    margin-bottom: 0px;
+    padding-bottom: 10px;
+  }
+  .githubLink {
+    margin: 0 2rem;
+    margin-bottom: 0rem;
+    padding: 0rem;
+    height: auto;
   }
 }

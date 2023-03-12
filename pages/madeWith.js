@@ -1,5 +1,6 @@
 import style from "@/styles/heroSection/madeWith.module.scss";
 import { useEffect, useState } from "react";
+import Link from "next/link";
 
 export default function MadeWith() {
   const [blink, setBlink] = useState([
@@ -177,6 +178,19 @@ export default function MadeWith() {
               <span className={style.yellowText}>mit:</span> Visual Studio Code,
               Adobe XD, Photoshop, Illustrator, Lightroom und Procreate
             </p>
+          </div>
+          <div className={style.githubLinkContainer}>
+            <h4 className={`${style.nextText} ${style.githubText}`}>
+              Quellcode im Github Repo:&nbsp;&nbsp;&nbsp;
+            </h4>
+            <Link
+              href="https://github.com/stier-dev/next.js-portfolio"
+              target="_blank"
+            >
+              <h4 className={`${style.githubLink} ${style.nextText}`}>
+                github.com/stier-dev/next.js-portfolio
+              </h4>
+            </Link>
           </div>
         </div>
       </div>
