@@ -4,10 +4,12 @@ import Head from "next/head";
 import Script from "next/script";
 import { getCookie } from "cookies-next";
 import { useEffect } from "react";
+import React from "react";
 
 export const MyApp: React.FC<{
   Component: React.FC;
-  pageProps: React.PropsWithChildren<unknown>;
+  pageProps: any;
+  // pageProps: React.PropsWithChildren<unknown>;
 }> = ({ Component, pageProps }) => {
   useEffect(() => {
     // when writing this function with empty scopes it is called only on the initial render

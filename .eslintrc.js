@@ -24,7 +24,10 @@ module.exports = {
     "react/prop-types": "off",
     indent: "off",
     "react/react-in-jsx-scope": "off",
-    "react/jsx-filename-extension": [1, { extensions: [".js", ".jsx"] }],
+    "react/jsx-filename-extension": [
+      2,
+      { extensions: [".js", ".jsx", "ts", "tsx"] },
+    ],
     "linebreak-style": ["error", "unix"],
     quotes: ["error", "double"],
     semi: ["error", "always"],
