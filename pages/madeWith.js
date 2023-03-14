@@ -169,6 +169,7 @@ export default function MadeWith() {
               ></div>
             </div>
           </div>
+
           <div className={style.programsNameContainer}>
             <p className={style.programsText}>
               <span className={style.yellowText}>in:</span> html, css, sass und
@@ -179,9 +180,11 @@ export default function MadeWith() {
               Adobe XD, Photoshop, Illustrator, Lightroom und Procreate
             </p>
           </div>
+
           <div className={style.githubLinkContainer}>
+            <div className={style.divider} />
             <h4 className={`${style.nextText} ${style.githubText}`}>
-              Quellcode im Github Repo:&nbsp;&nbsp;&nbsp;
+              Quellcode im Github Repo&nbsp;&nbsp;&nbsp;
             </h4>
             <Link
               href="https://github.com/stier-dev/next.js-portfolio"
@@ -189,6 +192,19 @@ export default function MadeWith() {
             >
               <h4 className={`${style.githubLink} ${style.nextText}`}>
                 github.com/stier-dev/next.js-portfolio
+              </h4>
+            </Link>
+          </div>
+          <div className={style.linkedInLinkContainer}>
+            <h4 className={`${style.nextText} ${style.githubText}`}>
+              Linked In&nbsp;&nbsp;&nbsp;
+            </h4>
+            <Link
+              href="https://https://www.linkedin.com/in/stier-dev/"
+              target="_blank"
+            >
+              <h4 className={`${style.githubLink} ${style.nextText}`}>
+                https://www.linkedin.com/in/stier-dev/
               </h4>
             </Link>
           </div>

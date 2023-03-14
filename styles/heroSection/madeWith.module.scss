@@ -234,6 +234,14 @@
   margin-top: 1.2rem;
 }
 
+.linkedInLinkContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: -1rem;
+}
+
 .githubLink {
   color: $lightBlue;
 }
@@ -241,6 +249,18 @@
 .githubLink:hover {
   // color: white;
   text-decoration: underline;
+}
+.divider {
+  position: relative;
+  height: 0.5px;
+  width: 50%;
+  margin: 0 25%;
+  background-color: #ffffff6f;
+  z-index: 1;
+  margin-top: 15px;
+}
+.githubLinkContainer {
+  width: 100%;
 }
 
 @media all and (max-width: 750px) {
@@ -412,6 +432,8 @@
     height: auto;
     margin-bottom: 0px;
     padding-bottom: 10px;
+    width: 100%;
+    text-align: center;
   }
   .githubLink {
     margin: 0 2rem;

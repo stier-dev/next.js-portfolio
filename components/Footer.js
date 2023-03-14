@@ -69,6 +69,9 @@ export default function Footer() {
             <p className={style.contact}>info@stier.dev</p>
           </a>
         </div>
+        <div className={style.copyrightContainer}>
+          <p>Copyright &copy; 2023 </p>
+        </div>
       </div>
     </div>
   );
