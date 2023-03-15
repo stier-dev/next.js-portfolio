@@ -183,29 +183,27 @@ export default function MadeWith() {
 
           <div className={style.githubLinkContainer}>
             <div className={style.divider} />
-            <h4 className={`${style.nextText} ${style.githubText}`}>
+            <p className={`${style.linkText}`}>
               Quellcode im Github Repo&nbsp;&nbsp;&nbsp;
-            </h4>
+            </p>
             <Link
               href="https://github.com/stier-dev/next.js-portfolio"
               target="_blank"
             >
-              <h4 className={`${style.githubLink} ${style.nextText}`}>
+              <p className={`${style.link}`}>
                 github.com/stier-dev/next.js-portfolio
-              </h4>
+              </p>
             </Link>
           </div>
           <div className={style.linkedInLinkContainer}>
-            <h4 className={`${style.nextText} ${style.githubText}`}>
-              Linked In&nbsp;&nbsp;&nbsp;
-            </h4>
+            <p className={`${style.linkText}`}>Linked In&nbsp;&nbsp;&nbsp;</p>
             <Link
               href="https://https://www.linkedin.com/in/stier-dev/"
               target="_blank"
             >
-              <h4 className={`${style.githubLink} ${style.nextText}`}>
+              <p className={`${style.link}`}>
                 https://www.linkedin.com/in/stier-dev/
-              </h4>
+              </p>
             </Link>
           </div>
         </div>

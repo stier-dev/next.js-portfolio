@@ -258,9 +258,24 @@
   background-color: #ffffff6f;
   z-index: 1;
   margin-top: 15px;
+  margin-bottom: 1rem;
 }
 .githubLinkContainer {
   width: 100%;
+}
+
+.linkText,
+.link {
+  font-size: 0.9rem;
+}
+
+.link {
+  color: $lightBlue;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+    color: $yellow;
+  }
 }
 
 @media all and (max-width: 750px) {
@@ -319,11 +334,24 @@
   .githubLinkContainer {
     margin-top: 0.5rem;
   }
+
+  .divider {
+    margin-top: 12px;
+    margin-bottom: 10px;
+  }
+
+  .linkText,
+  .link {
+    font-size: 0.7rem;
+  }
 }
 
 @media all and (max-width: 500px) {
+  .arrow {
+    top: -100px;
+  }
   .textAndIcons {
-    margin-top: 1rem;
+    margin-top: -12px;
     margin-bottom: 1.2rem;
   }
   .nextText {
@@ -372,6 +400,17 @@
   .procreateImg {
     width: 70px;
   }
+
+  .divider {
+    margin-top: 9px;
+    margin-bottom: 9px;
+  }
+
+  .linkText,
+  .link {
+    font-size: 0.6rem;
+    padding-bottom: 0.35rem;
+  }
 }
 
 @media all and (max-width: 425px) {
@@ -418,16 +457,20 @@
   .procreateImg {
     width: 60px;
   }
+
+  .divider {
+    margin-top: 9px;
+    margin-bottom: 9px;
+  }
+
+  .linkText,
+  .link {
+    font-size: 0.55rem;
+    padding-bottom: 0.35rem;
+  }
 }
 
 @media all and (max-width: 325px) {
-  .textAndIcons {
-    margin-bottom: 2rem;
-  }
-
-  .githubLinkContainer {
-    margin-top: 0rem;
-  }
   .githubText {
     height: auto;
     margin-bottom: 0px;
@@ -440,5 +483,15 @@
     margin-bottom: 0rem;
     padding: 0rem;
     height: auto;
+  }
+  .divider {
+    margin-top: 9px;
+    margin-bottom: 9px;
+  }
+
+  .linkText,
+  .link {
+    font-size: 0.52rem;
+    padding-bottom: 0.35rem;
   }
 }
