@@ -178,6 +178,15 @@
 .contactContainer {
   margin-top: 100px;
 }
+.blackOverlay {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
+  width: 100vw;
+  height: 500px;
+  position: absolute;
+  margin-top: -500px;
+  // bottom: 0;
+  z-index: 1;
+}
 
 @media (max-width: 1200px) {
   .contactContainer {

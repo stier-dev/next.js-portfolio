@@ -225,8 +225,10 @@ export default function About() {
         <div className={style.contactContainer}>
           <Contact />
         </div>
+
         {/* closing textContainer */}
       </div>
+      <div className={style.blackOverlay}></div>
       {/* background */}
       <div className={style.background}>
         <div className={style.backgroundImgContainer}>
