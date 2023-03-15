@@ -45,7 +45,7 @@
   left: 30vw;
   width: 600px;
   z-index: 2;
-  margin-bottom: 300px;
+  margin-bottom: 220px;
 
   // background-color: gray;
 }
@@ -188,7 +188,7 @@
 @media (max-width: 900px) {
   .textContainer {
     top: 100px;
-    margin-bottom: 200px;
+    margin-bottom: 110px;
     left: 25vw;
   }
   .contactContainer {
@@ -199,7 +199,7 @@
 @media (max-width: 850px) {
   .textContainer {
     width: 450px;
-    margin-bottom: 170px;
+    margin-bottom: 100px;
   }
 
   .headline {
@@ -229,13 +229,13 @@
 @media (max-width: 670px) {
   .textContainer {
     width: 350px;
-    margin-bottom: 40px;
+    margin-bottom: 80px;
     left: 30vw;
   }
 
   .backgroundImgContainer {
     width: 40vw;
-    height: 90vw;
+    height: 100vw;
   }
 
   .paragraph {
@@ -277,7 +277,7 @@
 @media (max-width: 560px) {
   .textContainer {
     width: 300px;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
   }
 
   .paragraph {
@@ -306,7 +306,7 @@
 @media (max-width: 450px) {
   .textContainer {
     width: 240px;
-    margin-bottom: -60px;
+    margin-bottom: 50px;
   }
 
   .headline {
@@ -346,7 +346,7 @@
   .textContainer {
     top: 70px;
     width: 200px;
-    margin-bottom: -120px;
+    margin-bottom: 20px;
   }
 
   .paragraph {
