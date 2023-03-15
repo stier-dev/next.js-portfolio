@@ -70,7 +70,7 @@ export default function Footer() {
           </a>
         </div>
         <div className={style.copyrightContainer}>
-          <p> Test Test Copyright &copy; 2023 </p>
+          <p> Copyright &copy; 2023 </p>
         </div>
       </div>
     </div>
