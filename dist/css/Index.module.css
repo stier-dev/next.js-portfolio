@@ -1,0 +1,66 @@
+.container {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.contactContainer {
+  scroll-margin-top: 100px;
+}
+
+.memorySection {
+  height: 1250px;
+  width: 100vw;
+  background-color: black;
+  scroll-margin-top: 100px;
+}
+
+.kaleidoskopSection {
+  height: 1100px;
+  width: 100vw;
+  scroll-margin-top: 100px;
+  background-color: black;
+}
+
+@media (max-width: 840px) {
+  .memorySection {
+    height: 880px;
+  }
+}
+@media (max-width: 590px) {
+  .memorySection {
+    height: 700px;
+  }
+}
+@media (max-width: 450px) {
+  .memorySection {
+    height: 615px;
+  }
+}
+@media (max-width: 400px) {
+  .memorySection {
+    height: 740px;
+  }
+}
+@media (max-width: 325px) {
+  .memorySection {
+    height: 590px;
+  }
+}
+@media (max-width: 850px) {
+  .kaleidoskopSection {
+    height: 850px;
+  }
+}
+@media (max-width: 589px) {
+  .kaleidoskopSection {
+    height: 650px;
+  }
+}
+@media (max-width: 399px) {
+  .kaleidoskopSection {
+    height: 530px;
+  }
+}

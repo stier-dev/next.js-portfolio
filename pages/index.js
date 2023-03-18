@@ -71,16 +71,14 @@ export default function Home() {
         <Navbar />
         <HeroSection />
         <MadeWith />
-        {/* <Memory /> */}
-        {/* <section name="memorySection"> */}
         <div id="memory" className={style.memorySection}>
           {memoryIsVisible && <LazyMemory />}
         </div>
-        {/* </section> */}
+
         <div id="kaleidoskop" className={style.kaleidoskopSection}>
           {kaleidoskopIsVisible && <LazyKaleidoskop />}
         </div>
-        {/* <Kaleidoskop /> */}
+
         <div id="kontakt" className={style.contactContainer}>
           <Contact />
         </div>

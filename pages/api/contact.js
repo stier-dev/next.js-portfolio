@@ -11,6 +11,7 @@ export default async (req, res) => {
       pass: process.env.pass,
     },
   });
+  console.log("yeeeeeeeey");
 
   try {
     const emailRes = await transporter.sendMail({
