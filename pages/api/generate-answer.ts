@@ -2,7 +2,7 @@ import { NextApiRequest, NextApiResponse } from "next";
 import { Configuration, OpenAIApi } from "openai";
 
 type ResponseData = {
-  text: string;
+  answer: string;
 };
 
 interface GenerateNextApiRequest extends NextApiRequest {
@@ -23,7 +23,6 @@ export default async function handler(
   // ? console log to find errors
   console.log("--------- start api debugging -----------");
   console.log("req.body", req.body);
-
   console.log("--------- end api debugging -----------");
 
   if (!prompt || prompt === "") {
@@ -42,6 +41,6 @@ export default async function handler(
   const response =
     aiResult.data.choices[0].text?.trim() ||
     "ups, irgendwas ist schief gelaufen";
-  res.status(200).json({ text: response });
+  res.status(200).json({ answer: response });
   // const response
 }

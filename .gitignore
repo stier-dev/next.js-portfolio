@@ -5,6 +5,9 @@
 /.pnp
 .pnp.js
 
+# igore my testing file
+/pages/chattest.tsx
+
 # testing
 /coverage
 
