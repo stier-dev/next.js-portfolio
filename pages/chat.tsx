@@ -14,7 +14,8 @@ export default function Chat() {
     return data.answer;
   };
 
-  // const answer = callApi("tell me a joke");
+  const answer = callApi("tell me a joke");
+  console.log(answer);
 
   // const joke = callApi("tell me a joke");
   return (
