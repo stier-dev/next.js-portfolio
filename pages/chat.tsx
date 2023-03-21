@@ -1,8 +1,23 @@
 "use client";
+import style from "@/styles/chat.module.scss";
+
+// ? Create an Imput
+// ? Create an Submit Btn
+
+// ? Create Event handler that sends the question from the Input field to the API
+
+// ? Create header, subheader, and an explanation
+// ? Style and make responsive
+
+// ? catch if server is buidy
+// ? loding icon for response when it is pending
+
+const prefix = "antworte in einem kurzen gedicht das sich reimt: ";
 
 export default function Chat() {
-  const callApi = async (prompt: string) => {
-    const response = await fetch("/api/generate-answer", {
+  const callApi = async (input: string) => {
+    let prompt = prefix + input;
+    const response = await fetch("http://localhost:3000/api/generate-answer", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -14,14 +29,17 @@ export default function Chat() {
     return data.answer;
   };
 
-  const answer = callApi("tell me a joke");
-  console.log(answer);
+  function submit() {
+    const answer = callApi("was ist schön am leben?");
+    console.log(answer);
+  }
 
   // const joke = callApi("tell me a joke");
   return (
     <div>
       <h1>Chat</h1>
-      {/* <button onClick={callApi();}>Like</button> */}
+      <input type="text" className={style.inputField} />
+      <button onClick={submit}>Fragen</button>
       <p>Question</p>
       <h2>Answer</h2>
       {/* <p> {answer}</p> */}
