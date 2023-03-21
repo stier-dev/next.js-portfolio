@@ -14,7 +14,11 @@ import { useState, useEffect } from "react";
 export default function FourWins() {
   const [hoveredRow, setHoveredRow] = useState(1);
   const [allSlots, setAllSlots] = useState([]);
-
+  // useEffect(() => {
+  //   // const firstRow = document.querySelector("oneField");
+  //   // console.log(firstRow);
+  //   console.log(firstRow.current);
+  // }, []);
   // ! event listener for marking the selected rows
   // addEventListener("mouseover", (event) => {
   //   console.log(event);
@@ -30,8 +34,6 @@ export default function FourWins() {
 
   function allSlotsInitial() {
     const allInitialSlots = [];
-
-    // ?create a funclion that
     for (let col = 1; col <= 7; col++) {
       for (let row = 1; row <= 7; row++) {
         allInitialSlots.push({
@@ -49,16 +51,20 @@ export default function FourWins() {
     allSlotsInitial();
   }, []);
 
+  const hoverFunction = (row) => {
+    setHoveredRow(row);
+  };
+
   const OneField = ({ column, row, player, occupied }: OneFieldProps) => {
     return (
       <div
+        onMouseEnter={() => hoverFunction(row)}
         className={`${style.oneField} ${
           occupied && player == "one" && style.occupiedByOne
         }  ${occupied && player == "two" && style.occupiedByTwo} ${
           row == hoveredRow && style.hoveredRow
         }`}
       >
-        {" "}
         <p className={style.placeText}>
           {column}
           {row}
@@ -67,11 +73,6 @@ export default function FourWins() {
     );
   };
 
-  // const mouseMove = (event) => {
-  //   console.log(event);
-  // };
-
-  // window.addEventListener("mousemove", mouseMove);
   return (
     <div>
       <h1 className={style.headline}>Vier Gewinnt</h1>
