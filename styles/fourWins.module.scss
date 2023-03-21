@@ -1,0 +1,42 @@
+$size: 100px;
+$tokenSize: $size/2.7;
+
+.oneField {
+  background-color: orange;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: $size;
+  width: $size;
+  margin: 0px;
+  padding: 0px;
+  // border: 1px solid white;
+}
+
+.oneField::after {
+  position: absolute;
+  content: "";
+  clip-path: circle($tokenSize at center);
+  background-color: blue;
+  height: $size;
+  width: $size;
+  margin: 0px;
+  padding: 0px;
+  border: 1px solid white;
+}
+
+.fieldsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: pink;
+  width: $size * 7;
+  height: $size * 7;
+}
+
+.placeText {
+  position: absolute;
+  z-index: 100;
+}
+.hoveredRow {
+  border: 1px solid white;
+}

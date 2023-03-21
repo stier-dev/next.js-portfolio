@@ -21,9 +21,9 @@ export default async function handler(
   const prompt = req.body.prompt;
 
   // ? console log to find errors
-  console.log("--------- start api debugging -----------");
-  console.log("req.body", req.body);
-  console.log("--------- end api debugging -----------");
+  // console.log("--------- start api debugging -----------");
+  // console.log("req.body", req.body);
+  // console.log("--------- end api debugging -----------");
 
   if (!prompt || prompt === "") {
     return new Response("Please send your Prompt", { status: 400 });
