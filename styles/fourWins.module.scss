@@ -1,5 +1,44 @@
+@import "/styles/abstracts/colors";
+@import "/styles/abstracts/fonts";
+
 $size: 100px;
-$tokenSize: $size/2.7;
+$tokenRadius: $size/2.7;
+$tokenSize: $tokenRadius * 2;
+
+.mainContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.headline {
+  font-family: $head-font;
+  font-size: 3rem;
+  letter-spacing: 0.17rem;
+  color: $yellow;
+  margin-top: 6rem;
+  margin-bottom: 0rem;
+  text-transform: uppercase;
+  width: 100%;
+  text-align: center;
+}
+
+.subHeadline {
+  font-weight: 400;
+  width: 100%;
+  text-align: center;
+}
+
+.token {
+  position: absolute;
+  height: $tokenSize;
+  width: $tokenSize;
+  background-color: pink;
+  border-radius: $tokenRadius;
+  margin: ($size - $tokenSize)/2;
+  // border-radius: 50px;
+}
 
 .oneField {
   background-color: orange;
@@ -10,13 +49,12 @@ $tokenSize: $size/2.7;
   width: $size;
   margin: 0px;
   padding: 0px;
-  // border: 1px solid white;
 }
 
 .oneField::after {
   position: absolute;
   content: "";
-  clip-path: circle($tokenSize at center);
+  clip-path: circle($tokenRadius at center);
   background-color: blue;
   height: $size;
   width: $size;
@@ -31,6 +69,7 @@ $tokenSize: $size/2.7;
   background-color: pink;
   width: $size * 7;
   height: $size * 7;
+  margin-top: 30px;
 }
 
 .placeText {
@@ -39,4 +78,14 @@ $tokenSize: $size/2.7;
 }
 .hoveredRow {
   border: 1px solid white;
+}
+.startingField {
+  background-color: green;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: $size;
+  width: $size;
+  margin: 0px;
+  padding: 0px;
 }
