@@ -197,10 +197,7 @@ export default function MadeWith() {
           </div>
           <div className={style.linkedInLinkContainer}>
             <p className={`${style.linkText}`}>Linked In&nbsp;&nbsp;&nbsp;</p>
-            <Link
-              href="https://https://www.linkedin.com/in/stier-dev/"
-              target="_blank"
-            >
+            <Link href="https://www.linkedin.com/in/stier-dev/" target="_blank">
               <p className={`${style.link}`}>
                 https://www.linkedin.com/in/stier-dev/
               </p>

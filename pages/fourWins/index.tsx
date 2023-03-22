@@ -84,7 +84,6 @@ export default function FourWins() {
       }
 
       console.log("the mouse has entered");
-      console.log(oneField.current.clientWidth);
     }
   };
 
