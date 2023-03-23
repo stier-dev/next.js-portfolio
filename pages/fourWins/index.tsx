@@ -11,17 +11,20 @@
 import style from "@/styles/fourWins.module.scss";
 import { useState, useEffect, useRef } from "react";
 import throttle from "@/functions/throttle";
+import next from "next";
 
 // const [allSlots, setAllSlots] = useState([]);
 export default function FourWins() {
   const [hoveredRow, setHoveredRow] = useState(1);
   const [allSlots, setAllSlots] = useState([]);
   const [activePlayer, setActivePlayer] = useState("blue");
+  const [winner, setWinner] = useState("notYet");
   const token = useRef<HTMLDivElement>(null);
   const oneField = useRef<HTMLDivElement>(null);
   const playingField = useRef<HTMLDivElement>(null);
   const numberOfRows: number = 7;
-  const numberOfColumns: number = 6;
+  // the first column is for the token!
+  const numberOfColumns: number = 7;
 
   interface OneFieldProps {
     key: string;
@@ -133,42 +136,130 @@ export default function FourWins() {
     }
   }
 
-  // * set the Token of the player to the selected row
-
-  function insertToken(row: number) {
-    let freeColumnIndex = isThereSpaceForAToken(row);
-    if (!freeColumnIndex) {
-      console.log("no space");
-      return;
-    }
-    // * change the array to
-    // * occupie the empty slot with the token of the player
-    // * change the player
-
-    let newAllSlots = [...allSlots];
-    newAllSlots[freeColumnIndex].occupied = true;
-    newAllSlots[freeColumnIndex].player = activePlayer;
+  function togglePlayer() {
     if (activePlayer == "blue") {
       setActivePlayer("red");
     } else if (activePlayer == "red") {
       setActivePlayer("blue");
     }
-    console.log(newAllSlots);
+  }
+  // * set the Token of the player to the selected row
+
+  function insertToken(row: number) {
+    let freeColumnIndex = isThereSpaceForAToken(row);
+    if (!freeColumnIndex) {
+      return;
+    }
+    let newAllSlots = [...allSlots];
+    newAllSlots[freeColumnIndex].occupied = true;
+    newAllSlots[freeColumnIndex].player = activePlayer;
+    togglePlayer();
   }
 
-  // * Check for a winner
+  // * winning function
+  function winningFunction(player) {
+    alert(`we have a winnter! ${player}`);
+  }
+  // **** Check for a winner
 
-  function checkForWinner() {
+  // * winner in a row
+
+  function checkForWinnerRow(player: string) {
+    let inARow = 0;
     // loop threw all rows and check for four in a row
-    for (let i = 0; i < allSlots.length; i++) {
-      console.log("hi");
+    for (let row = 1; row <= numberOfRows; row++) {
+      for (let i = 0; i < allSlots.length; i++) {
+        if (allSlots[i].row === row && allSlots[i].column >= 2) {
+          if (allSlots[i].player == player) {
+            inARow++;
+            if (inARow == 4) {
+              winningFunction(player);
+              return;
+            }
+          } else {
+            inARow = 0;
+          }
+        }
+      }
     }
+  }
+
+  // * winner in a column
+
+  function checkForWinnerColumn(player: string) {
+    let inAColumn = 0;
+    // loop threw all rows and check for four in a row
+    for (let column = 1; column <= numberOfColumns; column++) {
+      for (let i = 0; i < allSlots.length; i++) {
+        if (allSlots[i].column === column) {
+          if (allSlots[i].player == player) {
+            inAColumn++;
+            if (inAColumn == 4) {
+              winningFunction(player);
+              return;
+            }
+          } else {
+            inAColumn = 0;
+          }
+        }
+      }
+    }
+  }
+  function checkForWinnerDiagonalDown(player: string) {
+    // if it is in the last row, return (except for when you check for the 4th)
+    // let nextField = 8;
+    let nextI = 0;
+    for (let i = 7; i < 25; i++) {
+      nextI = 0;
+      if (allSlots[i].player == player && allSlots[nextI].row != 7) {
+        nextI = i + 8;
+        if (allSlots[nextI].player == player && allSlots[nextI].row != 7) {
+          nextI = nextI + 8;
+          if (allSlots[nextI].player == player && allSlots[nextI].row != 7) {
+            nextI = nextI + 8;
+            if (allSlots[nextI].player == player) {
+              winningFunction(player);
+              return;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  function checkForWinnerDiagonalUp(player: string) {
+    // let nextField = 8;
+    let nextI = 0;
+    for (let i = 10; i < 28; i++) {
+      nextI = 0;
+      if (allSlots[i].player == player) {
+        nextI = i + 6;
+        // if it is in the first row, return (except for when you check for the 4th)
+        if (allSlots[nextI].player == player && allSlots[nextI].row != 1) {
+          nextI = nextI + 6;
+          if (allSlots[nextI].player == player && allSlots[nextI].row != 1) {
+            nextI = nextI + 6;
+            if (allSlots[nextI].player == player) {
+              winningFunction(player);
+              return;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  function checkForWinner(player: string) {
+    checkForWinnerRow(player);
+    checkForWinnerColumn(player);
+    checkForWinnerDiagonalUp(player);
+    checkForWinnerDiagonalDown(player);
   }
 
   // * All Functions in one on Click function
   function onClickFunction(row: number) {
     insertToken(row);
-    checkForWinner();
+    checkForWinner(activePlayer);
   }
 
   return (
