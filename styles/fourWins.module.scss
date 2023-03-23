@@ -40,6 +40,14 @@ $tokenSize: $tokenRadius * 2;
   // border-radius: 50px;
 }
 
+.tokenBlue {
+  background-color: blue;
+}
+
+.tokenRed {
+  background-color: red;
+}
+
 .oneField {
   background-color: orange;
   display: flex;
@@ -55,7 +63,7 @@ $tokenSize: $tokenRadius * 2;
   position: absolute;
   content: "";
   clip-path: circle($tokenRadius at center);
-  background-color: blue;
+  background-color: black;
   height: $size;
   width: $size;
   margin: 0px;
@@ -88,4 +96,20 @@ $tokenSize: $tokenRadius * 2;
   width: $size;
   margin: 0px;
   padding: 0px;
+}
+
+// .occupiedByBlue ~ .oneField::after {
+//   background-color: blue;
+// }
+// .occupiedByRed ~ .oneField::after {
+//   background-color: red;
+// }
+
+// ! make the color only appear in her own class
+
+.occupiedByBlue {
+  background-color: blue;
+}
+.occupiedByRed {
+  background-color: red;
 }

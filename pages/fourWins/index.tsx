@@ -6,6 +6,7 @@
 // ? make the Tokens change color/ player each turn
 // ? make a function that searches for 4 in a row
 // ? make a winning screen
+// ? make event listener disappear if of screen
 
 import style from "@/styles/fourWins.module.scss";
 import { useState, useEffect, useRef } from "react";
@@ -15,9 +16,12 @@ import throttle from "@/functions/throttle";
 export default function FourWins() {
   const [hoveredRow, setHoveredRow] = useState(1);
   const [allSlots, setAllSlots] = useState([]);
+  const [activePlayer, setActivePlayer] = useState("blue");
   const token = useRef<HTMLDivElement>(null);
   const oneField = useRef<HTMLDivElement>(null);
   const playingField = useRef<HTMLDivElement>(null);
+  const numberOfRows: number = 7;
+  const numberOfColumns: number = 6;
 
   interface OneFieldProps {
     key: string;
@@ -48,10 +52,7 @@ export default function FourWins() {
   //  * Make Token follow Mouse
 
   const onMouseMove = (e) => {
-    // console.log(token.current.getBoundingClientRect());
-    // console.log(e);
-    // console.log(playingField.current.getBoundingClientRect());
-
+    let offset = 100;
     let mouseX = e.clientX;
     let playingFieldX = playingField.current.getBoundingClientRect().x;
     let playingFieldWidth = playingField.current.getBoundingClientRect().width;
@@ -61,8 +62,8 @@ export default function FourWins() {
       playingField.current.getBoundingClientRect().height;
     // * if the mouse enters the field
     if (
-      mouseX >= playingFieldX &&
-      mouseX <= playingFieldX + playingFieldWidth &&
+      mouseX >= playingFieldX - offset &&
+      mouseX <= playingFieldX + playingFieldWidth + offset &&
       mouseY >= playingFieldY &&
       mouseY <= playingFieldY + playingFieldHeight
     ) {
@@ -82,28 +83,16 @@ export default function FourWins() {
           oneField.current.clientWidth +
           "px";
       }
-
-      console.log("the mouse has entered");
     }
   };
 
-  // console.log(token.current);
-  //   circle.style.left = e.pageX + 'px';
-
+  // * On Mount functions: set initial Slots and add Mouse event listener
   useEffect(() => {
     allSlotsInitial();
     document.addEventListener("mousemove", throttle(onMouseMove, 100));
   }, []);
 
-  // * Hover selected Row function
-
-  const hoverFunction = (row: number) => {
-    setHoveredRow(row);
-    // console.log(row);
-  };
-
   // * Component for one field
-
   const OneField = ({ column, row, player, occupied }: OneFieldProps) => {
     return (
       <div
@@ -113,8 +102,8 @@ export default function FourWins() {
         }}
         ref={oneField}
         className={`${style.oneField} ${
-          occupied && player == "one" && style.occupiedByOne
-        }  ${occupied && player == "two" && style.occupiedByTwo} ${
+          occupied && player == "blue" && style.occupiedByBlue
+        }  ${occupied && player == "red" && style.occupiedByRed} ${
           row == hoveredRow && style.hoveredRow
         }`}
       >
@@ -126,9 +115,60 @@ export default function FourWins() {
     );
   };
 
-  // * On Click functions
+  // * Hover selected Row function
+
+  const hoverFunction = (row: number) => {
+    setHoveredRow(row);
+  };
+
+  // * is there is Space for a Token?
+
+  function isThereSpaceForAToken(row) {
+    for (let i = allSlots.length - 1; i >= 0; i--) {
+      if (allSlots[i].row === row) {
+        if (!allSlots[i].occupied) {
+          return i;
+        }
+      }
+    }
+  }
+
+  // * set the Token of the player to the selected row
+
+  function insertToken(row: number) {
+    let freeColumnIndex = isThereSpaceForAToken(row);
+    if (!freeColumnIndex) {
+      console.log("no space");
+      return;
+    }
+    // * change the array to
+    // * occupie the empty slot with the token of the player
+    // * change the player
+
+    let newAllSlots = [...allSlots];
+    newAllSlots[freeColumnIndex].occupied = true;
+    newAllSlots[freeColumnIndex].player = activePlayer;
+    if (activePlayer == "blue") {
+      setActivePlayer("red");
+    } else if (activePlayer == "red") {
+      setActivePlayer("blue");
+    }
+    console.log(newAllSlots);
+  }
+
+  // * Check for a winner
+
+  function checkForWinner() {
+    // loop threw all rows and check for four in a row
+    for (let i = 0; i < allSlots.length; i++) {
+      console.log("hi");
+    }
+  }
+
+  // * All Functions in one on Click function
   function onClickFunction(row: number) {
-    console.log(row);
+    insertToken(row);
+    checkForWinner();
   }
 
   return (
@@ -139,7 +179,12 @@ export default function FourWins() {
         <div className={style.background} />
         <div className={style.foreground} />
         <div ref={playingField} className={style.fieldsContainer}>
-          <div ref={token} className={style.token} />
+          <div
+            ref={token}
+            className={`${style.token} ${
+              activePlayer == "blue" && style.tokenBlue
+            }  ${activePlayer == "red" && style.tokenRed}`}
+          />
           {allSlots.map(({ key, column, row, player, occupied }) => {
             if (column > 1) {
               return (
