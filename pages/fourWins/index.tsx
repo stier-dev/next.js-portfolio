@@ -159,6 +159,7 @@ export default function FourWins() {
   // * winning function
   function winningFunction(player) {
     alert(`we have a winnter! ${player}`);
+    allSlotsInitial();
   }
   // **** Check for a winner
 
