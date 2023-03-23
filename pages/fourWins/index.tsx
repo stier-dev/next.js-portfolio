@@ -101,7 +101,7 @@ export default function FourWins() {
           onClickFunction(row);
         }}
         ref={oneField}
-        className={`${style.oneField} ${
+        className={`${style.oneField} ${!occupied && style.empty} ${
           occupied && player == "blue" && style.occupiedByBlue
         }  ${occupied && player == "red" && style.occupiedByRed} ${
           row == hoveredRow && style.hoveredRow

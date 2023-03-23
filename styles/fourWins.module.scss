@@ -59,18 +59,6 @@ $tokenSize: $tokenRadius * 2;
   padding: 0px;
 }
 
-.oneField::after {
-  position: absolute;
-  content: "";
-  clip-path: circle($tokenRadius at center);
-  background-color: black;
-  height: $size;
-  width: $size;
-  margin: 0px;
-  padding: 0px;
-  border: 1px solid white;
-}
-
 .fieldsContainer {
   display: flex;
   flex-wrap: wrap;
@@ -107,9 +95,38 @@ $tokenSize: $tokenRadius * 2;
 
 // ! make the color only appear in her own class
 
-.occupiedByBlue {
-  background-color: blue;
+.empty::after {
+  position: absolute;
+  content: "";
+  background-color: black;
+  clip-path: circle($tokenRadius at center);
+  height: $size;
+  width: $size;
+  margin: 0px;
+  padding: 0px;
+  border: 1px solid white;
 }
-.occupiedByRed {
+
+.occupiedByBlue::after {
+  position: absolute;
+  content: "";
+  background-color: blue;
+  clip-path: circle($tokenRadius at center);
+  height: $size;
+  width: $size;
+  margin: 0px;
+  padding: 0px;
+  border: 1px solid white;
+}
+
+.occupiedByRed::after {
+  position: absolute;
+  content: "";
   background-color: red;
+  clip-path: circle($tokenRadius at center);
+  height: $size;
+  width: $size;
+  margin: 0px;
+  padding: 0px;
+  border: 1px solid white;
 }
