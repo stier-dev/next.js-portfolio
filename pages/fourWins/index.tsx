@@ -11,14 +11,14 @@
 import style from "@/styles/fourWins.module.scss";
 import { useState, useEffect, useRef } from "react";
 import throttle from "@/functions/throttle";
-import next from "next";
+import Image from "next/image";
 
 // const [allSlots, setAllSlots] = useState([]);
 export default function FourWins() {
   const [hoveredRow, setHoveredRow] = useState(1);
   const [allSlots, setAllSlots] = useState([]);
   const [activePlayer, setActivePlayer] = useState("blue");
-  const [winner, setWinner] = useState("notYet");
+  // const [winner, setWinner] = useState("notYet");
   const token = useRef<HTMLDivElement>(null);
   const oneField = useRef<HTMLDivElement>(null);
   const playingField = useRef<HTMLDivElement>(null);
@@ -109,12 +109,7 @@ export default function FourWins() {
         }  ${occupied && player == "red" && style.occupiedByRed} ${
           row == hoveredRow && style.hoveredRow
         }`}
-      >
-        <p className={style.placeText}>
-          {column}
-          {row}
-        </p>
-      </div>
+      ></div>
     );
   };
 
@@ -276,17 +271,34 @@ export default function FourWins() {
             className={`${style.token} ${
               activePlayer == "blue" && style.tokenBlue
             }  ${activePlayer == "red" && style.tokenRed}`}
-          />
+          >
+            <div className={style.tokenImage}>
+              <Image
+                fill
+                alt="Token Desgin"
+                src={"/img/four_wins/inner_circle_transparent.svg"}
+              />
+            </div>
+          </div>
           {allSlots.map(({ key, column, row, player, occupied }) => {
             if (column > 1) {
               return (
-                <OneField
-                  key={key}
-                  column={column}
-                  row={row}
-                  player={player}
-                  occupied={occupied}
-                />
+                <div key={key} className={style.oneFieldContainer}>
+                  <div className={style.oneFieldImage}>
+                    <Image
+                      fill
+                      alt="Token Desgin"
+                      src={"/img/four_wins/outer_circle.svg"}
+                    />
+                  </div>
+                  <OneField
+                    key={key}
+                    column={column}
+                    row={row}
+                    player={player}
+                    occupied={occupied}
+                  />
+                </div>
               );
             } else {
               return (

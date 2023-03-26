@@ -34,35 +34,60 @@ $tokenSize: $tokenRadius * 2;
   position: absolute;
   height: $tokenSize;
   width: $tokenSize;
-  background-color: pink;
   border-radius: $tokenRadius;
   margin: ($size - $tokenSize)/2;
-  // border-radius: 50px;
-}
-
-.tokenBlue {
-  background-color: blue;
-}
-
-.tokenRed {
-  background-color: red;
-}
-
-.oneField {
-  background-color: orange;
   display: flex;
   justify-content: center;
   align-items: center;
+  border: 1px solid white;
+}
+
+.tokenBlue {
+  background-color: $blue;
+}
+
+.tokenRed {
+  background-color: $yellow;
+}
+
+.tokenImage {
+  position: relative;
+  height: 90%;
+  width: 90%;
+}
+
+.oneFieldContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   height: $size;
   width: $size;
+}
+
+.oneField {
+  position: relative;
+  background-color: #710000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
   margin: 0px;
   padding: 0px;
+}
+
+.oneFieldImage {
+  position: absolute;
+  height: 85%;
+  width: 85%;
+  z-index: 10;
+  pointer-events: none;
 }
 
 .fieldsContainer {
   display: flex;
   flex-wrap: wrap;
-  background-color: pink;
   width: $size * 7;
   height: $size * 7;
   margin-top: 30px;
@@ -72,11 +97,9 @@ $tokenSize: $tokenRadius * 2;
   position: absolute;
   z-index: 100;
 }
-.hoveredRow {
-  border: 1px solid white;
-}
+
 .startingField {
-  background-color: green;
+  background-color: rgb(89, 89, 89);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -110,7 +133,11 @@ $tokenSize: $tokenRadius * 2;
 .occupiedByBlue::after {
   position: absolute;
   content: "";
-  background-color: blue;
+  background-color: $blue;
+  background-image: url("/img/four_wins/inner_circle_transparent.svg");
+  background-size: 70%;
+  background-position: center;
+  background-repeat: no-repeat;
   clip-path: circle($tokenRadius at center);
   height: $size;
   width: $size;
@@ -122,7 +149,11 @@ $tokenSize: $tokenRadius * 2;
 .occupiedByRed::after {
   position: absolute;
   content: "";
-  background-color: red;
+  background-color: $yellow;
+  background-image: url("/img/four_wins/inner_circle_transparent.svg");
+  background-size: 70%;
+  background-position: center;
+  background-repeat: no-repeat;
   clip-path: circle($tokenRadius at center);
   height: $size;
   width: $size;
