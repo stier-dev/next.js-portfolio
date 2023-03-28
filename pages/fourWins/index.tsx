@@ -9,6 +9,7 @@
 // ? make event listener disappear if of screen
 
 import style from "@/styles/fourWins.module.scss";
+import btnStyle from "@/styles/components/buttons.module.scss";
 import { useState, useEffect, useRef } from "react";
 import throttle from "@/functions/throttle";
 import Image from "next/image";
@@ -17,14 +18,16 @@ import Image from "next/image";
 export default function FourWins() {
   const [hoveredRow, setHoveredRow] = useState(1);
   const [allSlots, setAllSlots] = useState([]);
-  const [activePlayer, setActivePlayer] = useState("blue");
-  // const [winner, setWinner] = useState("notYet");
+  const [activePlayer, setActivePlayer] = useState("blau");
+
   const token = useRef<HTMLDivElement>(null);
   const oneField = useRef<HTMLDivElement>(null);
   const playingField = useRef<HTMLDivElement>(null);
   const numberOfRows: number = 7;
   // the first column is for the token!
   const numberOfColumns: number = 7;
+  const [winningScreen, setWinningScreen] = useState(false);
+  const [winner, setWinner] = useState("peter");
 
   interface OneFieldProps {
     key: string;
@@ -93,10 +96,10 @@ export default function FourWins() {
   useEffect(() => {
     allSlotsInitial();
     document.addEventListener("mousemove", throttle(onMouseMove, 100));
-  }, []);
+  }, [playingField]);
 
   // * Component for one field
-  const OneField = ({ column, row, player, occupied }: OneFieldProps) => {
+  const OneField = ({ row, player, occupied }: OneFieldProps) => {
     return (
       <div
         onMouseEnter={() => hoverFunction(row)}
@@ -105,8 +108,8 @@ export default function FourWins() {
         }}
         ref={oneField}
         className={`${style.oneField} ${!occupied && style.empty} ${
-          occupied && player == "blue" && style.occupiedByBlue
-        }  ${occupied && player == "red" && style.occupiedByRed} ${
+          occupied && player == "blau" && style.occupiedByBlue
+        }  ${occupied && player == "gelb" && style.occupiedByRed} ${
           row == hoveredRow && style.hoveredRow
         }`}
       ></div>
@@ -132,10 +135,10 @@ export default function FourWins() {
   }
 
   function togglePlayer() {
-    if (activePlayer == "blue") {
-      setActivePlayer("red");
-    } else if (activePlayer == "red") {
-      setActivePlayer("blue");
+    if (activePlayer == "blau") {
+      setActivePlayer("gelb");
+    } else if (activePlayer == "gelb") {
+      setActivePlayer("blau");
     }
   }
   // * set the Token of the player to the selected row
@@ -148,13 +151,11 @@ export default function FourWins() {
     let newAllSlots = [...allSlots];
     newAllSlots[freeColumnIndex].occupied = true;
     newAllSlots[freeColumnIndex].player = activePlayer;
-    togglePlayer();
   }
 
   // * winning function
-  function winningFunction(player) {
-    alert(`we have a winnter! ${player}`);
-    allSlotsInitial();
+  function winningFunction() {
+    setWinningScreen(true);
   }
   // **** Check for a winner
 
@@ -169,7 +170,8 @@ export default function FourWins() {
           if (allSlots[i].player == player) {
             inARow++;
             if (inARow == 4) {
-              winningFunction(player);
+              setWinner(player);
+              winningFunction();
               return;
             }
           } else {
@@ -191,7 +193,8 @@ export default function FourWins() {
           if (allSlots[i].player == player) {
             inAColumn++;
             if (inAColumn == 4) {
-              winningFunction(player);
+              setWinner(player);
+              winningFunction();
               return;
             }
           } else {
@@ -214,7 +217,8 @@ export default function FourWins() {
           if (allSlots[nextI].player == player && allSlots[nextI].row != 7) {
             nextI = nextI + 8;
             if (allSlots[nextI].player == player) {
-              winningFunction(player);
+              setWinner(player);
+              winningFunction();
               return;
             }
           }
@@ -236,7 +240,8 @@ export default function FourWins() {
           if (allSlots[nextI].player == player && allSlots[nextI].row != 1) {
             nextI = nextI + 6;
             if (allSlots[nextI].player == player) {
-              winningFunction(player);
+              setWinner(player);
+              winningFunction();
               return;
             }
           }
@@ -256,12 +261,38 @@ export default function FourWins() {
   function onClickFunction(row: number) {
     insertToken(row);
     checkForWinner(activePlayer);
+    togglePlayer();
+  }
+
+  // * winning screen
+
+  function playAgain() {
+    allSlotsInitial();
+    setWinningScreen(false);
   }
 
   return (
     <div className={style.mainContainer}>
       <h1 className={style.headline}>Vier Gewinnt</h1>
       <h2 className={style.subHeadline}>Spiele gegen eine*n Freund*in</h2>
+      <div
+        className={`${style.winningScreen} ${
+          winningScreen && style.visibleWinningScreen
+        } ${!winningScreen && style.hideWinningScreen}`}
+      >
+        <h1 className={style.headline}>{winner} gewinnt!</h1>
+
+        <div className={btnStyle.slideBtn} onClick={playAgain}>
+          <span letter="R">R</span>
+          <span letter="E">E</span>
+          <span letter="V">V</span>
+          <span letter="A">A</span>
+          <span letter="N">N</span>
+          <span letter="C">C</span>
+          <span letter="H">H</span>
+          <span letter="E">E</span>
+        </div>
+      </div>
       <div className={style.gameContainer}>
         <div className={style.background} />
         <div className={style.foreground} />
@@ -269,8 +300,8 @@ export default function FourWins() {
           <div
             ref={token}
             className={`${style.token} ${
-              activePlayer == "blue" && style.tokenBlue
-            }  ${activePlayer == "red" && style.tokenRed}`}
+              activePlayer == "blau" && style.tokenBlue
+            }  ${activePlayer == "gelb" && style.tokenRed}`}
           >
             <div className={style.tokenImage}>
               <Image

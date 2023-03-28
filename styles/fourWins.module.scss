@@ -161,3 +161,27 @@ $tokenSize: $tokenRadius * 2;
   padding: 0px;
   border: 1px solid white;
 }
+
+.winningScreen {
+  position: absolute;
+  top: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 200px;
+  padding-top: 100px;
+  background-color: rgba(0, 0, 0, 0.68);
+  z-index: 15;
+}
+
+.hideWinningScreen {
+  opacity: 0;
+  height: 0px;
+  width: 0px;
+  pointer-events: none;
+}
+
+.visibleWinningScreen {
+  opacity: 1;
+}

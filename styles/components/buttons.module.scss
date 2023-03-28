@@ -44,3 +44,65 @@
     }
   }
 }
+
+.slideBtn {
+  position: relative;
+  width: 12rem;
+  height: 2.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffb124;
+  border: 1px solid white;
+  border-radius: 0.2rem;
+  padding: 0.5rem 1rem;
+  font-size: 1.2rem;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+  z-index: 2;
+}
+.slideBtn span {
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+  display: inline-block;
+  transition: 0.5s;
+}
+
+@media (hover: hover) {
+  .slideBtn span:nth-child(odd) {
+    transform: translateY(-3rem);
+  }
+  .slideBtn:hover span:nth-child(odd) {
+    transform: translateY(0);
+  }
+  .slideBtn span:nth-child(even) {
+    transform: translateY(3rem);
+  }
+  .slideBtn:hover span:nth-child(even) {
+    transform: translateY(0);
+  }
+
+  .slideBtn span:nth-child(odd):before {
+    content: attr(letter);
+    position: absolute;
+    transform: translateY(3rem);
+  }
+
+  .slideBtn span:nth-child(even):before {
+    content: attr(letter);
+    position: absolute;
+    transform: translateY(-3rem);
+  }
+
+  .slideBtn:hover {
+    border-color: #ffb124;
+    color: white;
+  }
+}
