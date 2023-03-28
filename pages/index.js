@@ -1,12 +1,8 @@
-// import Memory from "./memory";
-// import React from "react";
 import HeroSection from "./heroSection";
 import style from "@/styles/Index.module.scss";
 import MadeWith from "./madeWith";
-// import LoadingIcons from "@/components/LoadingIcons";
 import Contact from "./kontakt";
 import Navbar from "@/components/Navbar";
-// import Kaleidoskop from "./kaleidoskop";
 // * dynamic loading / Deferred loading / lazy loading
 import dynamic from "next/dynamic";
 import { useState, useEffect } from "react";
@@ -16,11 +12,13 @@ export default function Home() {
   const [memoryIsVisible, setMemoryIsVisible] = useState(false);
   const LazyKaleidoskop = dynamic(() => import("./kaleidoskop"));
   const [kaleidoskopIsVisible, setKaleidoskopIsVisible] = useState(false);
+  const LazyFourWins = dynamic(() => import("./fourWins"));
+  const [fourWinsIsVisible, setFourWinsIsVisible] = useState(true);
 
   // use Effect to make sure, that the elements are loaded in the dom before they are targeted
   useEffect(() => {
+    // ! memory
     let memoryObserver = undefined;
-    // eslint-disable-next-line react-hooks/exhaustive-deps
     memoryObserver = new IntersectionObserver(
       (entries) => {
         // if there is only one entry it will be entries[0]
@@ -37,8 +35,12 @@ export default function Home() {
         rootMargin: "200px",
       }
     );
+    let memorySection = undefined;
+    memorySection = document.querySelector("#memory");
+    memoryObserver.observe(memorySection);
+
+    // ! kaleidoskop
     let kaleidoskopObserver = undefined;
-    // eslint-disable-next-line react-hooks/exhaustive-deps
     kaleidoskopObserver = new IntersectionObserver(
       (entries) => {
         // if there is only one entry it will be entries[0]
@@ -48,7 +50,6 @@ export default function Home() {
             setKaleidoskopIsVisible(true);
           } else {
             console.log("kaleidoskop not intersecting");
-            // setMemoryIsVisible(false);
           }
         });
       },
@@ -56,13 +57,33 @@ export default function Home() {
         rootMargin: "300px",
       }
     );
-    let memorySection = undefined;
+
     let kaleidoskopSection = undefined;
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    memorySection = document.querySelector("#memory");
     kaleidoskopSection = document.querySelector("#kaleidoskop");
-    memoryObserver.observe(memorySection);
     kaleidoskopObserver.observe(kaleidoskopSection);
+
+    // ! fourWins
+    let fourWinsObserver = undefined;
+    fourWinsObserver = new IntersectionObserver(
+      (entries) => {
+        // if there is only one entry it will be entries[0]
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            console.log("fourWins is intersecting");
+            setFourWinsIsVisible(true);
+          } else {
+            console.log("fourWins not intersecting");
+          }
+        });
+      },
+      {
+        rootMargin: "300px",
+      }
+    );
+
+    let fourWinsSection = undefined;
+    fourWinsSection = document.querySelector("#fourWins");
+    fourWinsObserver.observe(fourWinsSection);
   }, []);
 
   return (
@@ -77,6 +98,10 @@ export default function Home() {
 
         <div id="kaleidoskop" className={style.kaleidoskopSection}>
           {kaleidoskopIsVisible && <LazyKaleidoskop />}
+        </div>
+
+        <div id="fourWins" className={style.fourWinsSection}>
+          {fourWinsIsVisible && <LazyFourWins />}
         </div>
 
         <div id="kontakt" className={style.contactContainer}>

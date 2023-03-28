@@ -122,7 +122,7 @@ export default function FourWins() {
 
   // * is there is Space for a Token?
 
-  function findFreeSlotIndex(row) {
+  function findFreeSlotIndex(row: number) {
     for (let i = allSlots.length - 1; i >= 0; i--) {
       if (allSlots[i].row === row) {
         if (!allSlots[i].occupied) {
@@ -319,6 +319,7 @@ export default function FourWins() {
                       fill
                       alt="Token Desgin"
                       src={"/img/four_wins/outer_circle.svg"}
+                      className={style.outerCircle}
                     />
                   </div>
                   <OneField

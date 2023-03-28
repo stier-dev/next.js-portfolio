@@ -24,6 +24,13 @@
   background-color: black;
 }
 
+.fourWinsSection {
+  height: 1100px;
+  width: 100vw;
+  scroll-margin-top: 100px;
+  background-color: black;
+}
+
 @media (max-width: 840px) {
   .memorySection {
     height: 880px;
