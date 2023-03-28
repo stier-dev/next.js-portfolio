@@ -58,36 +58,40 @@ export default function FourWins() {
   //  * Make Token follow Mouse
 
   const onMouseMove = (e) => {
-    let offset = 100;
-    let mouseX = e.clientX;
-    let playingFieldX = playingField.current.getBoundingClientRect().x;
-    let playingFieldWidth = playingField.current.getBoundingClientRect().width;
-    let mouseY = e.clientY;
-    let playingFieldY = playingField.current.getBoundingClientRect().y;
-    let playingFieldHeight =
-      playingField.current.getBoundingClientRect().height;
-    // * if the mouse enters the field
-    if (
-      mouseX >= playingFieldX - offset &&
-      mouseX <= playingFieldX + playingFieldWidth + offset &&
-      mouseY >= playingFieldY &&
-      mouseY <= playingFieldY + playingFieldHeight
-    ) {
-      token.current.style.left =
-        mouseX - oneField.current.clientWidth / 2 + "px";
-
-      if (mouseX <= playingFieldX + oneField.current.clientWidth / 2) {
-        token.current.style.left = playingFieldX + "px";
-      }
+    if (playingField.current && oneField.current) {
+      let offset = 100;
+      let mouseX = e.clientX;
+      let playingFieldX = playingField.current.getBoundingClientRect().x;
+      let playingFieldWidth =
+        playingField.current.getBoundingClientRect().width;
+      let mouseY = e.clientY;
+      let playingFieldY = playingField.current.getBoundingClientRect().y;
+      let playingFieldHeight =
+        playingField.current.getBoundingClientRect().height;
+      // * if the mouse enters the field
       if (
-        mouseX >=
-        playingFieldX + playingFieldWidth - oneField.current.clientWidth / 2
+        mouseX >= playingFieldX - offset &&
+        mouseX <= playingFieldX + playingFieldWidth + offset &&
+        mouseY >= playingFieldY &&
+        mouseY <= playingFieldY + playingFieldHeight
       ) {
-        token.current.style.left =
-          playingFieldX +
-          playingFieldWidth -
-          oneField.current.clientWidth +
-          "px";
+        if (oneField.current) {
+          token.current.style.left =
+            mouseX - oneField.current.clientWidth / 2 + "px";
+        }
+        if (mouseX <= playingFieldX + oneField.current.clientWidth / 2) {
+          token.current.style.left = playingFieldX + "px";
+        }
+        if (
+          mouseX >=
+          playingFieldX + playingFieldWidth - oneField.current.clientWidth / 2
+        ) {
+          token.current.style.left =
+            playingFieldX +
+            playingFieldWidth -
+            oneField.current.clientWidth +
+            "px";
+        }
       }
     }
   };
@@ -259,6 +263,7 @@ export default function FourWins() {
 
   // * All Functions in one on Click function
   function onClickFunction(row: number) {
+    console.log("yo");
     insertToken(row);
     checkForWinner(activePlayer);
     togglePlayer();
