@@ -1,11 +1,5 @@
 // ? make rows line up when the mouse hovers over them
-// ? create a section where the next token follows your mouse
-// ? create Tokens
-// ? make Tokens slide into the slots
-// ? make the Tokens occupie slots
-// ? make the Tokens change color/ player each turn
-// ? make a function that searches for 4 in a row
-// ? make a winning screen
+
 // ? make event listener disappear if of screen
 
 import style from "@/styles/fourWins.module.scss";
@@ -18,7 +12,7 @@ import Image from "next/image";
 export default function FourWins() {
   const [hoveredRow, setHoveredRow] = useState(1);
   const [allSlots, setAllSlots] = useState([]);
-  const [activePlayer, setActivePlayer] = useState("blau");
+  const [currentPlayer, setActivePlayer] = useState("blau");
 
   const token = useRef<HTMLDivElement>(null);
   const oneField = useRef<HTMLDivElement>(null);
@@ -40,10 +34,10 @@ export default function FourWins() {
   // * Set initial Slots
 
   function allSlotsInitial() {
-    const allInitialSlots = [];
+    const initialSlots = [];
     for (let col = 1; col <= 7; col++) {
       for (let row = 1; row <= 7; row++) {
-        allInitialSlots.push({
+        initialSlots.push({
           key: row.toString() + col.toString(),
           column: col,
           row: row,
@@ -51,7 +45,7 @@ export default function FourWins() {
           player: "none",
         });
       }
-      setAllSlots(allInitialSlots);
+      setAllSlots(initialSlots);
     }
   }
 
@@ -128,7 +122,7 @@ export default function FourWins() {
 
   // * is there is Space for a Token?
 
-  function isThereSpaceForAToken(row) {
+  function findFreeSlotIndex(row) {
     for (let i = allSlots.length - 1; i >= 0; i--) {
       if (allSlots[i].row === row) {
         if (!allSlots[i].occupied) {
@@ -139,22 +133,22 @@ export default function FourWins() {
   }
 
   function togglePlayer() {
-    if (activePlayer == "blau") {
+    if (currentPlayer == "blau") {
       setActivePlayer("gelb");
-    } else if (activePlayer == "gelb") {
+    } else if (currentPlayer == "gelb") {
       setActivePlayer("blau");
     }
   }
   // * set the Token of the player to the selected row
 
   function insertToken(row: number) {
-    let freeColumnIndex = isThereSpaceForAToken(row);
+    let freeColumnIndex = findFreeSlotIndex(row);
     if (!freeColumnIndex) {
       return;
     }
     let newAllSlots = [...allSlots];
     newAllSlots[freeColumnIndex].occupied = true;
-    newAllSlots[freeColumnIndex].player = activePlayer;
+    newAllSlots[freeColumnIndex].player = currentPlayer;
   }
 
   // * winning function
@@ -265,7 +259,7 @@ export default function FourWins() {
   function onClickFunction(row: number) {
     console.log("yo");
     insertToken(row);
-    checkForWinner(activePlayer);
+    checkForWinner(currentPlayer);
     togglePlayer();
   }
 
@@ -305,8 +299,8 @@ export default function FourWins() {
           <div
             ref={token}
             className={`${style.token} ${
-              activePlayer == "blau" && style.tokenBlue
-            }  ${activePlayer == "gelb" && style.tokenRed}`}
+              currentPlayer == "blau" && style.tokenBlue
+            }  ${currentPlayer == "gelb" && style.tokenRed}`}
           >
             <div className={style.tokenImage}>
               <Image
