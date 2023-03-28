@@ -90,13 +90,13 @@
   }
 
   .slideBtn span:nth-child(odd):before {
-    content: attr(letter);
+    content: attr(data-letter);
     position: absolute;
     transform: translateY(3rem);
   }
 
   .slideBtn span:nth-child(even):before {
-    content: attr(letter);
+    content: attr(data-letter);
     position: absolute;
     transform: translateY(-3rem);
   }

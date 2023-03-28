@@ -282,14 +282,14 @@ export default function FourWins() {
         <h1 className={style.headline}>{winner} gewinnt!</h1>
 
         <div className={btnStyle.slideBtn} onClick={playAgain}>
-          <span letter="R">R</span>
-          <span letter="E">E</span>
-          <span letter="V">V</span>
-          <span letter="A">A</span>
-          <span letter="N">N</span>
-          <span letter="C">C</span>
-          <span letter="H">H</span>
-          <span letter="E">E</span>
+          <span data-letter="R">R</span>
+          <span data-letter="E">E</span>
+          <span data-letter="V">V</span>
+          <span data-letter="A">A</span>
+          <span data-letter="N">N</span>
+          <span data-letter="C">C</span>
+          <span data-letter="H">H</span>
+          <span data-letter="E">E</span>
         </div>
       </div>
       <div className={style.gameContainer}>
