@@ -12,8 +12,8 @@ export default function Home() {
   const [memoryIsVisible, setMemoryIsVisible] = useState(false);
   const LazyKaleidoskop = dynamic(() => import("./kaleidoskop"));
   const [kaleidoskopIsVisible, setKaleidoskopIsVisible] = useState(false);
-  const LazyFourWins = dynamic(() => import("./fourWins"));
-  const [fourWinsIsVisible, setFourWinsIsVisible] = useState(true);
+  // const LazyFourWins = dynamic(() => import("./fourWins"));
+  // const [fourWinsIsVisible, setFourWinsIsVisible] = useState(true);
 
   // use Effect to make sure, that the elements are loaded in the dom before they are targeted
   useEffect(() => {
@@ -100,9 +100,9 @@ export default function Home() {
           {kaleidoskopIsVisible && <LazyKaleidoskop />}
         </div>
 
-        <div id="fourWins" className={style.fourWinsSection}>
-          {/* {fourWinsIsVisible && <LazyFourWins />} */}
-        </div>
+        {/* <div id="fourWins" className={style.fourWinsSection}> */}
+        {/* {fourWinsIsVisible && <LazyFourWins />} */}
+        {/* </div> */}
 
         <div id="kontakt" className={style.contactContainer}>
           <Contact />
