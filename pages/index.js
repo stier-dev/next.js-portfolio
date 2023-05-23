@@ -101,7 +101,7 @@ export default function Home() {
         </div>
 
         <div id="fourWins" className={style.fourWinsSection}>
-          {fourWinsIsVisible && <LazyFourWins />}
+          {/* {fourWinsIsVisible && <LazyFourWins />} */}
         </div>
 
         <div id="kontakt" className={style.contactContainer}>
